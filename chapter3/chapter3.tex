@@ -1,0 +1,2470 @@
+\chapter{Time-Independent Maxwell Equations}\label{maxwell1}
+
+\section{Introduction}
+In this chapter, we shall recast the familiar force laws of electrostatics and magnetostatics
+ as vector field equations.
+
+\section{Coulomb's Law}
+Between 1785 and 1787, the French physicist Charles Augustine de Coulomb performed
+a series of experiments involving electric charges, and 
+eventually established what is
+nowadays known  as {\em Coulomb's law}. According to this law, the force
+acting between two static electric charges is central, inverse-square,
+and proportional to the product of the charges. Two like
+charges repel one another,
+whereas two unlike charges attract. Suppose that two charges, $q_1$ 
+and $q_2$, are 
+located at position vectors  ${\bf r}_1$ and ${\bf r}_2$, respectively. The 
+electrical force acting
+on the second charge is written
+\begin{equation}\label{e31}
+{\bf f}_2 = \frac{q_1\, q_2}{4\pi\epsilon_0} \frac{{\bf r}_2 - {\bf r}_1}
+{|{\bf r}_2-{\bf r}_1|^{3}}
+\end{equation}
+in vector notation---see Figure~\ref{f24}.  An equal and
+opposite force acts on the first charge,
+in accordance with Newton's third law of motion.
+The SI unit of electric charge is the coulomb (C). The magnitude of the charge on
+an electron is $1.6022\times 10^{-19}$ C. Finally, the universal constant $\epsilon_0$
+is called the {\em permittivity of free space}, and takes the value
+\begin{equation}
+\epsilon_0 = 8.8542\times 10^{-12} \,\,{\rm C^{\,2} \,N^{-1}m^{-2}}.
+\end{equation}
+\begin{figure}
+\epsfysize=1.5in
+\centerline{\epsffile{chapter3/fig3.1.eps}}
+\caption{\em Coulomb's law.}\label{f24}
+\end{figure}
+
+Suppose that two masses, $m_1$ and $m_2$, are located at position vectors
+${\bf r}_1$ and ${\bf r}_2$, respectively. According to Newton's law
+of gravity, the gravitational force acting on the second mass
+is written
+\begin{equation}\label{e33}
+{\bf f}_2 = - G \,m_1 \,m_2\, \frac{{\bf r}_2 - {\bf r}_1}
+{|{\bf r}_2 - {\bf r}_1|^{3}}
+\end{equation}
+in vector notation. The gravitational constant $G$ takes the value
+\begin{equation}
+G = 6.6726\times 10^{-11}\,\,{\rm N \,m^2 \,kg^{-2}}.
+\end{equation}
+Note that Coulomb's law has the same mathematical form as Newton's law of gravity.
+In particular, they  are both {\em inverse-square} force laws: {\em i.e.},
+\begin{equation}
+|{\bf f}_2| \propto \frac{1}{|{\bf r}_2- {\bf r}_1|^2}.
+\end{equation}
+However, these laws differ in two crucial respects. Firstly, the force due to gravity
+is always {\em attractive} (there is no such thing as a negative mass). 
+Secondly, the magnitudes of the two forces are vastly different. 
+Consider the ratio of the electrical and gravitational forces acting on two
+particles. This ratio is a constant, independent of the relative positions
+of the particles, and is given by
+\begin{equation}
+\frac{|{\bf f}_{\rm electrical}|}{|{\bf f}_{\rm gravitational}|}
+= \frac{|q_1|}{m_1}\frac{|q_2|}{m_2} \frac{1}{4\pi\epsilon_0 \,G}.
+\end{equation}
+For electrons, the charge to mass ratio is $|q|/m = 1.759\times 10^{11}~{\rm C\, kg^{-1}}$,
+so
+\begin{equation}
+\frac{|{\bf f}_{\rm electrical}|}{|{\bf f}_{\rm gravitational}|}
+= 4.17\times 10^{42}.
+\end{equation}
+This is a colossal number! Suppose we were studying a physics problem involving the motion
+of particles  under the action of two forces with the
+same range, but differing in magnitude by a factor
+$10^{42}$. It would seem a plausible approximation (to say the least) to
+start the investgation by neglecting the weaker force altogether. Applying this reasoning to the motion of
+particles in the Universe, we would expect the Universe to be governed entirely by 
+electrical forces. However, this is not the case. The force which
+holds us to the surface of the Earth, and  prevents us  from
+floating off into space, is gravity. The force which causes the Earth
+to orbit the Sun is also gravity. In fact, on astronomical length-scales gravity is 
+the dominant force, and electrical forces are largely irrelevant.
+The key to understanding this paradox is that there are both
+positive and negative electric charges, whereas there are only positive
+gravitational ``charges.'' This means that gravitational forces are always
+cumulative,
+whereas electrical forces can cancel one another out. Suppose, for the
+sake of argument,  that the Universe
+starts out with randomly distributed 
+ electric charges. Initially, we expect
+electrical forces to completely dominate gravity. These forces try to make
+ every positive
+charge get as far away as possible from the  other positive charges in the Universe, and as close
+as possible to the other negative charges. After a while, we  expect 
+the positive and
+negative charges to form close pairs. Just how close is determined by Quantum
+Mechanics, but, in general, it is fairly close: {\em i.e.}, about $10^{-10}$ m.
+The electrical forces due to the charges in each pair
+effectively  cancel
+one another out  on length-scales much larger than the mutual spacing
+of the pair. 
+However, it is only possible for
+gravity to be the dominant long-range force in the Universe if the number
+of positive charges is almost equal to the number of
+negative charges. In this
+situation, every positive charge can find a negative charge to team up with, and
+there are virtually no charges left over. In order for the cancellation
+of long-range electrical forces to be effective, the relative difference in the
+number of positive and negative charges in the Universe must be  incredibly
+small. In fact, positive and negative charges have to cancel one another
+ to such accuracy that most physicists believe that the net electrical
+charge of the Universe is
+{\em exactly} zero. But, it is not sufficient for the Universe to start out with zero
+charge. Suppose there were some elementary particle process which did not
+conserve electric charge. Even if this were to go on at a very low
+rate, it would not take long before the fine balance between
+positive and negative charges in the Universe was wrecked. So, 
+it is important that electric
+charge is a {\em conserved}\/ quantity ({\em i.e.}, the net charge of the Universe can neither
+increase or decrease). As far as we know, this is the case. To date, no 
+elementary particle reactions have been discovered which create or destroy net
+electric charge.
+
+In summary,
+ there are two long-range forces in the Universe, electricity and gravity.
+The former is enormously stronger than the latter, but is usually ``hidden'' away
+inside neutral atoms. The fine balance of forces due
+to negative and positive electric charges starts to break down on atomic scales.
+In fact, interatomic and intermolecular forces are all
+  electrical in nature. So, electrical forces
+ are basically what prevent us  from
+falling though the floor. But, this is electromagnetism on the 
+microscopic or atomic scale---what is usually termed  {\em Quantum Electromagnetism}. This book is about
+{\em Classical Electromagnetism}. That is, electromagnetism on length-scales much
+larger than the atomic scale. Classical Electromagnetism 
+generally describes phenomena
+in which some sort of ``violence''  is done to matter, so that the
+close pairing of negative and positive
+charges is  disrupted. This allows electrical forces to manifest
+themselves
+ on macroscopic length-scales. Of course, very little disruption is necessary
+before gigantic forces are generated. Hence, it is no coincidence that the vast majority
+of useful machines which humankind has devised during the last century or so
+are electrical in nature. 
+
+Coulomb's law and Newton's law are both examples of what are usually referred to as
+{\em action at a distance}\/ laws.
+  According to Equations~(\ref{e31}) and (\ref{e33}), if the first charge
+or mass is moved then the force acting on the second charge or mass 
+responds {\em immediately}. In particular, equal and opposite forces act on the two charges or masses
+at all times. However, this cannot be correct according to Einstein's Special Theory of
+Relativity, which implies that the maximum speed with which information can propagate through
+ the Universe
+is the speed of light in vacuum. So, if the first charge or mass is moved then there must
+always be a time delay ({\em i.e.}, at least the time needed for a light
+signal to propagate between the two charges or masses) before the second charge or
+mass responds. Consider a rather extreme example. Suppose the first charge or
+mass is suddenly annihilated. The second charge or mass only finds out about
+this some time later. During this time interval, the second charge or mass
+experiences an electrical or gravitational force  which is as if 
+the first charge or mass were still there.
+ So, during this period, there is an action but no
+reaction, which violates Newton's third law of motion.
+ It is clear that action at a distance
+is not compatible with Relativity, and, consequently,
+that Newton's third law of motion is 
+ not
+strictly true. Of course, Newton's third law is intimately tied up with the
+conservation of linear momentum in the Universe. This is a concept which most physicists are loath
+to abandon.  It turns out that we can ``rescue'' momentum conservation by abandoning
+action at a distance theories, and instead adopting so-called  {\em field theories}\/ in which
+there is a medium, called a field, which transmits the force from one particle
+to another. Of course, in electromagnetism there are two fields---the electric field,
+and the magnetic field. Electromagnetic forces are transmitted via these 
+fields at the speed of light, which implies that the laws
+of Relativity are  never violated.
+Moreover, the fields can soak up energy and  momentum. This means that even when
+the actions and reactions acting on charged particles are not quite equal and opposite,
+momentum is still conserved. 
+We can bypass some of the problematic aspects of  action at a distance by
+only considering {\em steady-state}\/ situations. For the moment, this is how we shall
+proceed.
+
+Consider $N$ charges, $q_1$ though $q_N$, which are located at position vectors
+${\bf r}_1$ through ${\bf r}_N$, respectively. Electrical forces obey what is known as
+the {\em principle of superposition}:{\em i.e.}, the electrical force acting on a test charge
+$q$ at position vector ${\bf r}$ is simply the vector sum of all of the
+Coulomb law forces exerted on it by each of the $N$ charges taken in isolation. In other
+words, the electrical force exerted by the $i$th charge (say) on the test charge is
+the same as if all of the other charges were not there. Thus, the force acting
+on the test charge is given by
+\begin{equation}
+{\bf f}({\bf r}) = q \sum_{i=1}^N \frac{q_i}{4\pi\epsilon_0}
+\frac{{\bf r}-{\bf r}_i}{|{\bf r}-{\bf r}_i|^3}.
+\end{equation}
+It is helpful to define a vector field ${\bf E}({\bf r})$, called the
+{\em electric field}, which is the force exerted on a unit test charge located at
+position vector ${\bf r}$. So, the force on a test charge is written
+\begin{equation}\label{e39}
+{\bf f} = q\,{\bf E},
+\end{equation}
+and the electric field is given by
+\begin{equation}\label{e310}
+{\bf E}({\bf r}) = \sum_{i=1}^N \frac{q_i}{4\pi\epsilon_0} 
+\frac{{\bf r}- {\bf r}_i}{|{\bf r}-{\bf r}_i|^3}.
+\end{equation}
+At this point, we have no reason to believe that the electric field has any
+real physical existence. It is just a useful device for calculating the force which
+acts on test charges placed at  various locations.
+
+The electric field from a single charge $q$ located at the origin is purely radial,
+points outwards if the charge is positive, inwards if it is negative, and has
+magnitude
+\begin{equation}\label{e311}
+E_r (r) = \frac{q}{4\pi\epsilon_0\,r^2},
+\end{equation}
+where $r= |{\bf r}|$.
+We can represent an electric field by {\em field-lines}.
+ The direction of the lines
+indicates 
+the direction of the
+local electric field, and the density of the lines perpendicular to this direction
+is proportional to the magnitude of the local electric field.
+It follows from Equation~(\ref{e311}) that the number of field-lines crossing the
+surface of a sphere centered on a point charge (which is equal to
+$E_r$ times the area, $4\pi\,r^2$, of the surface) is {\em independent}\/
+of the radius of the sphere.
+Thus, the field of a point positive charge is represented by a group of equally
+spaced, unbroken, straight lines radiating from the charge---see Figure~\ref{f23}.
+Likewise, field of a point negative charge is represented by a group of
+equally spaced, unbroken, straight-lines converging on the charge.
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter3/fig3.2.eps}}
+\caption{\em Electric field-lines generated by a positive charge.}\label{f23}
+\end{figure}
+
+The electric 
+field from a collection of charges is 
+simply the vector sum of the fields
+from each of the charges taken in isolation. In other words, electric fields are 
+completely {\em superposable}. Suppose that, instead of having discrete charges, we 
+have a continuous distribution of charge represented by a {\em charge density}\/
+$\rho({\bf r})$. Thus, the charge at position vector ${\bf r}'$ is
+$\rho({\bf r}')\,d^3{\bf r}'$, where $d^3{\bf r}'$ is the volume element
+at ${\bf r}'$. It follows from a simple extension of Equation~(\ref{e310}) that the electric
+field generated by this charge distribution is
+\begin{equation}\label{e312}
+{\bf E}({\bf r}) =\frac{1}{4\pi\epsilon_0}
+ \int \rho({\bf r}')\, \frac{{\bf r}- {\bf r}' }
+{|{\bf r} - {\bf r}'|^3} \,d^3{\bf r}',
+\end{equation}
+where the volume integral is over all space, or, at least, over all space for which
+$\rho({\bf r}')$ is non-zero. We shall sometimes refer to the above result
+as {\em Coulomb's law}, since it is essentially equivalent to Equation~(\ref{e31}).
+
+\section{Electric  Scalar Potential}
+Suppose that ${\bf r} = (x,\,y,\,z)$ and ${\bf r'}= (x',\,y',\,z')$ in Cartesian coordinates.
+The $x$ component of $({\bf r} - {\bf r'})/{|{\bf r} - {\bf r'}|^3}$ is
+written
+\begin{equation}
+\frac{x - x'}{[(x-x')^2+(y-y')^2 + (z-z')^2]^{\,3/2}}.
+\end{equation}
+However, it is easily demonstrated that
+\begin{eqnarray}
+\frac{x - x'}{[(x-x')^2+(y-y')^2 + (z-z')^2]^{\,3/2}} = \mbox{\hspace{4cm}}
+&&\\[0.5ex]
+\mbox{\hspace{4cm}}-\frac{\partial}{\partial x}\!\left(
+\frac{1}{[(x-x')^2+(y-y')^2 + (z-z')^2]^{\,1/2}}\right).&&\nonumber
+\end{eqnarray}
+Since there is nothing special about the $x$-axis, we can write
+\begin{equation}\label{e315}
+\frac{{\bf r}- {\bf r}' }
+{|{\bf r} - {\bf r}'|^3} = -\nabla\!\left(\frac{1}{|{\bf r} - {\bf r'}|}\right),
+\end{equation}
+where $\nabla\equiv (\partial/\partial x,\,\partial/\partial y, \,
+\partial/\partial z)$
+is a differential operator which involves the components of ${\bf r}$ but not
+those of ${\bf r}'$. 
+It follows from Equation~(\ref{e312}) that
+\begin{equation}\label{e316}
+{\bf E} = -\nabla \phi,
+\end{equation}
+where
+\begin{equation}\label{e317}
+\phi({\bf r}) = \frac{1}{4\pi\epsilon_0}
+\int \frac{ \rho({\bf r}')}{|{\bf r} - {\bf r}'|} \,d^3{\bf r}'.
+\end{equation}
+Thus, the electric field generated by a collection of fixed charges can be written
+as the gradient of a scalar field---known as the {\em electric scalar potential}---and this field can be expressed as a
+simple volume integral involving the charge distribution.
+
+The scalar potential generated by a charge $q$ located at the origin is
+\begin{equation}
+\phi( r) = \frac{q}{4\pi\epsilon_0\,r}.
+\end{equation}
+According to Equation~(\ref{e310}), the scalar potential generated by a set of $N$
+discrete charges $q_i$, located at ${\bf r}_i$, is
+\begin{equation}
+\phi({\bf r}) = \sum_{i=1}^N \phi_i ({\bf r}),
+\end{equation}
+where
+\begin{equation}\label{e320}
+\phi_i({\bf r}) = \frac{q_i}{4\pi\epsilon_0\,|{\bf r} - {\bf r}_i|}.
+\end{equation}
+Thus,  the scalar potential is just the sum of the potentials generated by each
+of the charges taken in isolation.
+
+Suppose that a particle of
+charge $q$ is taken along some path from point $P$ to point $Q$.
+The net work done on the particle by electrical forces is 
+\begin{equation}
+{\cal W} = \int_P^Q {\bf f}\cdot d{\bf l},
+\end{equation}
+where ${\bf f}$ is the electrical force, and $d{\bf l}$ is a line element along the
+path. Making use of Equations~(\ref{e39}) and (\ref{e316}), we obtain
+\begin{equation}\label{e322}
+{\cal W} = q \int_P^Q {\bf E}\cdot d{\bf l} = - q\int_P^Q \nabla\phi\cdot d{\bf l}
+= -q \left[\,\phi(Q)- \phi(P)\,\right].
+\end{equation}
+Thus, the work done on the particle is simply minus its charge times the difference
+in electric potential between the end point and the beginning point. This quantity
+is clearly {\em independent}\/ of the path taken between $P$ and $Q$. So, an electric field
+generated by stationary charges is an example of a {\em conservative}\/ field. In fact, this
+result follows immediately from vector field theory once we are told,
+in Equation~(\ref{e316}),  that the electric field
+is the gradient of a scalar potential. The work done on the particle
+when it is taken around a closed loop is zero, so
+\begin{equation}
+\oint_C {\bf E}\cdot d{\bf l} = 0
+\end{equation}
+for any closed loop $C$. This implies from Stokes' theorem that
+\begin{equation}\label{e324}
+\nabla\times {\bf E} = {\bf 0}
+\end{equation}
+for any electric field generated by stationary charges. Equation~(\ref{e324})
+also follows directly 
+from Equation~(\ref{e316}), since $\nabla\times\nabla \phi \equiv {\bf 0}$ for any scalar potential
+$\phi$. 
+
+The SI unit of electric potential is the volt, which is equivalent to a joule
+per coulomb. Thus, according to Equation~(\ref{e322}),
+ the electrical work done on a particle when it is
+taken between two points is the product of minus its charge and the voltage difference 
+between the points. 
+
+We  are familiar with the idea that a particle moving in 
+a gravitational field possesses  potential energy as well as  kinetic
+energy. If the particle moves from  point $P$ to a lower point $Q$ then the
+gravitational field does work on the particle causing its kinetic energy to
+increase. The increase in kinetic energy of the particle is balanced by an
+equal decrease in its potential energy, so that the overall energy of the
+particle is a conserved quantity. Therefore, the work done on the particle
+as it moves from $P$ to $Q$ is {\em minus}\/ the difference in its gravitational
+potential energy between points $Q$ and $P$. Of course, it only makes sense to
+talk about gravitational potential energy because the gravitational field
+is  {\em conservative}. Thus, the work done in taking a particle between two
+points is {\em path-independent}, and, therefore, well-defined. This means that the
+difference in potential energy of the particle between the beginning and end 
+ points is also
+well-defined.
+We have already seen that
+an electric field generated by stationary charges is a conservative field.
+In follows that 
+we can define an electrical potential energy of a particle moving in such a field.
+By analogy with gravitational fields, the work done in taking a particle 
+from point $P$ to point $Q$ is
+equal to minus  the difference in  potential energy of the particle between
+points $Q$
+and $P$.  It follows from Equation~(\ref{e322}) that 
+ the potential  energy of the particle at a general
+point $Q$, relative to some reference point $P$ (where the potential energy is set to zero), is given by
+\begin{equation}
+W (Q)= q \,\phi(Q).
+\end{equation}
+Free particles try to move down gradients of  potential energy, in order to
+attain a
+minimum potential energy state. Thus, free particles in the Earth's gravitational
+field tend to fall downwards.
+Likewise, positive charges moving in an electric field
+tend to migrate  towards regions with the most negative
+voltage, and {\em vice versa}\/ for negative charges. 
+
+The scalar electric potential is undefined to an additive
+constant. So, the transformation
+\begin{equation}
+\phi({\bf r}) \rightarrow \phi({\bf r}) + c
+\end{equation}
+leaves the electric field unchanged according to Equation~(\ref{e316}).
+The potential can be fixed unambiguously
+ by specifying its value at a single point. The
+usual convention is to say that the potential  is zero at infinity. This convention
+is implicit in Equation~(\ref{e317}), where it can be seen that $\phi\rightarrow 0$ as $|{\bf r}|
+\rightarrow\infty$, provided that the total charge $\int \rho({\bf r}')\,d^3{\bf r}'$
+is finite. 
+
+\section{Gauss' Law}\label{s33}
+Consider a single charge $q$ located at the origin. The electric field generated by
+such a charge is given by Equation~(\ref{e311}). Suppose that we surround the charge by 
+a concentric spherical surface $S$ of radius $r$---see Figure~\ref{f25}.  The flux of the
+electric field through this surface is 
+given by
+\begin{equation}\label{e327}
+\oint_S{\bf E}\cdot d{\bf S}= \oint_S  E_r\, dS_r = E_r(r) \, 4\pi \,r^2 =
+\frac{q}{4\pi\epsilon_0\,r^2}\,\,4\pi \,r^2 =
+ \frac{q}{\epsilon_0},
+\end{equation}
+since the normal to the surface is always
+parallel to the local        electric field.
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter3/fig3.3.eps}}
+\caption{\em Gauss' law.}\label{f25}
+\end{figure}
+However, we also know from Gauss' theorem that
+\begin{equation}\label{e328}
+\oint_S {\bf E}\cdot d{\bf S} = \int_V \nabla\cdot {\bf E} \,\,d^3{\bf r},
+\end{equation}
+where $V$ is the volume enclosed by surface $S$. Let us evaluate 
+$\nabla\cdot {\bf E}$ directly. In Cartesian coordinates, the field is written
+\begin{equation}
+{\bf E} = \frac{q}{4\pi\epsilon_0} \left(\frac{x}{r^3},\,\, \frac{y}{r^3},
+\,\, \frac{z}{r^3}
+\right),
+\end{equation}
+where $r^2=x^2+y^2+z^2$. So,
+\begin{equation}\label{e330}
+\frac{\partial E_x}{\partial x} = \frac{q}{4\pi\epsilon_0}\left(
+\frac{1}{r^3} - \frac{3\,x}{r^4}\frac{x}{r} \right) =
+\frac{q}{4\pi\epsilon_0}\frac{r^2-3\,x^2}{r^5}.
+\end{equation}
+Here, use has been made of
+\begin{equation}
+\frac{\partial r}{\partial x} = \frac{x}{r}.
+\end{equation}
+Formulae analogous to Equation~(\ref{e330}) can be obtained for $\partial E_y/\partial y$ and
+ $\partial E_z/\partial z$.
+The divergence of the field is thus given by
+\begin{equation}\label{e332}
+\nabla\cdot {\bf E} = \frac{\partial E_x}{\partial x}+
+\frac{\partial E_y}{\partial y}+ \frac{\partial E_z}{\partial z}
+= \frac{q}{4\pi\epsilon_0} \frac{3\,r^2 - 3\,x^2-3\,y^2-3\,z^2}{r^5} = 0.
+\end{equation}
+This is a puzzling result! We have from Equations~(\ref{e327}) and (\ref{e328}) that 
+\begin{equation}\label{e333}
+\int_V \nabla \cdot{\bf E}\,\,d^3{\bf r}= \frac{q}{\epsilon_0},
+\end{equation}
+and yet we have just proved that $\nabla\cdot {\bf E}=0$. This paradox can be
+resolved after a close examination of Equation~(\ref{e332}). At the origin
+($r=0$) we find that $\nabla\cdot
+{\bf E} = 0/0$, which means that $\nabla\cdot {\bf E}$
+can take any value at this point. 
+Thus, Equations~(\ref{e332}) and (\ref{e333}) can be reconciled
+if $\nabla \cdot {\bf E}$ is some sort
+of ``spike'' function: {\em i.e.}, it is zero everywhere except arbitrarily
+close to the origin,
+where it becomes very large. This
+must occur in such a manner that the volume  integral over the spike
+is finite. 
+
+Let us examine how we might construct a one-dimensional spike function.
+Consider the ``box-car'' function
+\begin{equation}
+g(x,\epsilon) = \left\{
+\begin{array}{lll}
+1/\epsilon &\mbox{\hspace{1cm}}& {\rm for~} |x| < \epsilon/2\\
+0 &&{\rm otherwise}
+\end{array}
+\right.
+\end{equation}
+---see Figure~\ref{f26}.
+It is clear that 
+\begin{equation}\label{e335}
+\int_{-\infty}^{\infty} g(x,\epsilon)\,dx = 1.
+\end{equation}
+Now consider  the function 
+\begin{equation}
+\delta(x) = \lim_{\epsilon\rightarrow 0} g(x,\epsilon).
+\end{equation}
+This is zero everywhere except arbitrarily close to $x=0$. 
+According to Equation~(\ref{e335}), 
+it also possess a finite integral;
+\begin{equation}\label{e337}
+\int_{-\infty}^{\infty} \delta (x)\,dx = 1.
+\end{equation}
+Thus, $\delta(x)$ has all of the required properties of a spike function.
+The one-dimensional  spike function $\delta(x)$ is called the 
+{\em Dirac delta-function}, after the Cambridge physicist Paul Dirac who 
+invented it in 1927 whilst investigating Quantum Mechanics. The delta-function is an
+example of what mathematicians call a {\em generalized function}: it is not
+well-defined at $x=0$, but its integral is nevertheless well-defined.
+Consider the integral
+\begin{equation}
+\int_{-\infty}^{\infty} f(x)\,\delta(x)\,dx,
+\end{equation}
+where $f(x)$ is a function which is well-behaved in the vicinity of $x=0$. 
+Since the delta-function is zero everywhere apart from very close
+to $x=0$, it is clear that
+\begin{equation}\label{e339}
+\int_{-\infty}^{\infty}f(x)\, \delta(x)\,dx = f(0)\int_{-\infty}^{\infty} \delta(x)
+\,dx = f(0),
+\end{equation}
+where use has been made of Equation~(\ref{e337}). The above equation, which is valid for any
+well-behaved
+function, $f(x)$, is effectively the definition of a delta-function. 
+A simple change of variables allows us to define $\delta(x-x_0)$, which is
+a  spike function centred on $x=x_0$. Equation~(\ref{e339}) gives
+\begin{equation}
+\int_{-\infty}^{\infty} f(x)\,\delta(x-x_0)\,dx = f(x_0).
+\end{equation}
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter3/fig3.4.eps}}
+\caption{\em A box-car function.}\label{f26}
+\end{figure}
+
+We actually want a three-dimensional spike function:
+{\em i.e.}, a function
+ which is zero everywhere
+apart from arbitrarily close to the origin, and whose volume integral is unity.
+If we denote this function by $\delta({\bf r})$ then it is easily seen that
+the three-dimensional delta-function is the product of three one-dimensional
+delta-functions:
+\begin{equation}
+\delta({\bf r}) = \delta(x)\,\delta(y)\,\delta(z).
+\end{equation}
+This function is clearly zero everywhere except the origin. But is its volume
+integral unity? Let us integrate over a cube of dimension $2\,a$ which is 
+centred on the origin, and aligned along the Cartesian axes. This
+volume integral is obviously separable, so that
+\begin{equation}
+\int \delta({\bf r})\,d^3{\bf r} = \int_{-a}^{a} \delta(x)\,dx
+ \int_{-a}^{a} \delta(y)\,dy \int_{-a}^{a} \delta(z)\,dz.
+\end{equation}
+The integral can be turned into an integral over all space by taking
+the limit $a\rightarrow\infty$. However, we know that for one-dimensional
+delta-functions $\int_{-\infty}^{\infty} \delta(x)\,dx = 1$, so it follows
+from the above equation that
+\begin{equation}\label{e343}
+\int \delta({\bf r})\,d^3{\bf r} =1,
+\end{equation}
+which is the desired result. A simple generalization of previous arguments yields
+\begin{equation}
+\int f({\bf r})\, \delta({\bf r})\,d^3{\bf r} =f({\bf 0}),
+\end{equation}
+where $f({\bf r})$ is any well-behaved scalar field. Finally, we can change variables
+and write
+\begin{equation}
+ \delta({\bf r} - {\bf r}') = \delta(x-x')\,\delta(y-y')\,\delta(z-z'),
+\end{equation}
+which is a three-dimensional  spike function centred on 
+${\bf r} = {\bf r}'$. It is easily demonstrated that
+\begin{equation}
+\int f({\bf r})\,\delta({\bf r}- {\bf r}')\,d^3{\bf r}= f({\bf r}').
+\end{equation}
+Up to now, we have only considered volume integrals taken
+ over all space. However, it
+should be obvious that the above result  also holds for integrals
+over any finite volume $V$ which contains the point ${\bf r} = {\bf r}'$. Likewise,
+the integral is zero if $V$ does not contain ${\bf r} = {\bf r}'$.
+
+Let us now return to the problem in hand. The electric field generated by a charge
+$q$ located at the origin has $\nabla\cdot{\bf E}=0$ everywhere apart from the
+origin, and also satisfies
+\begin{equation}
+\int_V {\nabla}\cdot{\bf E}\,\,d^3{\bf r} = \frac{q}{\epsilon_0}
+\end{equation}
+for a spherical volume $V$ centered on the origin. These two facts imply that
+\begin{equation}\label{e348}
+\nabla\cdot {\bf E} = \frac{q}{\epsilon_0} \,\delta({\bf r}),
+\end{equation}
+where use has been made of Equation~(\ref{e343}).
+
+At this stage,  vector field theory has yet to show its worth.
+After all, we have just spent an inordinately long time proving something using
+vector field theory which we 
+previously proved in one line [see Equation~(\ref{e327})]  using conventional
+analysis. It is time to demonstrate the power of vector field theory. 
+Consider, again, a charge $q$ at the origin surrounded by a spherical surface $S$
+which is centered on the origin. 
+Suppose that we now displace the surface $S$, so that it is no longer centered
+on the origin. What is the flux of the electric field out of S? This is no longer
+a simple problem for conventional analysis, because the normal to the surface is
+not  parallel to the local electric field. However, using  vector field theory
+this problem is no more difficult than the previous one. We have
+\begin{equation}\label{e349}
+\oint_S {\bf E} \cdot d{\bf S} = \int_V \nabla\cdot {\bf E}\,\,d^3{\bf r}
+\end{equation}
+from Gauss' theorem,
+plus Equation~(\ref{e348}).
+From these equations, 
+it is clear that the flux of ${\bf E}$ out of $S$ is $q/\epsilon_0$ for a
+spherical surface displaced from the origin. However, the flux becomes zero when the
+displacement is sufficiently large that the origin is no longer enclosed by
+the sphere. 
+It is possible to prove this via conventional analysis, but it is certainly not easy.
+Suppose  that the surface $S$ is not spherical  but is
+instead  highly distorted. What now is the flux of ${\bf E}$ out of $S$? This
+is a virtually impossible problem in conventional analysis, but it is still easy
+using vector field theory. Gauss' theorem and Equation~(\ref{e348}) tell us that
+the flux is $q/\epsilon_0$ provided that the surface contains the origin,
+and that the flux is zero otherwise. This result is completely independent of the shape of $S$.
+
+Consider $N$ charges $q_i$ located at ${\bf r}_i$. A simple generalization of
+Equation~(\ref{e348}) gives
+\begin{equation}
+\nabla\cdot {\bf E} = \sum_{i=1}^N
+ \frac{q_i}{\epsilon_0}\, \delta({\bf r} - {\bf r}_i).
+\end{equation}
+Thus, Gauss' theorem (\ref{e349}) implies that
+\begin{equation}\label{e351}
+\oint_S {\bf E}\cdot d{\bf S} = \int_V \nabla\cdot{\bf E}\,\,
+d^3{\bf r}= \frac{Q}{\epsilon_0},
+\end{equation}
+where $Q$ is the total charge enclosed by the surface $S$. This result is called
+{\em Gauss' law}, and does
+not depend on the shape of the surface. 
+
+Suppose, finally, that instead of having a set of discrete charges, we have a
+continuous charge distribution described by a charge density $\rho({\bf r})$.
+The charge contained in a small rectangular volume of dimensions $dx$, $dy$, and $dz$
+located at position
+ ${\bf r}$ is $Q=\rho({\bf r})\,dx\,dy\,dz$. However, if we integrate
+$\nabla\cdot {\bf E}$ over this volume element we obtain
+\begin{equation}
+\nabla \cdot {\bf E} \,\,dx\,dy\,dz = \frac{Q}{\epsilon_0}= 
+\frac{\rho\,dx\,dy\,dz}{\epsilon_0},
+\end{equation}
+where use has been made of Equation~(\ref{e351}). Here, the volume element is assumed to be
+sufficiently small that $\nabla\cdot{\bf E}$ does not vary significantly across
+it. Thus, we get
+\begin{equation}\label{e353}
+\nabla \cdot {\bf E} = \frac{\rho}{\epsilon_0}.
+\end{equation}
+This is the first of four field equations, called Maxwell's equations, which 
+ together form 
+a complete description of electromagnetism. Of course, our derivation of
+Equation~(\ref{e353}) is only valid for electric fields generated by stationary
+charge distributions. In principle, additional terms might be required to describe
+fields generated by moving charge distributions. However, 
+it turns out that this is not the case,
+and that Equation~(\ref{e353}) is universally valid. 
+
+Equation~(\ref{e353}) is a differential equation describing the electric field generated
+by a set of  charges. We already know the solution to this equation when the
+charges are stationary:
+it is given by Equation~(\ref{e312}),
+\begin{equation}\label{e354}
+{\bf E}({\bf r}) = \frac{1}{4\pi \epsilon_0} \int \rho({\bf r}')\,
+\frac{{\bf r} - {\bf r}'}{|{\bf r} - {\bf r}'|^3}\,d^3{\bf r}'.
+\end{equation}
+Equations~(\ref{e353}) and (\ref{e354}) can be reconciled provided 
+\begin{equation}\label{e355}
+\nabla\cdot\left(\frac{{\bf r} - {\bf r}'}{|{\bf r} - {\bf r}'|^3}\right)
+=- \nabla^2\left(\frac{1}{|{\bf r} - {\bf r}'|}\right)= 4\pi\,\delta({\bf r}
+-{\bf r}'),
+\end{equation}
+where use has been made of Equation~(\ref{e315}).
+It follows that
+\begin{eqnarray}
+\nabla\cdot{\bf E}({\bf r})& = &\frac{1}{4\pi\epsilon_0}\int
+\rho({\bf r}')\,\nabla\cdot\left(\frac{{\bf r} - {\bf r}'}
+{|{\bf r} - {\bf r}'|^3}\right)\,d^3{\bf r}'\nonumber\\[0.5ex]
+&=&
+\int \frac{\rho({\bf r}')}{\epsilon_0} \,\delta({\bf r} - {\bf r}')\,
+d^3{\bf r}' = \frac{\rho({\bf r})}{\epsilon_0},
+\end{eqnarray}
+which is the desired result. The most general form  of Gauss' law, Equation~(\ref{e351}),
+is obtained by integrating Equation~(\ref{e353}) over a volume $V$ surrounded by 
+a surface $S$, and making use of
+Gauss' theorem:
+\begin{equation}
+\oint_S {\bf E}\cdot d{\bf S} = \frac{1}{\epsilon_0} \int_V \rho({\bf r})\,d^3{\bf r}.
+\end{equation}
+
+One particularly interesting application of Gauss' law is {\em Earnshaw's
+theorem}, which states that it is impossible for a collection of charged particles to
+remain in static equilibrium solely under the influence of (classical) electrostatic forces.
+For instance, consider the motion of the $i$th particle in the
+electric field, ${\bf E}({\bf r})$, generated by all of the other static particles.
+The equilibrium position of the $i$th particle corresponds to some
+point ${\bf r}_i$, where ${\bf E}({\bf r}_i)={\bf 0}$. By  implication,
+${\bf r}_i$ does not correspond to the equilibrium position of
+any other particle.
+However, in order
+for ${\bf r}_i$  to be a {\em stable} equilibrium point, the particle
+must experience a {\em restoring force} when it moves a small
+distance away from ${\bf r}_i$ in {\em any} direction. Assuming that the
+$i$th particle is positively charged, this means that the electric
+field  must  point radially towards
+${\bf r}_i$ at all neighbouring points. Hence, if we apply Gauss' law to a small
+sphere centred on ${\bf r}_i$ then there must be a negative flux of
+${\bf E}$ through the surface of the sphere, implying the presence of a negative
+charge at ${\bf r}_i$. However, there is no such charge at ${\bf r}_i$.
+Hence, we conclude that ${\bf E}$ cannot point radially towards ${\bf r}_i$
+at all neighbouring points. In other
+words, there must be some neighbouring points at which ${\bf E}$ is directed {\em away}
+from ${\bf r}_i$. Hence, a positively charged particle
+placed at ${\bf r}_i$ can always escape by moving to such points.
+One corollary of Earnshaw's theorem is that classical electrostatics cannot
+account for the stability of atoms and molecules.
+
+As an example of the use of Gauss' law, let us calculate the electric field
+generated by a spherically symmetric charge annulus of inner radius $a$,
+and outer radius $b$, centered on the origin, and carrying a uniformly
+distributed charge $Q$. Now, from symmetry, we expect a spherically
+symmetric charge distribution to generated a spherically symmetric
+potential, $\phi(r)$. It therefore follows that the electric field is both
+spherically symmetric and radial: {\em i.e.}, ${\bf E} = E_r(r)\,{\bf e}_r$.
+Let us apply Gauss' law to an imaginary spherical surface, of radius
+$r$, centered on the origin---see Figure~\ref{fgauss}. Such a surface is generally known as a {\em Gaussian surface}. Now, according to
+Gauss' law, the flux of the electric field out of the surface is equal to
+the enclosed charge, divided by $\epsilon_0$. The flux is easy to calculate since the electric field is everywhere perpendicular to the
+surface. We obtain
+$$
+4\pi\,r^2\,E_r(r) = \frac{Q(r)}{\epsilon_0},
+$$
+where $Q(r)$ is the charge enclosed by a Gaussian surface of radius $r$.
+Now, it is evident that
+\begin{equation}
+Q(r) = \left\{ 
+\begin{array}{lcc}
+0&\mbox{\hspace{1cm}}&r<a\\[0.5ex]
+[(r^3-a^3)/(b^3-a^3)]\, Q&&a\leq r\leq b\\[0.5ex]
+Q&&b<r
+\end{array}
+\right..
+\end{equation}
+Hence,
+\begin{equation}
+E_r(r) = \left\{ 
+\begin{array}{lcc}
+0&\mbox{\hspace{1cm}}&r<a\\[0.5ex]
+[Q/(4\pi\epsilon_0\,r^2)]\,[(r^3-a^3)/(b^3-a^3)]&&a\leq r\leq b\\[0.5ex]
+Q/(4\pi\epsilon_0\,r^2)&&b<r
+\end{array}
+\right..
+\end{equation}
+The above electric field distribution illustrates two important points. Firstly,
+ the electric field generated outside a spherically symmetric
+charge distribution is the same that which would be generated if all of the charge in the distribution
+were concentrated at its center. Secondly, zero electric field is generated inside
+an empty cavity surrounded by a spherically symmetric charge distribution.
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter3/fig3.5.eps}}
+\caption{\em An example use of Gauss' law.}\label{fgauss}
+\end{figure}
+
+We can  easily determine the electric potential associated with the above 
+electric field using
+\begin{equation}
+\frac{\partial\phi(r)}{\partial r} = -E_r(r).
+\end{equation}
+The boundary conditions are that $\phi(\infty)=0$, and that $\phi$ is
+{\em continuous}\/ at $r=a$ and $r=b$. (Of course, a discontinuous potential would lead to
+an infinite electric field, which is unphysical.) It follows that
+\begin{equation}
+\phi(r) = \left\{ 
+\begin{array}{lcc}
+[Q/(4\pi\epsilon_0)]\,(3/2)\,[(b^2-a^2)/(b^3-a^3)]&\mbox{\hspace{0.5cm}}&r<a\\[0.5ex]
+[Q/(4\pi\epsilon_0\,r)]\,[(3b^3\,r-r^3-2\,a^3)/2\,(b^3-a^3)]&&a\leq r\leq b\\[0.5ex]
+Q/(4\pi\epsilon_0\,r)&&b<r
+\end{array}
+\right..
+\end{equation}
+Hence, the work done in slowly moving a charge from infinity to the
+center of the distribution (which is minus the work done by the electric field)
+is
+\begin{equation}
+W = q\,\left[\phi(0)-\phi(\infty)\right] = \frac{q\,Q}{4\pi\epsilon_0}\,\frac{3}{2}\left(\frac{b^2-a^2}{b^3-a^3}\right).
+\end{equation}
+
+\section{Poisson's Equation}
+We have seen that the electric field generated by a set of stationary charges can be written as
+the gradient of a scalar potential, so  that
+\begin{equation}
+{\bf E} = - \nabla \phi.
+\end{equation}
+This equation can be combined with the field equation (\ref{e353}) to give a partial
+differential equation for the scalar potential:
+\begin{equation}\label{e359}
+\nabla^2 \phi = -\frac{\rho}{\epsilon_0}.
+\end{equation}
+This is an example of a very famous type of partial differential equation known
+as {\em Poisson's equation}.
+
+In its most general form, Poisson's equation is written
+\begin{equation}
+\nabla^2 u = v,
+\end{equation}
+ where $u({\bf r})$ is some scalar potential which is
+to be determined, and
+$ v({\bf r})$ is a known ``source function.'' The most common boundary condition
+applied to this equation is that the potential $u$  is zero at infinity.
+The solutions to Poisson's equation are completely superposable. Thus, if
+$u_1$ is the potential generated by the source function $v_1$, and
+$u_2$ is the potential generated by the source function $v_2$, so that
+\begin{equation}
+\nabla^2 u_1 = v_1, \mbox{\hspace{1cm}} \nabla^2 u_2=v_2,
+\end{equation}
+then the potential generated by $v_1 + v_2$ is $u_1+u_2$, since
+\begin{equation}
+\nabla^2(u_1+u_2) = \nabla^2 u_1 + \nabla^2 u_2 = v_1 + v_2.
+\end{equation}
+Poisson's equation has this property because it is {\em linear}\/ in both the
+potential and the source term.
+
+The fact that the solutions to Poisson's equation are superposable suggests a
+general method for solving this equation. Suppose that we could construct all
+of the  solutions
+generated by point sources. Of course, these solutions
+must satisfy the appropriate boundary conditions.
+Any general source function can be built up out of a set of suitably weighted
+point sources, so the general solution of Poisson's equation must be
+expressible as a similarly weighted sum over the point source solutions. Thus, once we
+know all of the point source solutions we can construct any other solution.
+In mathematical terminology, we require the solution to
+\begin{equation}\label{e363}
+\nabla^2 G({\bf r}, \,{\bf r}') = \delta({\bf r} - {\bf r}')
+\end{equation}
+which goes to zero as $|{\bf r}|
+ \rightarrow\infty$. The function $G({\bf r}, \,{\bf r}')$
+is the solution generated by a unit point source located at position ${\bf r}'$.
+This function is known to mathematicians as a {\em Green's function}. The solution
+generated by a general source function $v({\bf r})$ is simply the 
+appropriately weighted sum of
+all of the Green's function solutions:
+\begin{equation}\label{e364}
+u({\bf r}) = \int G({\bf r},\, {\bf r}')\, v({\bf r}')\,d^3 {\bf r}'.
+\end{equation}
+We can easily demonstrate that this is the correct solution:
+\begin{equation}
+\nabla^2 u({\bf r}) = \int \left[\nabla^2 
+G({\bf r},\, {\bf r}')\right]\, v({\bf r}')\,d^3 {\bf r}'
+= \int \delta({\bf r} - {\bf r}')\,v({\bf r}')\,d^3 {\bf r}' = v({\bf r}).
+\end{equation}
+
+Let us return to Equation~(\ref{e359}):
+\begin{equation}\label{e366}
+\nabla^2 \phi = -\frac{\rho}{\epsilon_0}.
+\end{equation}
+The Green's function for this equation satisfies Equation~(\ref{e363}) with $|G|\rightarrow \infty$
+as $|{\bf r}|\rightarrow 0$. It follows from Equation~(\ref{e355}) that
+\begin{equation}\label{e367}
+G({\bf r}, {\bf r}') = -\frac{1}{4\pi} \frac{1}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+Note, from Equation~(\ref{e320}), that the Green's function has the same form as the potential
+generated by a point charge. This is hardly surprising, given the definition of
+a Green's function. It follows from Equation~(\ref{e364}) and (\ref{e367}) that the general solution
+to Poisson's equation, (\ref{e366}), is written
+\begin{equation}
+\phi({\bf r}) = \frac{1}{4\pi\epsilon_0}\int \frac{\rho({\bf r}')}
+{|{\bf r} - {\bf r}'|} \,d^3{\bf r}'.
+\end{equation}
+In fact, we have already obtained this solution by another method [see Equation~(\ref{e317})].
+
+\section{Amp\`{e}re's Experiments}
+As legend has it, in 1820 the Danish physicist Hans Christian \O rsted was giving a lecture 
+demonstration of various electrical and
+magnetic effects. Suddenly, much to his surprise, he noticed that
+the needle of a compass he was holding
+was deflected  when he moved it close to  a current carrying
+wire. Up until then, magnetism has been thought of as solely a property of some rather
+unusual rocks called loadstones.
+Word of this discovery spread quickly along the scientific grapevine,
+and the French physicist  Andre Marie Amp\`{e}re 
+immediately decided to investigate further. 
+Amp\`{e}re's apparatus consisted (essentially) of a long straight wire carrying an
+electric 
+current $I$. Amp\`{e}re quickly discovered that the needle of a small compass maps
+out a series of concentric circular loops in the plane
+perpendicular to  a current carrying wire---see Figure~\ref{f27}.
+The direction of circulation around these magnetic loops is conventionally taken to be
+the direction in which the {\em North}\/ pole of the compass needle
+points.
+Using  this convention, the circulation of the loops is given by a
+right-hand rule: if the thumb of the right-hand points along the direction of the
+current then the fingers of the right-hand circulate in the same sense as the 
+magnetic loops.
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter3/fig3.6.eps}}
+\caption{\em Magnetic loops around a current carrying wire.}\label{f27}
+\end{figure}
+
+Amp\`{e}re's next series of experiments involved bringing a short test wire, carrying
+a current $I'$,
+close to the original wire, and investigating the force exerted on the test wire---see Figure~\ref{f28}.
+This experiment is not quite as clear cut as Coulomb's experiment because, unlike
+electric charges, 
+electric currents cannot exist as point entities---they
+have to flow in complete circuits. We must
+imagine that the circuit which connects with  the central wire is sufficiently
+far away that it has no appreciable influence on the outcome of the experiment.
+The circuit which connects with
+ the test wire is more problematic. Fortunately, if the
+feed wires are twisted around each other, as indicated in Figure~\ref{f28}, then 
+they effectively cancel one another out, and also do not influence the outcome of
+the experiment.
+\begin{figure}
+\epsfysize=2.25in
+\centerline{\epsffile{chapter3/fig3.7.eps}}
+\caption{\em Amp\`{e}re's experiment.}\label{f28}
+\end{figure}
+
+Amp\`{e}re discovered that the force exerted on the test wire is directly proportional
+to its length. He also made the following observations.
+If the current in the test wire 
+({\em i.e.}, the test current) flows parallel to the current in the central wire 
+then the two wires  attract one another. If the current in the test
+wire is reversed then the two wires  repel one another.
+If the test current points radially towards the central wire 
+(and the current in the central wire flows upwards) then the test wire
+is subject to a downwards force. If the test current is reversed then the force is
+upwards. If the test current is rotated in a single plane, so that it starts
+parallel to the central current and ends up pointing radially
+towards it, then the force on
+the test wire is of constant magnitude, and is always at right-angles to the
+test current. If the test current is parallel to a magnetic loop then there is
+no force exerted on the test wire. If the test current is rotated in
+a single plane, so that it starts parallel to the central current and ends up
+pointing along a magnetic loop, then the magnitude of the force on the
+test wire attenuates like $\cos\theta$ (where $\theta$ is the angle the current
+is turned through---$\theta=0$ corresponds to the
+case where the test current is parallel to the central current),
+ and its direction is again always at right-angles to
+the test current. Finally, Amp\`{e}re was able to establish that the attractive
+force between two parallel current carrying wires is proportional to the product of
+the two currents, and
+ falls off like the inverse of the perpendicular
+distance between the wires.
+
+This rather complicated force law can be summed up succinctly in vector notation
+provided that we define a vector field ${\bf B}({\bf r})$, called the {\em magnetic field}, 
+whose direction is always parallel to the loops mapped out by a small
+  compass. The dependence of the force per unit length, ${\bf F}$, acting on a
+test wire with the different 
+possible orientations of the test current is described  by 
+\begin{equation}
+{\bf F} = {\bf I}' \times{\bf B},\label{e369}
+\end{equation}
+where ${\bf I}'$ is a vector whose direction and magnitude are the same as those
+of the test current. Incidentally, the SI unit of electric current is the
+ampere (A), which is the same as a coulomb per second.
+The SI unit of magnetic field-strength is the tesla (T), which is the
+same as a newton per ampere per meter.
+The variation of the force per unit length acting on
+a test wire with the strength of the 
+central current and the perpendicular distance $r$ to the central wire is 
+summed up by saying that the magnetic field-strength is proportional to $I$ and
+inversely proportional to $r$. Thus, defining cylindrical
+polar coordinates aligned along the
+axis of the central current, we have
+\begin{equation}
+B_\theta = \frac{\mu_0\,I}
+{2 \pi\, r},
+\end{equation}
+with $B_r=B_z = 0$. The constant of proportionality $\mu_0$ is called the
+{\em permeability of free space}, and takes the value
+\begin{equation}
+\mu_0 = 4\pi \times 10^{-7}\,{\rm N\,A^{-2}}.
+\end{equation}
+
+The concept of a magnetic field allows the calculation of the force on a test
+wire to be conveniently split into two parts. In the first part, we calculate the
+magnetic field generated by the current flowing in the central wire. This field
+circulates  in the plane normal to the wire: its magnitude is
+proportional to the central current, and inversely proportional to the  perpendicular
+distance from the wire. In the second part, we use
+Equation~(\ref{e369}) to calculate the force per unit
+length acting on a
+short current carrying wire located in the magnetic field 
+generated by the central current.
+This force is perpendicular to both the magnetic field and the direction of the
+test current. Note that, at this stage, we have no reason to suppose that the magnetic
+field has any real physical existence. It is introduced merely to facilitate the calculation
+of the  force exerted  on  the test wire by the central wire.
+
+\section{Lorentz Force}\label{slorentz}
+The flow of an electric current down
+a conducting  wire is ultimately due to  the motion of
+electrically charged particles
+(in most cases, electrons) through the conducting medium.
+ It seems reasonable, therefore, that
+the force exerted on the wire when it is placed in a magnetic field is really
+the resultant of the  forces exerted on these moving charges. Let us
+suppose that this is the case. 
+
+Let $A$ be the 
+(uniform) cross-sectional area of the (cylindrical) wire, and let $n$ be the number density
+of mobile charges in the conductor. Suppose that the
+mobile charges each have charge $q$ and velocity ${\bf v}$. We must assume that
+the conductor also contains stationary charges, of charge $-q$ and number density
+$n$ (say), so that the net charge density in the wire is zero. In most conductors, the
+mobile charges are electrons, and the stationary charges are ions.
+The magnitude of the electric current flowing through the wire is simply the
+number of coulombs per second which flow past a given point. In one second,
+a mobile charge moves a distance $v$, so all of the charges contained in a
+cylinder of cross-sectional area $A$ and length $v$ flow past a given point.
+Thus, the magnitude of the current is $q\,n\, A\,v$. The direction of the 
+current is the same as the direction of motion of the charges, so the
+vector current is ${\bf I}' = q\,n\,A\,{\bf v}$.
+According to Equation~(\ref{e369}), the force per unit length acting on the wire is
+\begin{equation}
+{\bf F} = q\,n\, A \,{\bf v}\times{\bf B}.
+\end{equation}
+However, a unit length of the wire contains $n\,A$ moving charges. So, assuming
+that each charge is subject to an equal force from the magnetic field (we have
+no reason to suppose otherwise), the force acting on an individual charge is
+\begin{equation}
+{\bf f} = q\,{\bf v} \times{\bf B}.
+\end{equation}
+We can combine this with Equation~(\ref{e39}) to give the force acting on a charge $q$ moving
+with velocity ${\bf v}$ in an electric field ${\bf E}$ and a magnetic field
+${\bf B}$:
+\begin{equation}\label{e374}
+{\bf f} = q\,{\bf E} + q\,{\bf v} \times{\bf B}.
+\end{equation}
+This is called the {\em Lorentz force law}, after the Dutch physicist
+Hendrik Antoon Lorentz who first formulated it. The electric
+force on a charged particle is parallel to the local electric field.
+The magnetic force, however, is perpendicular to both the local magnetic
+field and the particle's direction of motion. No magnetic force is exerted on a
+stationary charged particle.
+
+The
+equation of motion of a free particle of charge $q$ and
+mass $m$ moving in electric and
+magnetic fields is
+\begin{equation} \label{e3.75}
+m\frac{d{\bf v}}{dt} = q\,{\bf E} + q\,{\bf v} \times{\bf B},
+\end{equation}
+according to the Lorentz force law.
+This equation of motion was first verified in a famous experiment carried out
+by the Cambridge physicist J.J.~Thomson in 1897. Thomson was investigating
+{\em cathode rays}, a then mysterious form of radiation emitted by a heated
+metal element held at a large negative voltage ({\em i.e.}, a cathode) with respect
+to another metal element ({\em i.e.}, an anode)  in an evacuated tube. 
+German physicists held that cathode rays were
+a form of electromagnetic radiation, whilst British and French physicists suspected
+that they were, in reality, a stream of charged particles. Thomson was able to
+demonstrate that the latter view was correct. In Thomson's experiment, the
+cathode rays passed though a region of ``crossed'' electric and magnetic
+fields (still in vacuum). The fields were perpendicular to the original
+trajectory of the rays, and were also mutually perpendicular.
+
+Let us analyze  Thomson's experiment.  Suppose that
+the rays are originally traveling in the $x$-direction, and are subject to
+a uniform electric field $E$ in the   $z$-direction and a uniform magnetic
+field $B$ in the $-y$-direction---see Figure~\ref{fthom}. Let us assume, as Thomson did, that cathode
+rays are a stream of particles of mass $m$ and charge $q$. The
+equation of motion of the particles in the $z$-direction is
+\begin{equation}
+m \,\frac{d^2 z}{dt^2} = q\left(E - v \,B\right),\label{e376}
+\end{equation}
+where $v$ is the velocity of the particles in the $x$-direction.
+Thomson started off his experiment by
+only turning on the  electric field in his apparatus, and
+measuring the
+deflection $d$ of the ray in the $z$-direction after it had traveled a
+distance  $l$ through the electric field. It is clear from the equation
+of motion that 
+\begin{equation}\label{e377}
+d = \frac{q}{m} \frac{E\,t^2}{2} = \frac{q}{m} \frac{E\,l^2}{2\,v^2},
+\end{equation}
+where the ``time of flight'' $t$ is replaced by $l/v$. This formula is only
+valid if $d\ll l$, which is assumed to be the case. 
+Next, Thomson  turned on
+the magnetic field in his apparatus, and adjusted it so that the cathode ray was
+no longer deflected. The lack of deflection implies that the net force on the
+particles in the $z$-direction was zero. In other words, the electric and
+magnetic forces balanced exactly. It follows from Equation~(\ref{e376})
+that with a properly adjusted magnetic field-strength
+\begin{equation}\label{e378}
+v = \frac{E}{B}.
+\end{equation}
+Equations~(\ref{e377}) and (\ref{e378})
+  can be combined and rearranged to give the charge to mass ratio of
+the particles in terms of measured quantities:
+\begin{equation}
+\frac{q}{m} = \frac{2\,d\, E}{l^2 \,B^2}.
+\end{equation}
+Using this method, Thomson inferred that cathode rays were made up of
+negatively charged particles (the sign of the charge is obvious from the
+direction of the deflection in the electric field) with a charge to mass
+ratio of $-1.7\times 10^{11}$~C/kg. A decade later, in 1908, the American Robert
+Millikan performed his famous ``oil drop'' experiment, and discovered that
+mobile electric charges are quantized in units of $-1.6\times 10^{-19}$~C. 
+Assuming that mobile electric charges and the particles which
+make up cathode rays are one and the same thing,
+ Thomson's and Millikan's experiments imply that the mass
+of  these particles is  $9.4\times 10^{-31}$~kg. Of course, this is the mass of
+an electron (the modern value is $9.1\times 10^{-31}$~kg), and  
+$-1.6\times 10^{-19}$~C is the charge of an electron. Thus, cathode rays are, in fact,
+streams of electrons which are  emitted from a heated cathode, and then
+accelerated because of  the large voltage difference between the cathode and anode.
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter3/fig3.8.eps}}
+\caption{\em Thomson's experiment.}\label{fthom}
+\end{figure}
+
+Consider, now, a particle of mass $m$ and charge $q$ moving in a uniform
+magnetic field, ${\bf B} = B\,{\bf e}_z$. According, to
+Equation~(\ref{e3.75}), the particle's equation of motion can be written:
+\begin{equation}
+m\,\frac{d{\bf v}}{dt} = q\,{\bf v}\times{\bf B}.
+\end{equation}
+This reduces to
+\begin{eqnarray}
+\frac{dv_x}{dt} &=& {\mit\Omega}\,v_y,\\[0.5ex]
+\frac{dv_y}{dt} &=&-{\mit\Omega}\,v_x,\\[0.5ex]
+\frac{d v_z}{dt} &=& 0.
+\end{eqnarray}
+Here, ${\mit\Omega} = q\,B/m$ is called the {\em cyclotron frequency}.
+The above equations can easily be solved to give
+\begin{eqnarray}
+v_x&=& v_\perp\,\cos({\mit\Omega}\,t),\\[0.5ex]
+v_y&=& - v_\perp\,\sin({\mit\Omega}\,t),\\[0.5ex]
+v_z &=& v_\parallel,
+\end{eqnarray}
+and
+\begin{eqnarray}
+x&=& \frac{v_\perp}{\mit\Omega}\,\sin({\mit\Omega}\,t),\\[0.5ex]
+y&=& \frac{v_\perp}{\mit\Omega}\,\cos({\mit\Omega}\,t),\\[0.5ex]
+z &=& v_\parallel\,t.
+\end{eqnarray}
+According to these equations, the particle trajectory is a {\em spiral}\/
+whose axis is parallel to the magnetic field---see Figure~\ref{flamor}. The radius of the
+spiral is $\rho=v_\perp/{\mit\Omega}$, where $v_\perp$ is the particle's
+constant speed in the plane perpendicular to the magnetic field. Here, $\rho$
+is termed the {\em Larmor radius}.
+The particle
+drifts parallel to the magnetic field at a constant velocity, $v_\parallel$. Finally,
+the particle gyrates in the plane perpendicular to the magnetic field at the cyclotron
+frequency. Oppositely charged particles gyrate in opposite directions.
+\begin{figure}
+\epsfysize=0.75in
+\centerline{\epsffile{chapter3/fig3.9.eps}}
+\caption{\em Trajectory of a charged particle in a uniform magnetic field.}\label{flamor}
+\end{figure}
+
+Finally, if a particle is subject to a force ${\bf f}$, and moves a distance 
+$\delta
+{\bf r}$ in a time interval $\delta t$, then the work done on the particle by the
+force is
+\begin{equation}\label{e380}
+\delta W = {\bf f}\cdot \delta {\bf r}.
+\end{equation}
+Thus, the power input  to the particle from the force field is
+\begin{equation}
+P = \lim_{\delta t\rightarrow 0} \frac{\delta W}{\delta t} = {\bf f}\cdot
+ {\bf v},
+\end{equation}
+where ${\bf v}$ is the particle's velocity. It follows from the Lorentz force
+law, Equation~(\ref{e374}), that the power input to a particle moving in electric and magnetic
+fields is
+\begin{equation}
+P = q\,{\bf v}\cdot {\bf E}.
+\end{equation}
+Note that a charged particle can gain (or lose) energy from an electric
+field, but not from a magnetic field. This is because the magnetic force is
+always perpendicular to the particle's direction of motion, and, therefore, does
+no work on the particle [see Equation~(\ref{e380})]. Thus, in particle accelerators, magnetic
+fields are often used to guide particle motion ({\em e.g.}, in a circle), but the
+actual acceleration is always performed by electric fields.
+
+\section{Amp\`{e}re's Law}
+Magnetic fields, like electric fields, are completely superposable. So, if
+a field ${\bf B}_1$ is generated by a current $I_1$ flowing through some circuit,
+and a field ${\bf B}_2$ is generated by a current $I_2$ flowing through another
+ circuit, then when the currents $I_1$ and $I_2$ flow through both circuits
+simultaneously the generated magnetic field is ${\bf B}_1+{\bf B}_2$.
+
+Consider two parallel wires separated by a perpendicular distance $r$
+and carrying electric currents $I_1$ and $I_2$, respectively---see Figure~\ref{f29}. The magnetic field
+ strength at the second wire due to the current flowing in the first wire 
+is $B = \mu_0\, I_1/2\pi \,r$. This field is orientated at right-angles to the second
+wire, so the force per unit length exerted on the second wire is
+\begin{equation}
+F= \frac{\mu_0\, I_1 \,I_2}{2\pi \,r}.\label{e383}
+\end{equation}
+This follows from Equation~(\ref{e369}), which is valid for continuous wires as well as short
+test wires. The force acting on the second wire is directed radially inwards towards
+the first wire (assuming that $I_1\,I_2>0$). The magnetic field strength at the first wire due to the
+current flowing in the second wire is $B= \mu_0\, I_2/2\pi\ r$. This field
+is orientated at right-angles to the first wire, so the force per unit length acting
+on the first wire is equal and opposite to that acting on the second wire, 
+according to Equation~(\ref{e369}).  Equation~(\ref{e383}) is sometimes called {\em Amp\`{e}re's law},
+and is clearly another example of an action at a distance law: {\em i.e.}, if the
+current in the first wire is suddenly changed then the force on the second wire
+immediately adjusts. In reality, there should be a short time delay, at
+least as long as the propagation time for a light signal between the two wires. 
+Clearly, Amp\`{e}re's law is not strictly correct. However, as long as we restrict
+our investigations to {\em steady}\/ currents it is perfectly adequate.  
+\begin{figure}
+\epsfysize=1.75in
+\centerline{\epsffile{chapter3/fig3.10.eps}}
+\caption{\em Two parallel current carrying wires.}\label{f29}
+\end{figure}
+
+\section{Magnetic Monopoles?}
+Suppose that we have an infinite straight wire carrying an electric current
+$I$. Let the wire be aligned along the $z$-axis. The magnetic field
+generated by such a  wire is written
+\begin{equation}\label{e384}
+{\bf B} = \frac{\mu_0 \,I}{2\pi}\left(\frac{-y}{r^2},\, \frac{x}{r^2},\, 0 \right)
+\end{equation}
+in Cartesian coordinates, where $r=\sqrt{x^2+y^2}$. The divergence of this
+field is
+\begin{equation}
+\nabla\cdot {\bf B} = \frac{\mu_0\, I}{2\pi}\left( \frac{2\,y\,x}{r^4}-\frac{2\,x\,y}{r^4}
+\right) = 0,
+\end{equation}
+where use has been made of $\partial r/\partial x = x/r$, {\em etc.} We saw in Section~\ref{s33}
+that the divergence of the electric field appeared, at first sight, to be zero, but,
+was, in reality,  a delta-function, because the volume integral of
+$\nabla\cdot {\bf E}$ was non-zero. Does the same
+sort of thing happen for the divergence of the magnetic field? Well, if we could
+find a closed surface $S$ for which $\oint_S {\bf B}\!\cdot \!d{\bf S} \neq 0$ then,
+according to Gauss' theorem, $\int_V \nabla \cdot {\bf B} \,dV \neq 0 $, where 
+$V$ is the volume enclosed by $S$. This would certainly imply
+that $\nabla\cdot {\bf B} $ is some sort of delta-function. So, can we
+find such a surface? Consider a cylindrical surface
+aligned  with the wire. The magnetic field is everywhere tangential to the
+outward surface element, so this surface certainly has zero magnetic flux coming
+out of it. In fact, it is impossible to invent any closed surface for which
+$\oint_S {\bf B}\cdot d{\bf S} \neq 0$ with ${\bf B}$ given by Equation~(\ref{e384}) (if
+you do not believe this, just try and find one!). This suggests  that the divergence
+of a magnetic field generated by steady electric currents
+really is zero. Admittedly, we
+have only proved this for infinite straight currents, but, as will be demonstrated
+presently, it is true in general.
+
+If  $\nabla\cdot {\bf B}=0$ then  ${\bf B}$ is a
+{\em solenoidal} vector field. In other words,  field-lines of ${\bf B}$
+never begin or end.  This is certainly the
+case in Equation~(\ref{e384}) where the field-lines are a set of concentric circles centred
+on the $z$-axis.  What about magnetic
+fields generated by permanent magnets (the modern equivalent of loadstones)?
+Do they also never begin or end? Well, we know that a conventional bar
+magnet has both a North and South magnetic pole (like the Earth). If we track the
+magnetic field-lines with a small compass they  all emanate from the South
+pole, spread out, and eventually reconverge on the North pole---see Figure~\ref{f30}. It appears likely
+(but we cannot prove it with a compass) that the field-lines inside the magnet
+connect from the North to the South pole so as to form closed loops which never begin or end.
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter3/fig3.11.eps}}
+\caption{\em Magnetic field-lines generated by a bar magnet.}\label{f30}
+\end{figure}
+
+Can we produce an isolated North or South magnetic pole: for instance, by snapping
+a bar magnet in two? A compass needle would always point towards an isolated
+North pole, so this would act  like a negative ``magnetic charge.'' 
+Likewise, a compass needle would always point away from an isolated South
+pole, so this would act like a positive ``magnetic charge.'' 
+It is clear, from Figure~\ref{f31},
+that if we take  a closed surface $S$ containing an isolated
+magnetic pole, which is usually termed a {\em magnetic monopole}, then 
+$\oint_S {\bf B}\cdot d{\bf S} \neq 0$: the flux will be positive for an isolated
+South pole, and negative for an isolated North pole. 
+It follows from Gauss'
+theorem that if $\oint_S {\bf B}\cdot d{\bf S} \neq 0$ then $\nabla\cdot{\bf B}
+\neq 0$. Thus, the  statement that magnetic fields are solenoidal, or that
+$\nabla\cdot{\bf B} = 0$, is equivalent to  the statement that {\em
+there are no magnetic monopoles}. It is not clear, {\em a priori}, that this is
+a true statement. In fact, it is quite possible to formulate electromagnetism so as to
+allow for magnetic monopoles. However, as far as we are aware, there are no  magnetic
+monopoles in the Universe. 
+At least, if there are any then they are all 
+hiding from us!
+We know that if we try to make a magnetic monopole  by snapping a bar magnet in two
+then we just end up with two smaller bar magnets. If we snap one of these smaller
+magnets in two then we end up with two even smaller bar magnets. We can continue
+this process down to the atomic level without ever producing a magnetic monopole.
+In fact, permanent magnetism 
+is generated by electric currents circulating on the atomic
+scale, and so this type of
+magnetism is not fundamentally different to the magnetism generated
+by macroscopic currents. 
+\begin{figure}
+\epsfysize=2.25in
+\centerline{\epsffile{chapter3/fig3.12.eps}}
+\caption{\em Magnetic field-lines generated by magnetic monopoles.}\label{f31}
+\end{figure}
+
+In conclusion, {\em all}\/ steady magnetic fields in the Universe are generated by 
+circulating electric currents of some description. Such fields are solenoidal:
+that is, they never begin or end, and satisfy the field equation
+\begin{equation}
+\nabla \cdot {\bf B} = 0.
+\end{equation}
+This, incidentally,
+ is the second of Maxwell's equations. Essentially, it says that there is no
+such thing as a magnetic monopole. We have only proved that $\nabla\cdot{\bf B} =0$
+ for
+steady magnetic fields, but, in fact, this is also the case  for time-dependent fields
+(see later).
+
+\section{Amp\`{e}re's Circuital Law}
+Consider, again, an infinite straight wire aligned along the $z$-axis and  carrying
+a current $I$. The field generated by such a wire is written
+\begin{equation}
+B_\theta = \frac{\mu_0\, I}{2\pi \,r}
+\end{equation}
+in cylindrical polar coordinates. Consider a circular loop $C$ in the $x$-$y$ plane
+which is centred on the wire. Suppose that the radius of this loop is $r$.
+Let us evaluate the line integral $\oint_C {\bf B} \cdot d{\bf l}$.
+This integral is easy to perform because the magnetic field is
+always  parallel to the
+line element. 
+We have
+\begin{equation}\label{e388}
+\oint_C {\bf B} \cdot d{\bf l} = \oint B_\theta \,r\,d\theta= \mu_0 \,I.
+\end{equation}
+However, we know from Stokes' theorem that
+\begin{equation}\label{e389}
+\oint_C {\bf B} \cdot d{\bf l} = \int_S \nabla\times {\bf B} \cdot d{\bf S},
+\end{equation}
+where $S$ is any surface attached to the loop $C$. 
+
+Let us evaluate $\nabla\times {\bf B} $ directly. According to Equation~(\ref{e384}),
+\begin{eqnarray}\label{e390a}
+(\nabla\times{\bf B})_x &=& \frac{\partial B_z}{\partial y} - \frac{\partial B_y}
+{\partial z} = 0,\\[0.5ex]
+(\nabla\times{\bf B})_y &=&  \frac{\partial B_x}{\partial z} - \frac{\partial B_z}
+{\partial x} = 0,\\[0.5ex]
+(\nabla\times {\bf B})_z &=&  \frac{\partial B_y}{\partial x} - \frac{\partial B_x}
+{\partial y} \nonumber\\[0.5ex]&&= \frac{\mu_0\, I}{2\pi} \left(
+\frac{1}{r^2} - \frac{2\,x^2}{r^4} +\frac{1}{r^2} -\frac{2 \,y^2}{r^4}\right) =0,\label{e390c}
+\end{eqnarray}
+where use has been made of $\partial r/\partial x = x/r$, {\em etc.} We now have a problem.
+Equations (\ref{e388}) and (\ref{e389}) imply that
+\begin{equation}
+\int_S \nabla\times {\bf B} \cdot d{\bf S} = \mu_0 \,I.\label{e391}
+\end{equation}
+But,  we have just demonstrated that $\nabla\times{\bf B} = {\bf 0}$. This problem
+is very reminiscent of the difficulty we had earlier with ${\nabla}\cdot {\bf E}$. 
+Recall that $\int_V {\nabla}\cdot {\bf E} \,dV= q/\epsilon_0$ for a volume $V$ containing
+a discrete charge $q$, but that $\nabla \cdot{\bf E} = 0$ at a general point.
+We got around this problem
+ by saying that $\nabla\cdot {\bf E}$ is a three-dimensional
+delta-function whose spike is  coincident with the location of the charge. 
+Likewise, we can get around our present difficulty by saying that $\nabla\times
+{\bf B}$ is a two-dimensional delta-function. A three-dimensional delta-function
+is a singular (but integrable) {\em point} in space, whereas a two-dimensional 
+delta-function is a singular {\em line} in space. 
+It is clear from an examination of Equations~(\ref{e390a})--(\ref{e390c}) that the only component of
+$\nabla\times{\bf B}$ which can be singular is the $z$-component, and that this
+can only be singular on the $z$-axis ({\em i.e.}, $r=0$).
+Thus,  the singularity
+coincides with the location of the current, and we can write 
+\begin{equation}
+\nabla\times{\bf B} = \mu_0 \,I\,\delta(x)\,\delta(y)\,{\bf e}_z.\label{e392}
+\end{equation}
+The above equation certainly gives $(\nabla\times{\bf B})_x
+=(\nabla\times{\bf B})_y = 0$,  and $(\nabla\times{\bf B})_z=0$ everywhere apart
+from the $z$-axis, in accordance with Equations~(\ref{e390a})--(\ref{e390c}). Suppose that we integrate over
+a plane surface $S$ connected to the loop $C$. The surface element is
+$d{\bf S} = dx\,dy\,{\bf e}_z$, so
+\begin{equation}
+\int_S \nabla\times{\bf B} \cdot d{\bf S} = \mu_0 \,I \int\int
+ \delta(x)\,\delta(y)\, dx\,dy
+\end{equation}
+where the integration is performed over the region $\sqrt{x^2+ y^2} \leq r$. 
+However, since the  only part  of $S$ which actually
+contributes to the surface integral is the bit which 
+lies infinitesimally close to the $z$-axis, we can integrate over all $x$ and $y$
+without changing the result. Thus, we obtain
+\begin{equation}
+\int_S \nabla\times{\bf B} \cdot d{\bf S} = \mu_0\, I \int_{-\infty}^\infty
+\delta(x)\, dx\int_{-\infty}^{\infty}
+\delta(y)\,dy = \mu_0\, I,\label{e394}
+\end{equation}
+which is in agreement with Equation~(\ref{e391}). 
+
+But, why  have we gone to so much trouble to prove 
+something using vector field theory which can be demonstrated
+ in one line via conventional
+analysis [see Equation~(\ref{e388})]? The answer, of course, is that the vector field
+result is easily generalized, whereas the
+conventional result is just  a special case.
+For instance, it is clear that Equation~(\ref{e394}) is true for {\em any}\/ surface attached to the loop
+C, not just a plane surface.
+ Moreover, suppose that we distort our simple circular loop $C$
+so that it is no longer circular or even lies in one plane.
+ What now is the line integral
+of ${\bf B}$ around the loop? This is no longer a simple problem for conventional
+analysis, because the magnetic field is not parallel to a line element of the
+loop. 
+However, according to Stokes' theorem,
+\begin{equation}
+\oint_C {\bf B} \cdot d{\bf l} = \int_S \nabla\times{\bf B} \cdot d{\bf S},
+\end{equation}
+with $\nabla\times{\bf B}$ given by Equation~(\ref{e392}). Note that the only part of 
+ $S$ which contributes to the surface integral is an infinitesimal region
+centered on the $z$-axis. So, as long as 
+$S$ actually intersects the $z$-axis,
+it does not matter what shape the rest the surface is, and we  always get the same answer
+for the surface integral: namely,
+\begin{equation}
+\oint_C {\bf B}\cdot d{\bf l} = \int_S \nabla\times{\bf B} \cdot d{\bf S}
+=\mu_0\, I.
+\end{equation}
+
+Thus, provided  the curve $C$ circulates the $z$-axis, and, therefore, any surface
+$S$ attached to $C$  intersects the $z$-axis (an odd number of times), the line integral
+$\oint_C {\bf B}\cdot d{\bf l}$ is equal to $\mu_0\, I$.
+  Of course, if $C$ does not circulate the $z$-axis then
+an attached surface $S$ does not intersect the $z$-axis (an odd number of times) and 
+$\oint_C {\bf B}\cdot d{\bf l}$ is zero. There is one more proviso. The line
+integral $\oint_C {\bf B}\cdot d{\bf l}$ is $\mu_0\, I$ for a loop which circulates the
+$z$-axis in a clockwise direction (looking up the
+$z$-axis). However, if the loop circulates in an anti-clockwise
+direction then the integral is $-\mu_0\, I$. This follows because in the latter case
+the $z$-component of the surface element $d{\bf S}$ is oppositely directed to
+the current flow at the point where the surface intersects the wire. 
+
+Let us now consider $N$ wires directed parallel to the $z$-axis, with coordinates
+($x_i$, $y_i$) in the $x$-$y$ plane, each carrying a current $I_i$ in the
+positive $z$-direction. It is fairly obvious that Equation~(\ref{e392}) generalizes
+to
+\begin{equation}\label{e397}
+\nabla\times{\bf B} = \mu_0\sum_{i=1}^N I_i\, \delta(x-x_i)\,\delta(y-y_i)
+\,{\bf e}_z.
+\end{equation}
+If we integrate the magnetic field around some closed curve $C$, which can have any
+shape and does not  necessarily lie in one plane, then Stokes' theorem and
+the above equation imply that 
+\begin{equation}\label{e398}
+\oint_C {\bf B}\cdot d{\bf l} = \int_S \nabla\times{\bf B} \cdot d{\bf S}
+= \mu_0 \,{\cal I},
+\end{equation}
+where ${\cal I}$ is the total current enclosed by the curve. Again, if the
+curve circulates the $i$th wire  in a clockwise direction (looking down the 
+direction of current flow) then the wire contributes $I_i$ 
+to the aggregate current ${\cal I}$.
+On the other hand, 
+if the curve circulates in an anti-clockwise direction then the wire contributes
+$-I_i$. Finally, if the curve does not circulate the wire at all then
+the wire contributes nothing to ${\cal I}$. 
+
+Equation (\ref{e397}) is a field equation describing how a set of $z$-directed
+current carrying wires generate a magnetic field. These wires have
+zero-thickness, which implies that we are trying to squeeze a finite amount of
+current into an infinitesimal region. This
+accounts for the delta-functions on the right-hand side of
+the equation. Likewise, we obtained  delta-functions in Section~\ref{s33}
+because we were dealing with point charges. Let us now generalize to the more
+realistic case of diffuse currents. Suppose that the $z$-current flowing through
+ a small
+ rectangle in the $x$-$y$ plane, centred on  coordinates ($x$, $y$) and of dimensions
+$dx$ and $dy$, is $j_z(x,y)\,dx\,dy$. Here, $j_z$ is termed the {\em current density}\/ in
+the $z$-direction. Let us integrate $(\nabla\times{\bf B})_z$ over this rectangle.
+The rectangle is assumed to be sufficiently small that $(\nabla\times{\bf B})_z$
+does not vary appreciably across it. According to Equation~(\ref{e398}), this integral is
+equal to $\mu_0$ times the total $z$-current flowing through the rectangle. Thus,
+\begin{equation}
+(\nabla\times{\bf B})_z \,dx\,dy = \mu_0\, j_z\,dx\,dy,
+\end{equation}
+which implies that
+\begin{equation}
+(\nabla\times{\bf B})_z = \mu_0 \,j_z.\label{e3100}
+\end{equation}
+Of course, there is nothing special about the $z$-axis.
+Hence, we can obtain analogous equations for diffuse currents flowing
+in the $y$- and $z$-directions. We can combine all of these equations
+to form a single vector field equation
+which 
+describes how  electric currents generate magnetic fields: {\em i.e.},
+\begin{equation}
+\nabla\times{\bf B} = \mu_0 \,{\bf j},\label{e3102}
+\end{equation}
+where ${\bf j} = (j_x, j_y, j_z)$ is the vector current density.
+This is the third Maxwell equation. The electric current flowing through a
+small area $d{\bf S}$ located at position ${\bf r}$ is ${\bf j}({\bf r})
+ \cdot d{\bf S}$.
+Suppose that space is filled with  particles of charge $q$,  number density
+$n({\bf r})$, and velocity ${\bf v}({\bf r})$. The charge density is
+given by $\rho({\bf r})= q\,n$. The current density is given
+by ${\bf j}({\bf r})
+ = q \,n\, {\bf v}$, and  is obviously a proper vector field (velocities
+are proper vectors since they are ultimately derived from displacements). 
+
+If we form the line integral of ${\bf B}$ around some general closed curve
+$C$, making use of Stokes' theorem and the field equation (\ref{e3102}), then we
+obtain
+\begin{equation}\label{e3103}
+\oint_C {\bf B} \cdot d{\bf l} = \mu_0 \int_S {\bf j} \cdot d{\bf S}.
+\end{equation}
+In other words, the line integral of the magnetic field around any closed loop
+$C$ 
+is equal to $\mu_0$ times the flux of the current density through $C$. This
+result is called {\em Amp\`{e}re's circuital law}. If the currents flow in 
+zero-thickness wires then Amp\`{e}re's circuital law reduces to Equation~(\ref{e398}).
+
+The flux of the current density
+through $C$ is evaluated by integrating ${\bf j}\cdot d{\bf S}$ over any surface
+$S$ attached to $C$. Suppose that we take  two different surfaces $S_1$ and
+$S_2$. It is clear that if Amp\`{e}re's circuital
+law is to make any sense then the surface integral $\int_{S_1} {\bf j}
+\cdot d{\bf S} $ had better equal the integral $\int_{S_2} {\bf j}
+\cdot d{\bf S} $. That is, when we work out the flux of the current density
+though $C$ using two different attached surfaces then we had better get
+the same answer, otherwise Equation~(\ref{e3103}) is wrong (since the left-hand side is clearly independent
+of the surface spanning C). 
+We saw in Chapter~\ref{vector} that if the  integral of a vector field ${\bf A}$
+over some surface attached to a loop depends only on the loop, and is 
+independent of the surface which spans it, then this implies that
+$\nabla\cdot {\bf A} = 0$. Hence,
+we require that $\nabla\cdot{\bf j} = 0$ in order to make the
+flux of the current density through $C$ a well-defined quantity. We can also see this directly from the field equation (\ref{e3102}). We know that
+the divergence of a curl is automatically zero, so taking the divergence 
+of Equation~(\ref{e3102}), we obtain
+\begin{equation}
+\nabla\cdot{\bf j} = 0.
+\end{equation}
+
+We have shown that if Amp\`{e}re's circuital law is to make any sense then we need
+$\nabla\cdot{\bf j} = 0$. Physically, this implies that the net current flowing
+through any closed surface $S$ is zero. 
+Up to now, we have only considered
+stationary charges and steady currents. It is clear that if all charges are
+stationary and all currents are steady then there can be no net current flowing
+through a closed surface $S$, since this would imply a build up of charge in the
+volume $V$ enclosed by $S$. In other words, as long as we restrict our investigation
+to stationary charges, and steady currents, then we expect $\nabla\cdot {\bf j}=0$,
+and Amp\`{e}re's circuital law makes sense. However, suppose that we now relax this
+restriction. Suppose that some of the charges in a volume $V$ decide to move
+outside $V$. Clearly, there will be a non-zero net flux of electric current through
+the bounding surface $S$ whilst this is happening. This implies from
+Gauss' theorem that $\nabla\cdot{\bf j} \neq 0$. Under these circumstances
+Amp\`{e}re's circuital law collapses in  a heap. We shall see later that we can rescue
+Amp\`{e}re's  circuital law by adding an extra term involving a time derivative to the
+right-hand side of the field equation (\ref{e3102}).
+ For steady-state situations ({\em i.e.}, $\partial/\partial t=0$), this
+extra term can be neglected. Thus, the field equation 
+$\nabla\times{\bf B} = \mu_0 \,{\bf j}$
+is, in fact, only two-thirds of Maxwell's third equation: there is a term missing
+from the right-hand side. 
+
+We have now derived two field equations involving magnetic fields (strictly speaking,
+we have only derived one
+and two-thirds equations):
+\begin{eqnarray}
+\nabla\cdot{\bf B} &=& 0,\label{e3105a}\\[0.5ex]
+\nabla\times{\bf B} &=& \mu_0 \,{\bf j}.\label{e3105b}
+\end{eqnarray}
+We obtained these equations by looking at the fields generated by infinitely
+long, straight, steady  currents. This, of course, is a rather special class of
+currents. We should now go back and repeat the process for general currents.
+In fact, 
+if we did this we would find that the above field equations still hold (provided
+that the currents are steady). Unfortunately, this
+demonstration is rather messy and extremely tedious. There is a better approach.
+Let us {\em assume}\/ that the above field equations are valid for any 
+set of steady currents. 
+We can then, with relatively little effort, 
+use these equations to generate the correct formula for the magnetic field
+induced by a general set of steady currents, thus proving that our assumption
+is correct. More of this later.
+
+As an example of the use of Amp\`{e}re's circuital law, let us calculate the magnetic field
+generated by a cylindrical current annulus of inner radius $a$,
+and outer radius $b$, co-axial with the $z$-axis, and carrying a uniformly
+distributed $z$-directed current $I$. Now, from symmetry, and by analogy
+with the magnetic field generated by a straight wire, we expect the current distribution to generate a 
+magnetic field of the form ${\bf B}= B_\theta(r)\,{\bf e}_\theta$. 
+Let us apply Amp\`{e}re's circuital law to an imaginary circular loop in the $x$-$y$ plane, of radius
+$r$, centered on the $z$-axis---see Figure~\ref{famp}. Such a loop is generally known as an {\em Amp\`{e}rian loop}. Now, according to
+Amp\`{e}re's circuital law, the line integral of the magnetic field around the loop is equal to
+the  current enclosed by the loop, multiplied by $\mu_0$. The line integral is easy to calculate since the magnetic field is everywhere tangential to the
+loop. We obtain
+$$
+2\pi\,r\,B_\theta(r) = \mu_0\,I(r),
+$$
+where $I(r)$ is the current enclosed by  an Amp\`{e}rian loop of radius $r$.
+Now, it is evident that
+\begin{equation}
+I(r) = \left\{ 
+\begin{array}{lcc}
+0&\mbox{\hspace{1cm}}&r<a\\[0.5ex]
+[(r^2-a^2)/(b^2-a^2)]\, I&&a\leq r\leq b\\[0.5ex]
+I&&b<r
+\end{array}
+\right..
+\end{equation}
+Hence,
+\begin{equation}\label{eamp1}
+B_\theta(r) = \left\{ 
+\begin{array}{lcc}
+0&\mbox{\hspace{1cm}}&r<a\\[0.5ex]
+[\mu_0\,I/(2\pi\,r)]\,[(r^2-a^2)/(b^2-a^2)]&&a\leq r\leq b\\[0.5ex]
+\mu_0\,I/(2\pi\,r)&&b<r
+\end{array}
+\right..
+\end{equation}
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter3/fig3.13.eps}}
+\caption{\em An example use of Amp\`{e}re's circuital law.}\label{famp}
+\end{figure}
+
+\section{Helmholtz's Theorem}\label{s310}
+ Up to now, we have 
+only studied the 
+electric and magnetic fields generated by stationary charges and steady currents.
+We have found that these fields are describable in terms of four field  equations: {\em i.e.},
+\begin{eqnarray}
+\nabla\cdot{\bf E} &=& \frac{\rho}{\epsilon_0},\label{e3106a}\\[0.5ex]
+\nabla\times{\bf E} &=& {\bf 0}\label{e3106b}
+\end{eqnarray}
+for electric fields,
+and
+\begin{eqnarray}
+\nabla\cdot{\bf B} &=&0,\label{e3107a}\\[0.5ex]
+\nabla\times{\bf B} &=& \mu_0\, {\bf j}\label{e3107b}
+\end{eqnarray}
+for magnetic fields. There are no other field equations. 
+This strongly suggests that if we know the divergence and the curl of a vector field
+then we know everything there is to know about the field. In fact, this is the
+case. There is a mathematical theorem which sums this up. It is called
+{\em Helmholtz's theorem}, after the German polymath Hermann Ludwig Ferdinand von
+Helmholtz.
+
+Let us start with scalar fields. Field equations are a type of differential equation:
+{\em i.e.}, they deal with the infinitesimal differences in quantities between neighbouring
+points.  So what kind of
+differential equation completely specifies a
+scalar field? This is easy. Suppose that we have a scalar field $\phi({\bf r})$
+and a field equation which tells us the gradient of this field at all points:
+something like
+\begin{equation}
+\nabla\phi = {\bf A},
+\end{equation}
+where ${\bf A}({\bf r})$ is a vector field. Note that
+we need $\nabla\times{\bf A}= {\bf 0}$
+for self-consistency, since the curl of a gradient is automatically zero.
+The above equation completely
+specifies $\phi({\bf r})$ once we are given the value of the field at a single
+point, $P$ (say). Thus,
+\begin{equation}
+\phi(Q) = \phi(P)+\int_P^Q \nabla\phi\cdot d{\bf l} = 
+\phi(P)+\int_P^Q {\bf A}\cdot d{\bf l},
+\end{equation}
+where $Q$ is a general point. The fact that $\nabla\times{\bf A} = {\bf 0}$ means
+that ${\bf A}$ is a conservative field, which guarantees that the above
+equation  gives a {\em unique}\/ value for $\phi$ at a general point in space.
+
+Suppose that we have a vector field ${\bf F}({\bf r})$. How many differential equations
+do we need to completely specify this field? Hopefully, we only need two: one
+giving the divergence of the field, and one giving its curl. Let us
+test this hypothesis. Suppose that we have two field equations:
+\begin{eqnarray}
+\nabla\cdot {\bf F} = D,\label{e3110a}\\[0.5ex]
+\nabla\times{\bf F} = {\bf C},\label{e3110b}
+\end{eqnarray}
+where $D({\bf r})$ is a scalar field and ${\bf C}({\bf r})$ is a vector field.
+For self-consistency, we need
+\begin{equation}
+\nabla\cdot {\bf C} = 0,
+\end{equation}
+since the divergence of a curl is automatically zero. So, do these
+two field equations, plus some suitable boundary conditions, completely specify
+${\bf F}$? Suppose that we write
+\begin{equation}\label{e3112}
+{\bf F} = -\nabla U +\nabla\times{\bf W}.
+\end{equation}
+In other words, we are saying that a general vector field ${\bf F}$ is the sum of
+a conservative field, $\nabla U$, and a solenoidal field, $\nabla\times{\bf W}$.
+This sounds plausible, but it remains to be proved.
+Let us start by taking the divergence of the above equation, and making use of
+ Equation~(\ref{e3110a}). We get
+\begin{equation}\label{e3113}
+\nabla^2 U = -D.
+\end{equation}
+Note that the vector field ${\bf W}$ does not figure in this equation, because
+the divergence of a curl is automatically zero. Let us now take the curl of
+Equation~(\ref{e3112}):
+\begin{equation}
+\nabla\times{\bf F} = \nabla\times\nabla\times{\bf W}= \nabla(\nabla\cdot{\bf W})
+- \nabla^2{\bf W} = -\nabla^2 {\bf W}.
+\end{equation}
+Here, we assume that the divergence of ${\bf W}$ is zero. This is another thing
+which remains to be proved. Note that the scalar field $U$ does not figure in
+this equation, because the curl of a divergence is automatically zero.
+Using Equation~(\ref{e3110b}), we
+get
+\begin{eqnarray}
+\nabla^2 W_x &=& - C_x,\label{e3115a}\\[0.5ex]
+\nabla^2 W_y &=& - C_y,\\[0.5ex]
+\nabla^2 W_z &=& - C_z,\label{e3115c}
+\end{eqnarray}
+So, we have transformed our problem into four differential equations, Equation~(\ref{e3113})
+and Equations~(\ref{e3115a})--(\ref{e3115c}),  which
+we need to solve. Let us look at these equations. We immediately notice that
+they all have exactly the same form. In fact, they are all versions of Poisson's
+equation. We can now make use of a principle made famous by Richard P.\ Feynman:
+``the same equations have the same solutions.'' Recall that earlier on we 
+came across the following equation:
+\begin{equation}\label{e3116}
+\nabla^2\phi = -\frac{\rho}{\epsilon_0},
+\end{equation}
+where $\phi$ is the electrostatic potential and $\rho$ is the charge density.
+We proved that the solution to this equation, with the boundary condition that
+$\phi$ goes to zero at infinity, is
+\begin{equation}\label{e3117}
+\phi({\bf r} ) = \frac{1}{4\pi \epsilon_0} \int\frac{\rho({\bf r'})}
+{|{\bf r} - {\bf r'}|}\,d^3{\bf r'}.
+\end{equation}
+Well, if the same equations have the same solutions, and Equation~(\ref{e3117}) is the solution
+to Equation~(\ref{e3116}), then we can immediately write down the solutions to
+Equation~(\ref{e3113}) and Equations~(\ref{e3115a})--(\ref{e3115c}). We get
+\begin{equation}\label{e3118}
+U({\bf r} ) = \frac{1}{4\pi } \int\frac{D({\bf r'})}
+{|{\bf r} - {\bf r'}|}\,d^3{\bf r'},
+\end{equation}
+and
+\begin{eqnarray}
+W_x({\bf r} ) &=& \frac{1}{4\pi } \int\frac{C_x({\bf r'})}
+{|{\bf r} - {\bf r'}|}\,d^3{\bf r'},\\[0.5ex]
+W_y({\bf r} ) &=& \frac{1}{4\pi } \int\frac{C_y({\bf r'})}
+{|{\bf r} - {\bf r'}|}\,d^3{\bf r'},\\[0.5ex]
+W_z({\bf r} ) &=& \frac{1}{4\pi } \int\frac{C_z({\bf r'})}
+{|{\bf r} - {\bf r'}|}\,d^3{\bf r'}.
+\end{eqnarray}
+The last three equations can be combined to form a single vector equation:
+\begin{equation}\label{e3120}
+{\bf W} ({\bf r})= \frac{1}{4\pi } \int\frac{{\bf C}({\bf r'})}
+{|{\bf r} - {\bf r'}|}\,d^3{\bf r'}.
+\end{equation}
+
+We assumed earlier that $\nabla\cdot {\bf W} = 0$. Let us check to
+see if this is true. Note that
+\begin{equation}\label{e3121}
+\frac{\partial}{\partial x}\! \left(\frac{1}{|{\bf r} - {\bf r}'|}\right) = 
+-\frac{x-x'}{|{\bf r} - {\bf r}'|^3} = \frac{x'-x}{|{\bf r} - {\bf r}'|^3}
+= -\frac{\partial}{\partial x'} \!\left(\frac{1}{|{\bf r} - {\bf r}'|}\right),
+\end{equation}
+which implies that
+\begin{equation}\label{e2.145h}
+\nabla\left( \frac{1}{|{\bf r} - {\bf r}'|}\right) = - \nabla'
+ \left( \frac{1}{|{\bf r} - {\bf r}'|}\right),
+\end{equation}
+where $\nabla'$ is the operator $(\partial/\partial x', \partial/\partial y',
+\partial/\partial z')$. Taking the divergence of Equation~(\ref{e3120}), and making use of
+the above relation, we obtain
+\begin{equation}
+\nabla\cdot{\bf W} = \frac{1}{4\pi} \int {\bf C}({\bf r'})\cdot
+\nabla\left( \frac{1}{|{\bf r} - {\bf r}'|}\right)\,d^3{\bf r}'
+= -  \frac{1}{4\pi} \int {\bf C}({\bf r'})\cdot
+\nabla'\left( \frac{1}{|{\bf r} - {\bf r}'|}\right)\,d^3{\bf r}'.\label{e3123}
+\end{equation}
+Now
+\begin{equation}
+\int_{-\infty}^{\infty} g \,\frac{\partial f}{\partial x}\,dx = \left[
+g\,f\right]_{-\infty}^{\infty} - \int_{-\infty}^{\infty}
+ f\,\frac{\partial g}{\partial x}\,dx.
+\end{equation}
+However, if $g\,f\rightarrow 0$ as $x\rightarrow\pm\infty$ then we can neglect the
+first term on the right-hand side of the above equation and write
+\begin{equation}
+\int_{-\infty}^{\infty} g\, \frac{\partial f}{\partial x}\,dx = -
+\int_{-\infty}^{\infty} f\, \frac{\partial g}{\partial x}\,dx.
+\end{equation}
+A simple generalization of this result yields
+\begin{equation}\label{e2.152x}
+\int {\bf g}\cdot\nabla f\,d^3{\bf r} = - \int f\,\nabla\cdot {\bf g}\,d^3{\bf r},
+\end{equation}
+provided that $g_x\,f \rightarrow 0$ as $|{\bf r}|\rightarrow\infty$, {\em etc.}
+Thus, we can
+deduce that
+\begin{equation}\label{e3127}
+\nabla\cdot{\bf W} = \frac{1}{4\pi}\int \frac{\nabla'\!\cdot\!{\bf C}({\bf r}') }
+{|{\bf r} - {\bf r}'|} \,d^3{\bf r'}
+\end{equation}
+from Equation~(\ref{e3123}), provided  $|{\bf C}({\bf r})|$ is bounded as
+ $|{\bf r}|\rightarrow\infty$. However, we have already shown that
+$\nabla\cdot {\bf C} = 0$ from self-consistency arguments, so the above equation
+ implies that $\nabla\cdot{\bf W} = 0$, which is the desired result.
+
+We have  constructed a vector field ${\bf F}({\bf r})$ which satisfies Equations~(\ref{e3110a}) and (\ref{e3110b})
+and  behaves sensibly at infinity: {\em i.e.}, $|{\bf F}|\rightarrow 0$ as
+$|{\bf r}|\rightarrow \infty$. But, is our solution the only possible solution
+of Equations~(\ref{e3110a}) and (\ref{e3110b}) with sensible boundary conditions at infinity? Another way of posing
+this question is to ask whether there are any solutions of
+\begin{equation}
+\nabla^2 U = 0,~~~\nabla^2 W_i =0,\label{e3128}
+\end{equation}
+where $i$ denotes $x$, $y$, or $z$, which are bounded at infinity. If there are
+then we are in trouble, because we can take our solution and add to it an
+arbitrary amount of a vector field with zero divergence and zero curl, and thereby
+obtain another solution which also satisfies physical boundary conditions. 
+This would imply that our solution is not unique. In other words, it is not
+possible to unambiguously reconstruct a vector field given its divergence,
+its curl, and physical boundary conditions. Fortunately, the equation
+\begin{equation}
+\nabla^2 \phi = 0,
+\end{equation}
+which is called {\em Laplace's equation}, has a very interesting property: its solutions are
+{\em unique}. That is, if we can find a solution to Laplace's equation
+which satisfies the boundary conditions then we are guaranteed that this is
+the {\em only}\/ solution. We shall prove this later on in Section~\ref{suniq}. 
+Well, let us invent some solutions to Equations~(\ref{e3128}) which are bounded at infinity.
+How about
+\begin{equation}
+U=W_i =0 \,?\label{e3130}
+\end{equation}
+These solutions certainly satisfy Laplace's equation, and are well-behaved
+at infinity. Because the solutions to Laplace's equations are unique, we know
+that Equations~(\ref{e3130}) are the only solutions to Equations~(\ref{e3128}). 
+This means that there is no vector field which satisfies physical boundary
+equations at infinity and has zero divergence and zero curl. In other words, our
+solution to Equations~(\ref{e3110a}) and (\ref{e3110b}) is the {\em only} solution. Thus, we have
+unambiguously reconstructed the vector field ${\bf F}$ given its divergence, its
+curl, and sensible boundary conditions at infinity. This is Helmholtz's theorem.
+
+We have just demonstrated a number of very useful, and also very important, points. 
+First, according to Equation~(\ref{e3112}), a general vector field can be written as the
+sum of a conservative field and a solenoidal field. Thus, we ought to be able
+to write electric and magnetic fields in this form. Second, a general vector
+field which is zero at infinity is completely specified once its divergence
+and its curl are given. Thus, we can guess that the laws of electromagnetism
+can be written as four field equations,
+\begin{eqnarray}
+\nabla\cdot{\bf E} &=& {\it something},\\[0.5ex]
+\nabla\times{\bf E} &=& {\bf something},\\[0.5ex]
+\nabla\cdot{\bf B} &=& {\it something},\\[0.5ex]
+\nabla\times{\bf B} &=& {\bf something},
+\end{eqnarray}
+without knowing the first thing about electromagnetism (other than the fact that
+it deals with two vector fields). Of course, 
+Equations~(\ref{e3106a})--(\ref{e3107b}) are of
+exactly this form. We also know that there are only four  field equations, since
+the above equations are sufficient to completely reconstruct both ${\bf E}$ and
+${\bf B}$. Furthermore, we know that we can solve the field equations without
+even knowing what the right-hand sides look like. After all, we solved Equations~(\ref{e3110a})--(\ref{e3110b})
+for completely general right-hand sides. [Actually, the right-hand sides have
+to go to zero at infinity, otherwise integrals like Equation~(\ref{e3118}) blow up.]
+We also know that any solutions we find are unique. In other words, there is only
+one possible steady
+electric and magnetic field which can be generated by a given set of
+stationary charges and steady currents. The third thing which we proved was that
+if the right-hand sides of the above field equations are all zero then
+the only physical solution is ${\bf E}({\bf r}) = {\bf B}({\bf r}) = {\bf 0}$. This implies
+that steady electric and magnetic fields cannot generate themselves.
+Instead, they have to be generated by stationary charges and
+steady currents. So, if we come across a steady electric field then we know that if
+we trace the field-lines back we shall eventually find  a charge. 
+Likewise, a steady magnetic field implies that there is a steady
+current flowing somewhere. All of these results follow from vector field theory
+({\em i.e.}, from the mathematical properties of vector fields in three-dimensional space), prior to
+any investigation of electromagnetism.  
+
+\section{Magnetic Vector Potential}\label{svecs}
+Electric fields generated by stationary charges obey
+\begin{equation}
+\nabla\times{\bf E} = {\bf 0}.
+\end{equation}
+This immediately allows us to write
+\begin{equation}
+{\bf E} = -\nabla \phi,\label{e3133}
+\end{equation}
+since the curl of a gradient is automatically zero. In fact, whenever we come
+across an irrotational vector field in Physics we can always write it as the
+gradient of some scalar field. This is clearly a useful thing to do, since it
+enables us to
+replace a vector field by a much simpler scalar field.
+ The quantity $\phi$ in the above equation
+is known as the {\em electric scalar potential}. 
+
+Magnetic fields generated by steady currents (and unsteady currents, for that matter)
+satisfy
+\begin{equation}
+\nabla\cdot {\bf B} = 0.
+\end{equation}
+This immediately allows us to write 
+\begin{equation}
+{\bf B} = \nabla\times{\bf A},\label{e3135}
+\end{equation}
+since the divergence of a curl is automatically zero. In fact, whenever we come
+across a solenoidal vector field in Physics we can always write it as the curl
+of some other 
+vector field. This is not an obviously useful thing to do, however, since
+it only allows us to replace one vector field by another. Nevertheless, Equation~(\ref{e3135})
+is one of the
+most useful equations we shall come across in this book. The quantity
+${\bf A}$ is known as the {\em magnetic vector potential}.
+
+We know from Helmholtz's theorem that a vector field is fully specified by
+its divergence and its curl. The curl of the vector potential gives us the magnetic
+field via Equation~(\ref{e3135}). However, the divergence of ${\bf A}$ has no physical
+significance. In fact, we are completely free to choose $\nabla\cdot{\bf A}$ to
+be whatever we like. Note that, according to Equation~(\ref{e3135}), the magnetic field
+is invariant under the transformation 
+\begin{equation}
+{\bf A} \rightarrow {\bf A} - \nabla\psi.\label{e3136}
+\end{equation}
+In other words, the vector potential is undetermined to the gradient of a scalar 
+field. This is just another way of saying that we are free to choose $\nabla\cdot
+{\bf A}$. Recall that the electric scalar potential is undetermined to an
+arbitrary additive constant, since the transformation
+\begin{equation}
+\phi \rightarrow \phi + c\label{e3137}
+\end{equation}
+leaves the electric field invariant in Equation~(\ref{e3133}). The transformations (\ref{e3136})
+and (\ref{e3137}) are examples of what mathematicians call  {\em gauge transformations}.
+The choice of a particular function $\psi$ or a particular constant $c$ is
+referred to as a choice of the 
+gauge. We are free to fix the gauge to be whatever we
+like. The most sensible choice is the one which makes our equations as simple
+as possible. The usual gauge for the scalar potential $\phi$ is such
+that $\phi\rightarrow 0$ at infinity. The usual gauge for ${\bf A}$
+(in steady-state situations) is such that
+\begin{equation}\label{e3138}
+\nabla\cdot{\bf A} = 0.
+\end{equation}
+This particular choice is known as the {\em Coulomb gauge}.
+
+It is obvious that we can always add a constant to $\phi$ so as to make
+it zero at infinity. But it is not at all obvious that we can always
+perform a gauge transformation such as to make $\nabla\cdot{\bf A}$ zero.
+Suppose that we have found some vector field ${\bf A}({\bf r})$ whose curl gives the
+magnetic field but whose divergence in non-zero. Let
+\begin{equation}
+\nabla \cdot{\bf A} = v({\bf r}).
+\end{equation}
+So, can we find a scalar field $\psi$ such that after we perform the
+gauge transformation (\ref{e3136}) we are left with $\nabla\cdot{\bf A} = 0$? Taking
+the divergence of Equation~(\ref{e3136}) it is clear that we need to find a
+function  $\psi$ which
+satisfies
+\begin{equation}
+\nabla^2\psi = v.
+\end{equation}
+But this is just Poisson's equation. We know that we can always find a
+unique solution of this equation (see Section~\ref{s310}). This proves that, in practice,
+we can always set the divergence of ${\bf A}$ equal to zero. 
+
+Let us again consider  an infinite straight wire directed along the $z$-axis and
+carrying a current $I$. The magnetic field generated by such a wire is
+written
+\begin{equation}
+{\bf B} = \frac{\mu_0 \,I}{2\pi} \left(\frac{-y}{r^2}, \frac{x}{r^2}, 0\right).
+\end{equation}
+We wish to find a vector potential ${\bf A}$ 
+ whose curl is equal to  the above magnetic field,  and whose divergence is
+zero. It is not difficult to see that 
+\begin{equation}
+{\bf A} = -\frac{\mu_0 \,I}{4\pi} \left(\,0,\,0,\,\ln[x^2+y^2]\,\right)
+\end{equation}
+fits the bill.
+Note that the vector potential is parallel to the direction of the current. This
+would seem to suggest that there is a more direct relationship between 
+the vector potential and the current than there is between the magnetic field
+and the current. The potential is not very well-behaved on the $z$-axis, but this
+is just because we are dealing with an infinitely thin current. 
+
+Let us take the curl of Equation~(\ref{e3135}). We find that
+\begin{equation}
+\nabla\times{\bf B} = \nabla\times\nabla\times {\bf A} = \nabla(\nabla\cdot{\bf A})
+-\nabla^2{\bf A} = - \nabla^2{\bf A},
+\end{equation}
+where use has been made of the Coulomb gauge condition 
+(\ref{e3138}). We can combine the above
+relation with the field equation (\ref{e3102}) to give
+\begin{equation}
+\nabla^2{\bf A} = - \mu_0 \,{\bf j}.
+\end{equation}
+Writing this in component form, we obtain
+\begin{eqnarray}
+\nabla^2 A_x &=& - \mu_0\, j_x,\\[0.5ex]
+\nabla^2 A_y &=& - \mu_0\, j_y,\\[0.5ex]
+\nabla^2 A_z &=& - \mu_0\, j_z.
+\end{eqnarray}
+But, this is just Poisson's equation three times over. We can immediately
+write the unique solutions to the above equations:
+\begin{eqnarray}
+A_x({\bf r}) = \frac{\mu_0}{4\pi} \int \frac{j_x({\bf r}')}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r}',\\[0.5ex]
+A_y({\bf r}) = \frac{\mu_0}{4\pi} \int \frac{j_y({\bf r}')}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r}',\\[0.5ex]
+A_z({\bf r}) = \frac{\mu_0}{4\pi} \int \frac{j_z({\bf r}')}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r}'.
+\end{eqnarray}
+These solutions can be recombined to form a single vector solution
+\begin{equation}
+{\bf A}({\bf r}) = \frac{\mu_0}{4\pi} 
+\int \frac{{\bf j}({\bf r}')}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r}'.\label{e3147}
+\end{equation}
+Of course, we have seen a equation like this before:
+\begin{equation}\label{e3148}
+\phi({\bf r}) = \frac{1}{4\pi\epsilon_0} \int
+\frac{\rho({\bf r}')}{|{\bf r} - {\bf r}'|}\,d^3{\bf r}'.
+\end{equation}
+Equations (\ref{e3147}) and (\ref{e3148}) are the unique solutions (given the arbitrary choice
+of gauge) to the field equations (\ref{e3106a})--(\ref{e3107b}): they specify the magnetic
+vector and electric scalar potentials generated by a set of stationary
+charges, of charge density $\rho({\bf r})$, and a set of steady currents,
+of current density ${\bf j}({\bf r})$. Incidentally, we can prove that
+Equation~(\ref{e3147}) satisfies the gauge condition $\nabla\cdot{\bf A}=0$ by repeating
+the analysis of Equations~(\ref{e3120})--(\ref{e3127}) (with ${\bf W}\rightarrow{\bf A}$
+and ${\bf C} \rightarrow \mu_0\, {\bf j}$), and using the fact that
+$\nabla\cdot{\bf j} = 0$ for steady currents. 
+
+As an example, let us find the vector potential associated with the magnetic field
+distribution (\ref{eamp1}). By symmetry, and by analogy with the
+vector potential generated by a straight wire, we expect that
+${\bf A} = A_z(r)\,{\bf e}_z$. Note that this form for ${\bf A}$
+satisfies the Coulomb gauge.
+Hence, using $\nabla\times {\bf A} = {\bf B}$,  we get
+\begin{equation}
+\frac{\partial A_z}{\partial r} =- B_\theta(r).
+\end{equation}
+The boundary conditions are that $A_z$ be continuous at $r=a$ and $r=b$,
+since a discontinuous $A_z$ would generate an infinite magnetic field,
+which is unphysical. Thus, we obtain
+\begin{equation}
+A_z(r) = \left\{ 
+\begin{array}{lcc}
+(\mu_0\,I/2\pi)\,[1/2- a^2\,\ln(b/a)/(b^2-a^2)]&\mbox{\hspace{0.25cm}}&r<a\\[0.5ex]
+(\mu_0\,I/2\pi)\,([b^2/2-r^2/2-a^2\,\ln(b/r)]/[b^2-a^2])&&a\leq r\leq b\\[0.5ex]
+-(\mu_0\,I/2\pi)\,\ln(r/b)&&b<r
+\end{array}
+\right..
+\end{equation}
+
+\section{Biot-Savart Law}
+According to Equation~(\ref{e3133}), we can obtain an expression for the electric field 
+generated by stationary charges by
+taking minus the gradient of Equation~(\ref{e3148}). This yields
+\begin{equation}
+{\bf E} ({\bf r}) = \frac{1}{4\pi\epsilon_0} \int\rho({\bf r}')\,
+\frac{{\bf r} - {\bf r}'}{|{\bf r} - {\bf r}'|^3}\,d^3{\bf r}',
+\end{equation}
+which we recognize as Coulomb's law written for a continuous charge distribution. 
+According to Equation~(\ref{e3135}), we can obtain an  equivalent expression for the magnetic 
+field generated by steady currents by taking the curl of Equation~(\ref{e3147}). This gives
+\begin{equation}
+{\bf B} ({\bf r}) = \frac{\mu_0}{4\pi} \int
+\frac{{\bf j}({\bf r}')\times
+({\bf r} - {\bf r}')}{|{\bf r} - {\bf r}'|^3}\,d^3{\bf r}',\label{e3150}
+\end{equation}
+where use has been made of the vector identity $\nabla\times(\phi\,{\bf A})= 
+\phi\,\nabla\times{\bf A} + \nabla\phi\times{\bf A}$. Equation (\ref{e3150}) is
+known as the {\em Biot-Savart law}\/ after the French physicists Jean Baptiste
+Biot and Felix Savart: it completely specifies the magnetic field generated 
+by a steady (but otherwise quite general) distributed  current.
+
+Let us reduce  our  distributed  current  to 
+an idealized zero thickness wire. We can do this by writing
+\begin{equation}
+{\bf j}({\bf r})\,d^3{\bf r} = {\bf I}({\bf r}) \,dl,\label{e3151}
+\end{equation}
+where ${\bf I}$ is the vector current ({\em i.e.}, its direction and magnitude specify
+the direction and magnitude of the current) and
+$dl$ is an element of length along the wire. Equations~(\ref{e3150}) and (\ref{e3151}) can
+be combined to give 
+\begin{equation}
+{\bf B} ({\bf r}) = \frac{\mu_0}{4\pi} \int
+\frac{{\bf I}({\bf r}')\times
+({\bf r} - {\bf r}')}{|{\bf r} - {\bf r}'|^3}\,dl,\label{e3.152}
+\end{equation}
+which is the form in which the Biot-Savart law is most usually written. 
+This law is to magnetostatics ({\em i.e.}, the study of magnetic
+fields generated by steady currents) what Coulomb's law is to electrostatics
+({\em i.e.}, the study of electric fields generated by stationary charges). Furthermore,
+it can be experimentally verified given a set of currents, a
+compass, a test wire, and a great deal of skill and patience. This
+justifies  our
+earlier assumption that the field equations (\ref{e3105a}) and (\ref{e3105b}) are valid for general
+ current distributions (recall that we derived them by studying the  fields
+generated by infinite straight wires). Note that both Coulomb's law and
+the Biot-Savart law are {\em gauge independent}: {\em i.e.}, they do not depend on the 
+particular choice of  gauge.
+
+Consider  an infinite straight wire, directed along the
+$z$-axis, and carrying a current $I$---see Figure~\ref{f32}.
+Let us reconstruct the magnetic field generated by the wire at point
+$P$ using the Biot-Savart
+law. Suppose that the perpendicular distance to the wire is $\rho$. It is
+easily seen that
+\begin{eqnarray}
+{\bf I} \times({\bf r} - {\bf r}') &= &I\,\rho\,\,{\bf e}_\theta,\\[0.5ex]
+l &=& \rho\,\tan\phi,\\[0.5ex]
+dl &=& \frac{\rho}{\cos^2\phi} \,d\phi,\\[0.5ex]
+|{\bf r} - {\bf r}'| &=& \frac{\rho}{\cos\phi},
+\end{eqnarray}
+where $\theta$ is a cylindrical polar coordinate.
+Thus, according to Equation~(\ref{e3.152}), we have
+\begin{eqnarray}
+B_\theta& = &\frac{\mu_0}{4\pi}  \int_{-\pi/2}^{\pi/2} \frac{I\,\rho}
+{\rho^3 \,(\cos\phi)^{-3}}\frac{\rho}{\cos^2\phi} \,d\phi\nonumber\\[0.5ex]
+&=&\frac{\mu_0 \,I}{4\pi \,\rho} \int_{-\pi/2}^{\pi/2} \cos\phi\,d\phi
+= \frac{\mu_0 \,I}{4\pi \,\rho} \left[ \sin\phi\right]_{-\pi/2}^{\pi/2},
+\end{eqnarray}
+which gives the familiar result
+\begin{equation}
+B_\theta = \frac{\mu_0 \,I}{2\pi\, \rho}.\label{e3155}
+\end{equation}
+So, we have come full circle in our investigation of magnetic fields.
+Note that  the simple result (\ref{e3155}) can only be obtained from the Biot-Savart law
+after some non-trivial algebra. 
+Examination  of
+more complicated current distributions using this law invariably
+leads to  lengthy, involved,  and extremely unpleasant
+calculations. 
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter3/fig3.14.eps}}
+\caption{\em A Biot-Savart law calculation.}\label{f32}
+\end{figure}
+
+\section{Electrostatics and Magnetostatics}
+We have now completed our theoretical
+investigation of electrostatics and magnetostatics. Our next task is to incorporate
+time variation into our analysis.
+However, before we start this, let us briefly review
+our progress so far. We have found that the electric fields generated by stationary
+charges, and the magnetic fields generated by steady currents, are describable
+in terms of four field equations:
+\begin{eqnarray}
+\nabla\cdot {\bf E} &=& \frac{\rho}{\epsilon_0},\label{e3156a}\\[0.5ex]
+\nabla\times{\bf E} &=& {\bf 0},\label{e3156b}\\[0.5ex]
+\nabla\cdot{\bf B} &=& 0,\label{e3156c}\\[0.5ex]
+\nabla\times{\bf B} &=& \mu_0 \,{\bf j}.\label{e3156d}
+\end{eqnarray}
+The boundary conditions are that the fields are zero at infinity, assuming that
+the generating charges and currents are localized 
+to some region in space. According to Helmholtz's theorem, the above field equations,
+plus the boundary conditions, are sufficient to {\em uniquely}\/ specify the electric
+and magnetic fields. The physical significance of this is that divergence
+and curl are the only {\em rotationally invariant}\/ first-order differential properties
+of a general vector field: {\em i.e.}, the only quantities which do not change their physical characteristics  when the
+coordinate axes are rotated. Since Physics does not depend on the orientation of the coordinate axes
+(which is, after all, quite arbitrary), it follows that divergence and curl are the {\em only}\/
+quantities which can appear in  first-order differential field equations which claim to describe physical
+phenomena.
+
+The field equations can be integrated to give:
+\begin{eqnarray}
+\oint_S {\bf E} \cdot d{\bf S} &=& \frac{1}{\epsilon_0}\int_V \rho\,dV,\label{e3157a}\\[0.5ex]
+\oint_C {\bf E} \cdot d{\bf l} &=& 0,\label{e3157b}\\[0.5ex]
+\oint_S {\bf B} \cdot d{\bf S} &=& 0,\label{e3157c}\\[0.5ex]
+\oint_C {\bf B} \cdot d{\bf l} &=& \mu_0 \int_{S'} {\bf j} \cdot d{\bf S}.\label{e3157d}
+\end{eqnarray}
+Here, $S$ is a closed surface enclosing a volume $V$. Also, $C$ is a closed loop,
+and $S'$ is some surface attached to this loop. The field equations 
+(\ref{e3156a})--(\ref{e3156d}) can be deduced
+from Equations~(\ref{e3157a})--(\ref{e3157d}) using Gauss' theorem and Stokes' theorem. Equation
+(\ref{e3157a}) is called Gauss' law, and says that the flux of the electric field
+out of a closed surface is proportional to the enclosed electric charge. 
+Equation~(\ref{e3157c}) has no particular name, and says that there is no such
+things as a magnetic monopole. Equation~(\ref{e3157d}) is called Amp\`{e}re's circuital  law,
+and says that the line integral of the magnetic
+field around any closed loop is proportional
+to the flux of the current density through the loop. 
+
+The field equation (\ref{e3156b}) is automatically satisfied if we write
+\begin{equation}
+{\bf E} = -\nabla \phi.\label{e3158}
+\end{equation}
+Likewise, the field equation (\ref{e3156c}) is automatically satisfied if we write
+\begin{equation}
+{\bf B} = \nabla\times{\bf A}.\label{e3159}
+\end{equation}
+Here, $\phi$ is the electric scalar potential, and ${\bf A}$ is the magnetic vector
+potential. The electric field is clearly unchanged if we add a constant to the
+scalar potential:
+\begin{equation}
+{\bf E} \rightarrow {\bf E}~~~{\rm as}~~~\phi\rightarrow \phi + c.
+\end{equation}
+The magnetic field is similarly unchanged if we subtract  the gradient of a scalar field from
+the vector potential:
+\begin{equation}
+{\bf B} \rightarrow {\bf B}~~~{\rm as}~~~{\bf A} \rightarrow {\bf A} - \nabla\psi.
+\end{equation}
+The above transformations, which leave the ${\bf E}$ and ${\bf B}$ fields
+invariant, are called gauge transformations. We are free to choose $c$ and $\psi$
+to be whatever we like: {\em i.e.}, we are free to choose the gauge.
+The most sensible gauge is the one  which make our
+equations as simple and symmetric as possible. This corresponds to the choice
+\begin{equation}
+\phi({\bf r}) \rightarrow 0~~~{\rm as}~~~|{\bf r}| \rightarrow \infty,
+\end{equation}
+and 
+\begin{equation}
+\nabla\cdot {\bf A} = 0.
+\end{equation}
+The latter convention is known as the Coulomb gauge.
+
+ Taking the 
+divergence of Equation~(\ref{e3158}) and the curl of Equation~(\ref{e3159}), and making use of the 
+Coulomb gauge, we find that the four field equations (\ref{e3156a})--(\ref{e3156d}) can be reduced to
+Poisson's equation written four times over:
+\begin{eqnarray}
+\nabla^2 \phi &=& - \frac{\rho}{\epsilon_0},\label{e3164a}\\[0.5ex]
+\nabla^2{\bf A} &=& - \mu_0 \,{\bf j}.\label{e3164b}
+\end{eqnarray}
+Poisson's equation is just about the simplest {\em rotationally invariant} second-order
+partial differential equation it is possible to write. Note that
+$\nabla^2$ is clearly rotationally invariant, since it is the divergence of
+a gradient, and both divergence and gradient are rotationally invariant.
+We can always construct the solution to Poisson's equation, given the
+boundary conditions. Furthermore, we have a {\em uniqueness theorem} which tells us
+that our solution is the only possible solution. Physically, this means that
+ there is only one electric and magnetic
+field which is consistent with a given set of stationary charges and steady currents.
+This sounds like an obvious, almost trivial, statement. But there are many
+areas of Physics (for instance, Fluid Mechanics and Plasma Physics) where
+we also believe, for physical reasons, that for a given set of boundary conditions
+the solution should be unique. The difficulty is that  in most cases 
+when we reduce a given problem to a partial differential equation we end up with
+something far nastier than Poisson's equation. In general, we cannot solve
+this equation. In fact, we usually cannot even prove that  it
+possess a solution for general boundary conditions, let alone that the solution
+is unique. So, we are very fortunate indeed that
+in Electrostatics and Magnetostatics a general problem always boils down to solving a
+tractable  partial differential equation. When physicists make statements to the effect that
+``Electromagnetism is the best understood theory in Physics,'' which they often do, what they are really
+saying is that the partial differential equations which crop up in this
+theory are soluble and have unique solutions.
+
+Poisson's equation
+\begin{equation}
+\nabla^2 u = v\label{e3165}
+\end{equation}
+is {\em linear}, which means that its solutions are superposable. We can exploit
+this fact to construct a general solution to this equation. Suppose that we can
+find the solution to
+\begin{equation}
+\nabla^2 G({\bf r}, {\bf r}') = \delta({\bf r} - {\bf r}')
+\end{equation}
+which satisfies the boundary conditions. 
+This is the solution driven by  a unit amplitude point source located at position
+vector ${\bf r}'$. Since any general source can be built up out of a weighted sum
+of point sources, it follows that a general solution to Poisson's equation 
+can be built up out of a similarly weighted superposition of point source solutions. 
+Mathematically, we can write
+\begin{equation}\label{e3167}
+u({\bf r}) = \int G({\bf r}, {\bf r}')\, v({\bf r}')\,d^3{\bf r}'.
+\end{equation}
+The function $G({\bf r}, {\bf r}')$ is called the Green's function. The Green's function
+for Poisson's equation is
+\begin{equation}\label{e3168}
+G({\bf r}, {\bf r}') = - \frac{1}{4\pi} \frac{1}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+Note that this  Green's function is proportional to the scalar potential of
+a point charge located at ${\bf r}'$: this is hardly surprising, given the
+definition of a Green's function. 
+
+According to Equations~(\ref{e3164a}), (\ref{e3164b}), (\ref{e3165}), (\ref{e3167}), and (\ref{e3168}), the 
+scalar and vector potentials generated by
+a set of stationary charges and steady currents take the form
+\begin{eqnarray}
+\phi({\bf r}) &=& \frac{1}{4\pi\epsilon_0} \int \frac{\rho({\bf r}')}
+{|{\bf r} - {\bf r}'|} \,d^3{\bf r}',\label{e3169a}\\[0.5ex]
+{\bf A}({\bf r}) &=& \frac{\mu_0}{4\pi} \int \frac{{\bf j}({\bf r}')}
+{|{\bf r} - {\bf r}'|} \,d^3{\bf r}'.\label{e3169b}
+\end{eqnarray}
+Making use of Equations~(\ref{e3158}), (\ref{e3159}), (\ref{e3169a}), and (\ref{e3169b}), we obtain Coulomb's law,
+\begin{equation}\label{e2.216x}
+{\bf E}({\bf r}) = \frac{1}{4\pi\epsilon_0} \int \rho({\bf r}') \,\frac{{\bf r} 
+-{\bf r}'}{|{\bf r} - {\bf r}'|^3}\,d^3{\bf r}',
+\end{equation}
+and the Biot-Savart law,
+\begin{equation}
+{\bf B} ({\bf r}) = \frac{\mu_0}{4\pi} \int \frac{{\bf j}({\bf r}')\times
+({\bf r} - {\bf r}')}
+{|{\bf r} - {\bf r}'|^3}\,d^3{\bf r}'.\label{e3171}
+\end{equation}
+Of course, both of these laws are examples of action at a distance laws (in that the electric and magnetic fields at a given point respond instantaneously to
+changes in the charge and current densities at distant points), and,
+therefore, violate the Special Theory of Relativity. However,  this is not a problem as long as we
+restrict ourselves to fields generated by
+{\em time-independent}\/ charge and current distributions. 
+
+The next question  is by how much is this scheme which we have just worked out going to
+be disrupted when we take time variation into account. The answer, somewhat
+surprisingly, is by very little indeed. So, in Equations~(\ref{e3156a})--(\ref{e3171}) we can already
+discern the basic outline of Classical Electromagnetism. Let us continue our
+investigation.
+
+{\small
+\section{Exercises}
+\renewcommand{\theenumi}{3.\arabic{enumi}}
+\begin{enumerate}
+\item A charge $Q$ is uniformly distributed in a sphere of radius $a$ centered
+on the origin. Use symmetry and Gauss' law to find the electric field generated inside and
+outside the sphere. What is the corresponding electric potential inside and
+outside the sphere?
+\item A charge per unit length $Q$ is uniformly distributed in an infinitely long cylinder
+of radius $a$ whose axis corresponds to the $z$-axis. Use symmetry and  Gauss' law to
+find the electric field generated inside and outside the cylinder. What is the
+corresponding electric potential inside and outside the cylinder.
+\item Find the electric charge distribution which generates the Yukawa
+potential
+$$
+\phi(r) = \frac{q}{4\pi\epsilon_0}\,\frac{{\rm e}^{-r/a}}{r},
+$$
+where $r$ is a spherical polar coordinate, and $a$ a positive constant.
+Why must the total charge in the distribution be zero?
+\item An electric dipole consists of two equal and opposite charges, $q$ and $-q$, separated by a {\em small}\/ distance $d$. The strength and orientation of the dipole
+is measured by its vector moment ${\bf p}$, which
+is of magnitude $q\,d$, and points in the direction  of the displacement of the positive charge from the negative. Use the principle of superposition
+to demonstrate that the electric potential generated by an electric dipole
+of moment ${\bf p}$ situated at the origin is
+$$
+\phi({\bf r}) = \frac{{\bf p}\cdot{\bf r}}{4\pi\epsilon_0\,r^3}.
+$$
+Show that the corresponding electric field distribution is
+$$
+{\bf E}({\bf r}) = \frac{3\,({\bf p}\cdot{\bf r})\,{\bf r} - r^2\,{\bf p}}{4\pi\epsilon_0\,r^5}.
+$$
+\item A electric dipole of fixed moment ${\bf p}$ is situated at position
+ ${\bf r}$ in a non-uniform external electric field ${\bf E}({\bf r})$. Demonstrate
+that the net force on the dipole can be written ${\bf f} = - \nabla W$, where
+$$
+W =- {\bf p}\cdot{\bf E}.
+$$
+Hence, show that the potential energy of an electric dipole of moment ${\bf p}_1$
+in the electric field generated by a second dipole of moment ${\bf p}_2$ is
+$$
+W = \frac{r^2\,({\bf p}_1\cdot{\bf p}_2) - 3\,({\bf p}_1\cdot{\bf r})\,({\bf p}_2\cdot{\bf r})}{4\pi\epsilon_0\,r^5},
+$$
+where ${\bf r}$ is the displacement of one dipole from another.
+\item Show that the torque on an electric dipole of moment ${\bf p}$ in a uniform
+external electric field ${\bf E}$ is
+$$
+\btau = {\bf p}\times {\bf E}.
+$$
+Hence, deduce that the potential energy of the dipole is
+$$
+W = -{\bf p}\cdot {\bf E}.
+$$
+\item A charge distribution $\rho({\bf r})$ is localized in the vicinity of the origin in a region of radius
+$a$. Consider the electric potential generated at position ${\bf r}$, where
+$|{\bf r}|\gg a$. Demonstrate via a suitable expansion in $a/r$ that
+$$
+\phi({\bf r}) = \frac{Q}{4\pi\epsilon_0\,r}+ \frac{{\bf p}\cdot{\bf r}}{4\pi\epsilon_0\,r^3} + \cdots,
+$$
+where $Q=\int \rho({\bf r})\,d^3{\bf r}$ is the total charge contained in the
+distribution, and ${\bf p} = \int \rho({\bf r})\,{\bf r}\,d^3{\bf r}$ its electric
+dipole moment.
+\item Consider a scalar potential field $\phi({\bf r})$ generated by a set of stationary
+charges. Demonstrate that the mean potential over any spherical surface which does
+not contain a charge is equal to the potential at the center.
+Hence, deduce that there can be no maxima or minima of the scalar potential
+in a charge free region. Hint: The solution to this problem is more intuitive
+than mathematical, and depends on the fact that the potential generated outside a uniform spherical charge shell is the same as that generated when
+all of the charge is collected at its center.
+\item Demonstrate that the Green's function for Poisson's equation in two
+dimensions ({\em i.e.}, $\partial/\partial z\equiv 0$) is
+$$
+G({\bf r}, {\bf r}') = - \frac{\ln|{\bf r}-{\bf r}'|}{2\pi},
+$$
+where ${\bf r}= (x,\,y)$, {\em etc.}
+Hence, deduce that the scalar potential field generated by the two-dimensional
+charge distribution $\rho({\bf r})$ is
+$$
+\phi({\bf r}) = - \frac{1}{2\pi\epsilon_0}\int\rho({\bf r}')\,\ln|{\bf r}-{\bf r'}|\,d^3{\bf r}'.
+$$
+\item A particle of mass $m$ and charge  $q$ starts at rest from the origin at $t=0$ in a uniform electric
+field $E$ directed along the $y$-axis, and a uniform magnetic field $B$ directed
+along the $z$-axis. Find the particle's subsequent motion in the $x$-$y$ plane. Sketch the particle's trajectory.
+\item In a parallel-plate magnetron the cathode and the anode are
+flat parallel plates, and a uniform magnetic field $B$ is applied in a direction
+parallel to the plates. Electrons are emitted from the cathode with essentially
+zero velocity. If the separation between the anode and cathode is $d$,
+and if the anode is held at a constant positive potential $V$ with respect to the cathode, show that no current will flow between the plates when
+$$
+V \leq \frac{e\,B^2\,d^2}{2\,m_e}.
+$$
+Here, $e$ is the magnitude of the electron charge, and $m_e$ the
+electron mass.
+
+\item An infinite, straight, circular cross-section wire of radius $a$ runs along the 
+$z$-axis and carries a uniformly distributed $z$-directed current $I$. Use symmetry and Amp\`{e}re's circuital law to find the magnetic field distribution inside and outside the
+wire. What is the corresponding magnetic vector potential inside and
+outside the wire? Use the Coulomb gauge.
+\item An infinite cylindrical current annulus of inner radius $a$, outer
+radius $b$, and axis running along the $z$-axis carries a uniformly
+distributed current per unit length $I$ in the $\theta$ direction: {\em i.e.},
+${\bf j}\propto {\bf e}_\theta$. Use symmetry and Amp\`{e}re's circuital law to find the magnetic field distribution inside and outside the
+annulus. What is the corresponding magnetic vector potential inside and
+outside the annulus? Use the Coulomb gauge.
+\item A thick slab extends from $z=-a$ to $z=a$, and is infinite in the $x$-$y$
+plane. The slab carries a uniform current density ${\bf j} = J\,{\bf e}_x$.
+Find the magnetic field and magnetic vector potential inside and outside the
+slab. Use the Coulomb gauge.
+\item Show that the magnetic vector potential due to two long, straight, $z$-directed wires, the first carrying a current $I$, and the second a current $-I$, 
+is 
+$$
+{\bf A} = \frac{\mu_0\,I}{2\pi}\,\ln\left(\frac{r_1}{r_2}\right){\bf e}_z,
+$$
+where $r_1$ and $r_2$ are the perpendicular distances to the two wires.
+\item Use the Biot-Savart law to:
+\begin{enumerate}
+\item Find the magnetic field at the center of a circular loop of radius $r$
+carrying a current $I$.
+\item Find the magnetic field at the center of a square loop carrying a current
+$I$. Let $r$ be the perpendicular distance from the center to one of the
+sides of the loop.
+\item Find the magnetic field at the center of a regular $n$-sided polygon carrying a current $I$. Let $r$ be the perpendicular distance from the center
+to one of the sides of the loop. Check that your answer reduces to the answer
+from part (a) in the limit $n\rightarrow\infty$.
+\end{enumerate}
+\item Use the Biot-Savart law to show that the magnetic field
+generated along the axis of a circular current loop of radius $a$ lying in
+the $x$-$y$ plane and centered on the origin is
+$$
+B_z = \frac{\mu_0\,I}{2}\,\frac{a^2}{(a^2+z^2)^{3/2}}.
+$$
+Here, $I$ is the current circulating counter-clockwise (looking down the
+$z$-axis) around the loop. Demonstrate that
+$$
+\int_{-\infty}^{\infty} B_z(z)\,dz = \mu_0\,I.
+$$
+Derive this result from Amp\`{e}re's circuital law.
+\item A Helmholtz coil consists of two identical, single turn, circular coils, of radius $a$,  carrying
+the same current, $I$, in the same sense, which are coaxial with one another,
+and are separated by a distance $d$. Show that the variation of the magnetic field-strength in the vicinity
+of the axial midpoint is minimized when $d=a$. Demonstrate that, in this optimal case, the
+magnetic field-strength at the axial midpoint is
+$$
+B = \frac{8\,\mu_0\,I}{5\sqrt{5}\,a}.
+$$
+
+\item A force-free magnetic field is such that ${\bf j}\times {\bf B} = {\bf 0}$. Demonstrate that such a field satisfies
+$$
+\nabla^2 {\bf B} = -\alpha^2\,{\bf B},
+$$
+where $\alpha$ is some constant. Find the force-free field with the lowest value of $\alpha$ (excluding $\alpha=0$) in a cubic volume of dimension $a$ bounded by superconducting walls (in which ${\bf B}={\bf 0}$).
+\item Consider a small circular current loop of radius $a$ lying in the
+$x$-$y$ plane and centered on the origin. Such a loop constitutes a magnetic
+dipole  of moment ${\bf m}$, where $m=\pi\,a^2\,I$, and $I$ is the circulating current. The direction of ${\bf m}$ is conventionally taken to be
+normal to the plane of the loop, in the sense given by the right-hand
+grip rule. Demonstrate that the magnetic vector potential generated
+at position ${\bf r}$, where $|{\bf r}|\gg a$, is
+$$
+{\bf A}({\bf r}) = \frac{\mu_0}{4\pi}\,\frac{{\bf m}\times {\bf r}}{r^3}.
+$$
+Show that the corresponding magnetic field is
+$$
+{\bf B}({\bf r}) = \frac{\mu_0}{4\pi}\left(\frac{3\,({\bf r}\cdot{\bf m})\,{\bf r}- r^2\,{\bf m}}{r^5}\right).
+$$
+
+\item Demonstrate that the torque on a magnetic dipole  of moment ${\bf m}$ placed in a uniform
+external magnetic field ${\bf B}$ is
+$$
+\btau = {\bf m}\times {\bf B}.
+$$
+Hence, deduce that the potential energy of the magnetic dipole is
+$$
+W = - {\bf m}\cdot{\bf B}.
+$$
+\item Consider two magnetic dipoles, ${\bf m}_1$ and ${\bf m}_2$. Suppose
+that ${\bf m}_1$ is fixed, whereas ${\bf m}_2$ can rotate freely in any direction. Demonstrate that the equilibrium configuration of the second dipole is
+such that
+$$
+\tan\theta_1 = - 2\,\tan\theta_2,
+$$
+where $\theta_1$ and $\theta_2$ are the angles subtended by ${\bf m}_1$
+and ${\bf m}_2$, respectively, with the radius vector joining them.
+\end{enumerate}
+\renewcommand{\theenumi}{2.\arabic{enumi}}
+}

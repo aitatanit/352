@@ -1,0 +1,24 @@
+This repository contains the Latex files required to compile
+a set of upper-division undergraduate lecture notes on 
+Classical Electromagnetism. These notes 
+were authored by Prof. Richard Fitzpatrick (Department 
+of Physics, University of Texas at Austin).
+
+The files will only compile properly when the following
+standard Latex packages are installed:
+
+fullpage
+epsf
+charter
+euler
+fancyhdr
+
+The document can be compiled by issuing the command
+
+latex 352
+
+in the base directory (containing 352.tex).
+
+The document will need to be compiled at least three times to
+update all of the internal references, and to generate the
+table of contents data.

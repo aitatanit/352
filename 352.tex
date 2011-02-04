@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                  Classical Electromagnetism 
+%                    A lecture course given by 
+%                    Prof Richard Fitzpatrick 
+%             at the University of Texas at Austin
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{rfbook}
+\usepackage{fullpage}
+
+%%%%%%%%%%%
+% Needed for figures
+%%%%%%%%%%%
+\usepackage{epsf}
+
+%%%%%%%%%
+% Customize fonts
+%%%%%%%%%
+\usepackage{charter}
+\usepackage{euler}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Customize equation, figure, and table numbering
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\@addtoreset{equation}{chapter}
+\@addtoreset{figure}{chapter}
+\@addtoreset{table}{chapter}
+\def\theequation{\arabic{chapter}.\arabic{equation}}
+\def\thefigure{\arabic{chapter}.\arabic{figure}}
+\def\thetable{\arabic{chapter}.\arabic{table}}
+\makeatother
+
+%%%%%%%%%%%%%%%
+% Customize table of contents
+%%%%%%%%%%%%%%%
+\usepackage{rftocloft}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsecnumwidth}{0.6em}
+
+%%%%%%%%%%%%%
+% Customize page headers
+%%%%%%%%%%%%%
+\setlength{\headheight}{14.5pt}
+\setlength{\headsep}{10pt}
+\usepackage{fancyhdr}
+
+%%%%%%%%%%%%%
+% Define custom symbols
+%%%%%%%%%%%%%
+\newcommand {\ltapp}   {\stackrel {_{\normalsize<}}{_{\normalsize \sim}}}
+\newcommand {\gtapp}   {\stackrel {_{\normalsize>}}{_{\normalsize \sim}}}
+\newcommand {\btheta}  {\mbox{\boldmath$\theta$}}
+\newcommand {\bphi}    {\mbox{\boldmath$\phi$}}
+\newcommand {\bvarphi} {\mbox{\boldmath$\varphi$}}
+\newcommand {\brho}    {\mbox{\boldmath$\rho$}}
+\newcommand {\btau}    {\mbox{\boldmath$\tau$}}
+\newcommand {\bbeta}    {\mbox{\boldmath$\beta$}}
+
+\begin{document}
+
+%%%%%%%
+% Titlepage
+%%%%%%%
+\thispagestyle{empty}
+\begin{center}
+{\Huge\bf Classical Electromagnetism}\\[1ex]
+~\\
+~\\
+~\\
+~\\
+{\Large\em  Richard Fitzpatrick}\\[1.5ex]~\\[1.5ex]
+{\Large\sf  Professor  of Physics}\\[1.5ex]
+{\Large\sf  The University of Texas at Austin}
+\end{center}
+
+%%%%%%%%%%
+% Set page headers
+%%%%%%%%%%
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancyhf{}
+\fancyhead[LO,RE]{\sl \leftmark}
+\fancyhead[LE,RO]{\sl \thepage}
+\fancyhead[RE]{\sl CLASSICAL ELECTROMAGNETISM}
+
+%%%%%%%%%%
+% Table of contents
+%%%%%%%%%%
+\tableofcontents
+
+%%%%
+% Body
+%%%%
+\include{chapter1/chapter1}
+\include{chapter2/chapter2}
+\include{chapter3/chapter3}
+\include{chapter4/chapter4}
+\include{chapter5/chapter5}
+\include{chapter6/chapter6}
+\include{chapter7/chapter7}
+\include{chapter8/chapter8}
+\include{chapter9/chapter9}
+
+\end{document}

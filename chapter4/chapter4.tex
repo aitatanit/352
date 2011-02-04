@@ -1,0 +1,2030 @@
+\chapter{Time-Dependent Maxwell Equations}\label{maxwell2}
+\section{Introduction}
+In this chapter, we shall generalize the time-independent Maxwell equations,
+derived in the previous chapter,
+to obtain the full set of time-dependent Maxwell equations.
+\section{Faraday's Law}
+The history of humankind's development of Physics
+can be thought of as the history of the synthesis of ideas. Physicists keep finding that
+apparently disparate phenomena can be understood as different aspects of some
+more fundamental phenomenon. This process has continued until, today, all physical
+phenomena can be described in terms of three fundamental forces: {\em Gravity}, the
+{\em Electroweak Force}, and the {\em Strong Force}. One of the main goals of modern physics
+is to find some way of combining these three forces so that all
+of physics can be described in  terms of a single unified force.
+
+The first great synthesis of ideas in Physics took place in 1666 when Issac Newton
+realised that the force which causes apples to fall downwards is the same as that which maintains the Planets in elliptical orbits around the Sun. The second
+great synthesis, which we are about to study in more detail, took place in
+1830 when Michael Faraday discovered that Electricity and Magnetism are two
+aspects of the same phenomenon, usually referred to as
+{\em Electromagnetism}. The third great synthesis, which we shall discuss
+presently, took place in 1873 when James Clerk Maxwell demonstrated that light
+and electromagnetism are intimately related.  The last (but, hopefully,
+not the final) great synthesis took place in 1967 when Steve Weinberg and
+Abdus Salam showed that the electromagnetic force
+and the weak nuclear force ({\em i.e.}, the one which is responsible for $\beta$ decays)
+can be combined to give the electroweak force.
+
+Let us now consider Faraday's experiments, having put them in their proper 
+historical context.
+Prior to 1830, the only known way  in which to make an electric
+current flow through a conducting wire was to connect the ends of the wire to 
+the positive and negative
+ terminals of a battery. We measure a battery's ability to push current
+down a wire in terms of its {\em voltage}, by which we mean the voltage difference
+between its positive and negative terminals. What does voltage correspond
+to in Physics?
+Well, volts are the units used to measure electric scalar potential, so when we
+talk about a 6\,V battery, what we are really saying is that the difference in 
+electric scalar potential between its positive and negative terminals is six volts.
+This insight allows us to write
+\begin{equation}
+V = \phi(\oplus)-\phi(\ominus) =
+-\int_{\oplus}^{\ominus} \nabla\phi\cdot
+d{\bf l} = \int_{\oplus}^{\ominus} {\bf E} \cdot d{\bf l},
+\end{equation}
+where $V$ is the battery voltage, $\oplus$ denotes the positive terminal,
+$\ominus$ the negative terminal, and $d{\bf l}$ is an element of length along the
+wire. Of course, the above equation is a direct consequence of ${\bf E} = -
+\nabla\phi$. Clearly, a voltage difference  between two ends of a wire 
+attached to a battery implies
+the presence of a longitudinal electric field which pushes charges through the
+wire. This field is directed from the positive terminal of the battery to the negative
+terminal, and is, therefore, such as to force electrons to flow through the
+wire from the negative to the positive terminal. As expected, this means that
+  a net
+positive current flows from the positive to the negative terminal. The fact that
+${\bf E}$ is a conservative field ensures that the voltage  difference $V$
+is independent of the
+path of the wire between the terminals. In other words, two different wires attached to the same battery
+develop  identical voltage differences.
+
+Let us now consider a closed loop of wire (with no battery). The voltage around such a loop, which is sometimes called the {\em electromotive
+force}\/ or {\em emf},  is
+\begin{equation}
+V = \oint {\bf E} \cdot d{\bf l} = 0.
+\end{equation}
+The fact that the right-hand side of the above equation is zero is a direct consequence of the field equation $\nabla\times{\bf E} = {\bf 0}$. 
+We conclude that, because ${\bf E}$ is a conservative field,  the electromotive force around a
+closed loop of wire 
+is automatically zero, and  so there is no current flow around such a loop.
+This all seems to make sense. However, in 1830 Michael Faraday discovered that a changing magnetic field
+can cause a current to flow around a closed 
+loop of wire (in the absence of a battery). 
+Well, if  current flows around the loop then there must be an electromotive
+force. So, 
+\begin{equation}
+V = \oint{\bf E} \cdot d{\bf l} \neq 0,
+\end{equation}
+which immediately implies that ${\bf E}$ is {\em not}\/ a conservative field, and that
+$\nabla\times{\bf E} \neq {\bf 0}$. Clearly, we are going to have to modify some
+of our ideas regarding electric fields.
+
+Faraday continued his experiments, and found that 
+another way of generating an electromotive force around a loop of wire
+is to keep the  magnetic field  constant
+and move the loop. Eventually,  Faraday was able to
+formulate a law which accounted for all of his experiments---the emf
+generated around a loop of wire in a magnetic field is proportional to
+the rate of change of the flux of the magnetic field through the loop. So,
+if the loop is denoted $C$, and $S$ is some surface attached to the loop, then Faraday's
+experiments can be summed up by writing
+\begin{equation}\label{e4.4}
+V = \oint_C{\bf E} \cdot d{\bf l} = A \,\frac{\partial }{\partial t}\!
+\int_S {\bf B} \cdot d{\bf S},
+\end{equation}
+where $A$ is a constant of proportionality. 
+Thus,  the changing flux of the magnetic field
+through the loop 
+generates  an electric field directed around the loop. This process is know as
+{\em magnetic induction}.
+
+ SI units have been carefully chosen so as to make $|A| = 1$ in
+the above equation. The only thing we now have to decide is whether
+$A=+1$ or $A=-1$. In other words, we need to decide which way around the loop  the induced emf
+wants to drive the current? We possess a general principle which allows us to
+decide  questions like this. It is called
+{\em Le\,Chatelier's principle}. According to Le~Chatelier's principle, every change
+generates a reaction which tries to minimize the change. Essentially, this means
+that the Universe is stable to small perturbations. When this principle
+is applied to the special case of
+magnetic induction, it is usually called {\em Lenz's law}. According to Lenz's
+law,  the current induced around a closed loop 
+is always such that the magnetic field it produces tries  to counteract the
+change in magnetic flux which generates the electromotive force. 
+From  Figure~\ref{f33}, it is clear that if the magnetic field ${\bf B}$ is
+increasing and  the current $I$ circulates clockwise (as seen from above) then
+it generates a field ${\bf B}'$ which opposes the increase in magnetic flux
+through the loop, in
+accordance with Lenz's law. The direction of the current is opposite to the
+sense of the current loop $C$, as determined by the right-hand grip rule (assuming that the flux of ${\bf B}$ through the
+loop is positive), so this implies that $A=-1$ in Equation~(\ref{e4.4}). Thus, Faraday's
+law takes the form
+\begin{equation}\label{e4.5}
+\oint_C {\bf E} \cdot d{\bf l} = - \frac{\partial}{\partial t}\! \int_S 
+{\bf B} \cdot d{\bf S}.
+\end{equation}
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter4/fig4.1.eps}}
+\caption{\em Lenz's law.}\label{f33}
+\end{figure}
+
+Experimentally, Faraday's law is found to correctly predict the emf
+({\em i.e.}, $\oint {\bf E}\cdot d{\bf l}$) generated around any wire loop, irrespective of
+the position or shape of the loop.
+ It is reasonable to assume that the same emf would be
+generated in the absence of the wire (of course, no current would flow
+in this case). We conclude that Equation~(\ref{e4.5}) is valid for {\em any}\/ closed loop $C$. Now, if Faraday's
+law is to make any sense then it must also be true for all surfaces $S$ attached to the
+loop $C$. Clearly, if the flux of the magnetic field through the loop depends on
+the surface upon which it is evaluated then Faraday's law is going to predict
+different emfs for different surfaces. Since there is no preferred surface for
+a general non-coplanar loop, this would not make very much sense. The condition
+for the flux of the magnetic field, $\int_S {\bf B} \cdot d{\bf S}$, to depend
+only on the loop $C$ to which the surface $S$ is attached, and not on the nature
+of the surface  itself, is
+\begin{equation}\label{e4.6}
+\oint_{S'} {\bf B} \cdot d{\bf S}' = 0,
+\end{equation}
+for any closed surface $S'$. 
+
+Faraday's law, Equation~(\ref{e4.5}), can be converted into a field equation using
+ Stokes' theorem. We obtain
+\begin{equation}\label{e4.7}
+\nabla\times{\bf E} = - \frac{\partial {\bf B}}{\partial t}.
+\end{equation}
+This is the final Maxwell equation. It describes how a changing magnetic field
+can generate, or induce, an electric field. Gauss' theorem applied to Equation~(\ref{e4.6})
+gives the familiar field equation
+\begin{equation}
+\nabla\cdot{\bf B} = 0.
+\end{equation}
+This ensures that the magnetic flux through a loop is a well-defined quantity.
+
+The divergence of Equation~(\ref{e4.7}) yields
+\begin{equation}
+\frac{\partial\, \nabla\cdot{\bf B}}{\partial t} = 0.
+\end{equation}
+Thus, the field equation (\ref{e4.7}) actually demands that the divergence of the
+magnetic field be constant in time for self-consistency (this means
+that the flux of the magnetic field through a loop need  not be a well-defined
+quantity, as long as 
+its time derivative is well-defined). However, a constant
+non-solenoidal magnetic field can only be generated by magnetic monopoles,
+and magnetic monopoles do not exist (as far as we are aware). Hence,
+$\nabla\cdot {\bf B} = 0$. Note that the absence of magnetic monopoles
+is an observational fact---it cannot be predicted by any theory. If 
+ magnetic monopoles were discovered  tomorrow then this would not cause physicists
+any great difficulties, since they know how to generalize Maxwell's equations to include
+both magnetic monopoles and currents of magnetic monopoles. In this generalized
+formalism, Maxwell's equations are completely symmetric with respect to
+electric and magnetic fields, and $\nabla\cdot{\bf B} \neq 0$. However,
+an extra term (involving the current of magnetic monopoles) must be added to the
+right-hand side of Equation~(\ref{e4.7}) in order to make it  mathematically self-consistent.
+
+As an example of the use of Faraday's law, let us calculate the electric
+field generated by a decaying magnetic field of the form ${\bf B} = B_z(r,t)\,{\bf e}_z$, where
+\begin{equation}
+B_z(r,t) = \left\{
+\begin{array}{lcc}
+B_0\,\exp(-t/\tau)&\mbox{\hspace{1cm}}&r\leq a\\[0.5ex]
+0&&r>a
+\end{array}
+\right..
+\end{equation}
+Here, $B_0$ and $\tau$ are positive constants.
+By symmetry, we expect an induced electric field of the form ${\bf E}(r,t)$.
+We also expect $\nabla\cdot{\bf E}=0$, since there are no electric charges
+in the problem. This rules out a radial electric field. We can also rule
+out a $z$-directed electric field, since $\nabla\times E_z(r)\,{\bf e}_z = -(\partial E_z/\partial r)\,{\bf e}_\theta$, and we require $\nabla\times {\bf E} \propto {\bf B}\propto {\bf e}_z$. Hence, the induced electric field must be of the
+form ${\bf E}(r,t) = E_\theta(r,t)\,{\bf e}_\theta$. Now, according to
+Faraday's law, the line integral of the electric field around some closed
+loop is equal to minus the rate of change of the magnetic flux through
+the loop. If we choose a loop which is a circle of radius $r$ in the $x$-$y$ plane, then we have
+\begin{equation}
+2\pi\,r\,E_\theta(r,t) = - \frac{d\Phi}{dt},
+\end{equation}
+where $\Phi$ is the magnetic flux (in the $+z$ direction) through a circular loop of radius $r$. 
+It is evident that
+\begin{equation}
+\Phi(r,t) = \left\{
+\begin{array}{lcc}
+\pi\,r^2\,B_0\,\exp(-t/\tau)&\mbox{\hspace{1cm}}&r\leq a\\[0.5ex]
+\pi\,a^2\,B_0\,\exp(-t/\tau)&&r>a
+\end{array}
+\right..
+\end{equation}
+Hence,
+\begin{equation}
+E_\theta(r,t) = \left\{
+\begin{array}{lcc}
+(B_0/2\,\tau)\,r\,\exp(-t/\tau)&\mbox{\hspace{1cm}}&r\leq a\\[0.5ex]
+(B_0/2\,\tau)\,(a^2/r)\,\exp(-t/\tau)&&r>a
+\end{array}
+\right..
+\end{equation}
+
+\section{Electric Scalar Potential?}\label{s4.3}
+We now have a problem. We can only write the electric field  in terms of a
+scalar potential ({\em i.e.}, ${\bf E} = - \nabla\phi$) provided that
+$\nabla\times{\bf E} = {\bf 0}$. However, we have just found that  the curl of the electric field is non-zero in the presence of a changing magnetic field.
+In other words, ${\bf E}$ is not, in general, a conservative field. Does this
+mean that we have to abandon the concept of electric scalar potential?
+Fortunately, it does not. It is still possible to define a scalar potential which is
+physically meaningful. 
+
+Let us start from the  equation
+\begin{equation}
+\nabla \cdot {\bf B} = 0,
+\end{equation}
+which is valid for both time-varying and non-time-varying magnetic fields. Since the
+magnetic field is solenoidal, we can write it as the curl of a vector potential:
+\begin{equation}\label{e4.11}
+{\bf B} = \nabla\times{\bf A}.
+\end{equation}
+So, there is no problem with the vector potential in the presence of time-varying fields. Let us substitute Equation~(\ref{e4.11}) into the field equation (\ref{e4.7}).
+We obtain
+\begin{equation}
+\nabla\times{\bf E} = - \frac{\partial \,\nabla\times{\bf A}}{\partial t},
+\end{equation}
+which can be written
+\begin{equation}
+\nabla\times\left( {\bf E} + \frac{\partial {\bf A} }{\partial t} \right) ={\bf 0}.
+\end{equation}
+Now, we know that a curl-free vector field can always be expressed as the gradient of
+a scalar potential, so let us write
+\begin{equation}
+{\bf E} + \frac{\partial {\bf A} }{\partial t} = -\nabla\phi,
+\end{equation}
+or
+\begin{equation}
+{\bf E} = - \nabla\phi - \frac{\partial {\bf A} }{\partial t}.
+\end{equation}
+This  equation tells us that the scalar potential $\phi$ only
+describes the conservative electric field generated by electric charges. 
+The electric field induced by time-varying magnetic fields is non-conservative, and
+is described by the magnetic vector potential ${\bf A}$.
+
+\section{Gauge Transformations}\label{s4.4}
+Electric and magnetic fields can be written in terms of scalar and
+vector  potentials, as follows:
+\begin{eqnarray}\label{e4.16a}
+{\bf E}& =& - \nabla\phi - \frac{\partial {\bf A}}{\partial t},\\[0.5ex]
+{\bf B} &=& \nabla\times{\bf A}.\label{e4.16b}
+\end{eqnarray}
+However, this prescription is not unique. There are many different
+potentials which can generate the same  fields. We have come
+across this problem before. It is called {\em gauge invariance}. The most general
+transformation which leaves the ${\bf E}$ and ${\bf B}$ fields unchanged  in
+Equations~(\ref{e4.16a}) and (\ref{e4.16b}) is
+\begin{eqnarray}\label{e4.17a}
+\phi &\rightarrow& \phi +\frac{\partial \psi}{\partial t},\\[0.5ex]
+{\bf A}& \rightarrow& {\bf A} - \nabla\psi.\label{e4.17b}
+\end{eqnarray}
+This is clearly a generalization of the gauge transformation 
+which we found earlier for static fields:
+\begin{eqnarray}\label{e4.18a}
+\phi &\rightarrow& \phi +c,\\[0.5ex]
+{\bf A}& \rightarrow& {\bf A} - \nabla\psi,\label{e4.18b}
+\end{eqnarray}
+where $c$ is a constant. 
+In fact, if $\psi({\bf r}, t)\rightarrow \psi({\bf r}) + c\,t$
+ then Equations~(\ref{e4.17a}) and (\ref{e4.17b}) reduce
+to Equations~(\ref{e4.18a}) and (\ref{e4.18b}).
+
+We are free to choose the gauge so as to make our equations as simple
+as possible. As before, the most sensible gauge for the scalar potential is
+to make it go to zero at infinity:
+\begin{equation}
+\phi({\bf r},t) \rightarrow 0\mbox{\hspace{1cm}as~~$|{\bf r}|\rightarrow \infty$}.
+\end{equation}
+For steady fields, we found that
+the optimum gauge for the vector potential
+was the so-called Coulomb gauge:
+\begin{equation}
+\nabla\cdot {\bf A} = 0.
+\end{equation}
+We can still use this gauge for non-steady fields. The argument, which we gave
+earlier (see Section~\ref{svecs}), that it is always possible to transform away the
+divergence of a vector potential remains valid. One of the nice features of
+the Coulomb gauge is that when we write the electric field,
+\begin{equation}\label{e4.21}
+{\bf E} = -\nabla\phi - \frac{\partial {\bf A}}{\partial t},
+\end{equation}
+we find that the part which is generated by charges ({\em i.e.}, the first term on the
+right-hand side) is conservative, and the part induced by magnetic fields
+({\em i.e.}, the second term on the right-hand side) is purely solenoidal. Earlier on, we
+proved mathematically that a general vector field can be written as the sum
+of a conservative field and a solenoidal field (see Section~\ref{s310}). Now we
+are finding that when we split up the electric field in this manner the
+two fields have different physical origins---the conservative part of
+the field emanates from
+electric charges, whereas the solenoidal part is induced by magnetic fields. 
+
+Equation~(\ref{e4.21}) can be combined with the field equation
+\begin{equation}
+\nabla\cdot {\bf E} = \frac{\rho}{\epsilon_0}
+\end{equation}
+(which remains valid for non-steady fields) to give
+\begin{equation}\label{e4.23}
+-\nabla^2 \phi - 
+\frac{\partial \,\nabla\cdot{\bf A}}{\partial t} = \frac{\rho}{\epsilon_0}.
+\end{equation}
+With the Coulomb gauge condition, $\nabla\cdot{\bf A} = 0$, the above expression
+reduces to
+\begin{equation}
+\nabla^2 \phi = -\frac{\rho}{\epsilon_0},
+\end{equation}
+which is just Poisson's equation. Thus, we can immediately write down an expression
+for the scalar potential generated by  non-steady fields. It is exactly analogous
+to our previous expression for the scalar potential generated by steady fields:
+{\em i.e.}, 
+\begin{equation}\label{e4.25}
+\phi({\bf r},t)= \frac{1}{4\pi\epsilon_0}
+\int \frac{\rho({\bf r}',t)}{|{\bf r} - {\bf r}'|} \,d^3{\bf r}'.
+\end{equation}
+However, this apparently simple result is {\em extremely} deceptive.
+Equation (\ref{e4.25}) is a typical action at a distance law. If the charge density changes
+suddenly at ${\bf r}'$ then the potential at ${\bf r}$ responds {\em immediately}.
+However, we shall see later that the full time-dependent Maxwell's equations only
+allow information to propagate at the speed of light ({\em i.e.}, they do not violate
+Relativity). How can these two statements be reconciled? The crucial point  is
+that the scalar potential cannot be measured directly, it can only be inferred
+from the electric field. In the time-dependent case, there are two parts to the
+electric field: that part which comes from the scalar potential, and that part
+which comes from the vector potential [see Equation~(\ref{e4.21})]. So, if the scalar
+potential responds immediately to some distance rearrangement of  charge density then
+it does not necessarily follow that the electric field also has an immediate response.
+What actually happens is that the change in the part of the
+electric field which comes from
+ the scalar
+potential is balanced by an equal and opposite change in the part which comes from the
+vector potential, so that the overall electric field remains unchanged. This state
+of affairs persists at least until sufficient time has elapsed for a light
+signal to travel from the distant charges to the region in question. 
+Thus, Relativity is not violated, since it is the
+electric field, and not the scalar potential, which carries physically accessible
+information.
+
+It is clear that the apparent action at a distance
+nature of Equation~(\ref{e4.25}) is highly misleading. This suggests, very strongly, that the
+Coulomb gauge is not the optimum gauge in the time-dependent case. A more
+sensible choice is the so called {\em Lorenz gauge}:
+\begin{equation}\label{e4.26}
+\nabla\cdot {\bf A} = -\epsilon_0 \mu_0 \,\frac{\partial \phi}{\partial t}.
+\end{equation}
+It can be shown, by analogy with earlier arguments (see Section~\ref{svecs}), that
+it
+is always possible to make a gauge transformation 
+such that the above equation is satisfied at a given instance in time. Substituting the Lorenz gauge condition
+into Equation~(\ref{e4.23}), we obtain
+\begin{equation}
+\epsilon_0\mu_0\,\frac{\partial^2\phi}{\partial t^2} - \nabla^2\phi = \frac{\rho}
+{\epsilon_0}.
+\end{equation}
+It turns out that this is a three-dimensional wave equation in which information
+propagates at the speed of light. But, more of this later. 
+Note that the magnetically induced part of
+the electric field ({\em i.e.}, $-\partial {\bf A}/\partial t$) 
+is not purely solenoidal in the Lorenz
+gauge. This is a slight disadvantage of the Lorenz gauge with respect to the
+Coulomb gauge. However, this disadvantage
+is more than offset by other advantages which will
+become apparent presently. Incidentally, the fact that the part of the electric
+field which we
+ascribe to magnetic induction changes when we change the gauge suggests
+ that the separation
+of the field into magnetically induced and charge induced components is not
+unique in the general time-varying case ({\em i.e.}, it is a convention). 
+
+\section{Displacement Current}
+Michael Faraday revolutionized Physics in 1830 by showing that electricity
+and magnetism were interrelated phenomena. He achieved this breakthrough 
+by careful experimentation. Between 1864 and 1873, James Clerk Maxwell achieved
+a similar breakthrough by pure thought. Of course, this was only possible
+because he was able to take the experimental results of Coulomb, Amp\`{e}re, Faraday, {\em etc.},
+as his starting point. Prior to 1864, the laws of electromagnetism were written
+in integral form. Thus, Gauss's law was (in SI units) {\em the flux of
+the electric  field through a closed surface equals the total enclosed charge,
+divided by $\epsilon_0$}. The no magnetic monopole law was {\em the flux of the
+magnetic field through any closed surface is zero}. Faraday's law was
+{\em the electromotive force generated around a closed loop equals minus the
+rate of change of the magnetic flux through the loop}. Finally, Amp\`{e}re's
+circuital
+law was {\em the line integral of the magnetic field around a closed loop equals
+the total current flowing through the loop, multiplied by $\mu_0$}. Maxwell's first
+great achievement 
+was to realize that these laws could be expressed as a set of first-order partial
+differential equations. Of course, he wrote his equations
+ out in component form, because
+modern vector notation did not come into vogue until about the time of the
+First World War. In modern notation, Maxwell first wrote:
+\begin{eqnarray}\label{e4.28}
+\nabla\cdot{\bf E} &=& \frac{\rho}{\epsilon_0}, \\[0.5ex]
+\nabla\cdot{\bf B} &=& 0, \\[0.5ex]
+\nabla\times{\bf E} &=& - \frac{\partial {\bf B}}{\partial t} , \\[0.5ex]
+\nabla\times{\bf B} &=& \mu_0 \,{\bf j}.\label{e4.31}
+\end{eqnarray}
+Maxwell's second great achievement was to realize that these equations are wrong. 
+
+We can see that there is something slightly unusual about 
+Equations~(\ref{e4.28})--(\ref{e4.31}): {\em i.e.}, they
+are very  asymmetric with respect to electric and magnetic fields. After all, time-varying magnetic fields
+can induce electric fields, but electric fields apparently 
+cannot affect magnetic fields
+in any way. However, there is a far more serious problem associated
+with the above equations,
+which we alluded to earlier. Consider the integral form of the last 
+Maxwell equation
+({\em i.e.}, Amp\`{e}re's circuital law)
+\begin{equation}\label{e4.32}
+\oint_C {\bf B} \cdot d{\bf l} = \mu_0 \int_S {\bf j}\cdot d{\bf S}.
+\end{equation}
+This says that the line integral of the magnetic field around a closed loop
+$C$ is equal to $\mu_0$ times the flux of the current density through the loop.
+The problem is that the flux of the current density through  a loop is not,
+in general, a well-defined quantity.
+In order for the  flux to be well-defined,  the integral of
+${\bf j}\cdot d{\bf S}$ over some surface $S$ attached to a loop
+$C$ must depend
+on $C$, but not on the details of $S$. This is only the case if
+\begin{equation}
+\nabla \cdot {\bf j} = 0.
+\end{equation}
+Unfortunately, the above  condition is only
+satisfied for non-time-varying fields. 
+
+Why do we say that, in general,  $\nabla\cdot{\bf j} \neq 0$? Well, consider
+the flux of ${\bf j}$ out of some closed surface $S$ enclosing a
+volume $V$. This is clearly equivalent to the rate at which 
+ charge flows out of $S$. However, if charge is a conserved quantity
+(and we certainly 
+believe that it is) then the rate at which  charge flows out of $S$ must
+ equal
+the rate of decrease of the charge contained in volume $V$. Thus,
+\begin{equation}
+\oint_S {\bf j} \cdot d{\bf S} = - \frac{\partial}{\partial t}\!
+\int_V \rho\,dV.
+\end{equation}
+Making use of Gauss' theorem, this yields
+\begin{equation}\label{e4.35}
+\nabla\cdot{\bf j} = -\frac{\partial \rho}{\partial t}.
+\end{equation}
+Thus,
+$\nabla\cdot{\bf j} =0$ is only true  in a steady-state ({\em i.e.},
+when $\partial/\partial t \equiv 0$). 
+
+The problem with Amp\`{e}re's circuital law is well illustrated by the following very famous
+example.
+Consider a long straight wire interrupted by a parallel plate capacitor. Suppose
+that $C$ is some loop which circles the wire. In the time-independent situation, the
+capacitor acts like a break in the wire, so no current flows, and no magnetic
+field is generated. There is clearly no problem with Amp\`{e}re's law in this case. 
+However, in the time-dependent situation, a transient current flows in the wire as the
+capacitor charges up, or charges down, and so a transient magnetic field is generated. 
+Thus, the line integral of the magnetic field around $C$ is
+(transiently)  non-zero. According to Amp\`{e}re's circuital law, the flux of the current density
+through any surface attached to $ C$  should also be (transiently) non-zero.
+Let us consider two such surfaces. The
+first surface, $S_1$, intersects the wire---see Figure~\ref{fdisp}. This surface
+causes us no problem, since the flux of ${\bf j}$ though the surface is clearly
+non-zero (because it  intersects
+a current carrying wire).
+The second surface, $S_2$, passes between the plates of the capacitor, and, therefore,
+does not intersect the wire at all. Clearly, the flux of the current density through
+this surface is zero. The current density fluxes through surfaces $S_1$ and $S_2$
+are obviously different. However, both surfaces are attached to the same loop $C$,
+ so
+the fluxes should be the same, according to Amp\`{e}re's law (\ref{e4.32}). It would appear 
+that Amp\`{e}re's  circuital law is about to disintegrate. Note, however, that although the surface $S_2$ does not intersect any electric current,
+it does pass through a region of strong changing
+ electric field as it threads between the
+plates of the charging (or discharging) capacitor. Perhaps, if we add a term involving
+$\partial {\bf E}/{\partial t}$ to the right-hand side of Equation~(\ref{e4.31}) then we
+can somehow fix up Amp\`{e}re's circuital law? This is, essentially, how Maxwell reasoned
+more than one hundred years ago.
+\begin{figure}
+\epsfysize=1.5in
+\centerline{\epsffile{chapter4/fig4.2.eps}}
+\caption{\em Application of Amp\`{e}re's circuital law to a charging, or discharging, capacitor.}\label{fdisp}
+\end{figure}
+
+Let us try out this scheme. Suppose that we write
+\begin{equation}\label{e4.36}
+\nabla\times{\bf B} = \mu_0\, {\bf j} +\lambda\,\frac{\partial {\bf E}}{\partial t},
+\end{equation}
+instead of Equation~(\ref{e4.31}). Here, $\lambda$ is some constant. Does this resolve
+our problem? We want  the flux of the right-hand side of the
+above equation through some loop $C$ to be  well-defined; {\em i.e.}, it should only
+depend on $C$, and not the particular surface $S$ (which spans $C$) upon which
+it is evaluated. This is another way of saying that we want the divergence of
+the right-hand side to be zero. In fact, we can see that
+this is necessary for self-consistency, since the divergence of the left-hand side
+is automatically zero. So, taking the divergence of Equation~(\ref{e4.36}), we obtain
+\begin{equation}
+0= \mu_0 \,\nabla\cdot{\bf j} +\lambda \,\frac{\partial\,
+ \nabla\cdot{\bf E}}{\partial t}.
+\end{equation}
+But, we know that
+\begin{equation}
+\nabla\cdot{\bf E} = \frac{\rho}{\epsilon_0},
+\end{equation}
+so combining the previous two equations we arrive at
+\begin{equation}
+\mu_0 \nabla\cdot{\bf j} + \frac{\lambda}{\epsilon_0} \frac{\partial\rho}{\partial t}
+=0.
+\end{equation}
+Now, our charge conservation law (\ref{e4.35})  can be written
+\begin{equation}
+\nabla\cdot{\bf j} +\frac{\partial\rho}{\partial t} = 0.
+\end{equation}
+The previous two equations are in agreement  provided
+ $\lambda = \epsilon_0\mu_0$. So, if we modify the final Maxwell equation
+such that it reads
+\begin{equation}\label{e4.41}
+\nabla\times{\bf B} = \mu_0 \,({\bf j} +{\bf j}_d),
+\end{equation}
+where
+\begin{equation}
+{\bf j}_d = \epsilon_0\,\frac{\partial{\bf E}}{\partial t},
+\end{equation}
+then we find that the divergence of the right-hand side is
+ zero as a consequence
+of charge conservation. The extra term, ${\bf j}_d$, 
+is called the {\em displacement current}\/ density (this name was invented by Maxwell).
+In summary, we have shown that although the flux of the real current density through a loop is
+{\em not}\/ well-defined,  if we form the sum of the real current density and the displacement
+current density  then the flux of this new quantity through a  loop {\em is} well-defined. 
+
+Of course, the displacement current is not a current at all. It is, in fact, 
+associated with the  induction of   magnetic fields by  time-varying electric
+fields. Maxwell came up with this rather  curious name because many of his ideas 
+regarding electric and magnetic fields were completely wrong. For instance, Maxwell
+believed in the \ae ther (a tenuous invisible medium permeating all space), and he thought that electric and magnetic fields were some
+sort of stresses in this medium. He also thought that the displacement current
+was associated with  displacements of the \ae ther (hence, the name). The
+reason that these misconceptions did not invalidate his equations is quite simple.
+Maxwell based his equations on the results of experiments, and he  added in his
+extra term so as to make these equations  mathematically self-consistent.
+Both of these steps are valid irrespective of the existence or non-existence
+of the \ae ther.
+
+Now, the field equations (\ref{e4.28})--(\ref{e4.31}) are derived directly from the results
+of famous nineteenth century experiments. So, if  a new term involving
+the time derivative of the electric field needs to
+be added to one of these equations, for the sake of mathematical consistency,
+why is there is no corresponding nineteenth century experimental result which demonstrates
+this fact?  Well, it turns out that the new term describes an effect which is far too small
+to have  been observed in the nineteenth century. Let us demonstrate
+this. 
+
+First, we shall show that it is comparatively easy to detect the induction of
+an electric field by a changing magnetic field in a desktop laboratory experiment. 
+The Earth's magnetic field is about 1 gauss (that is, $10^{-4}$ tesla). 
+Magnetic fields generated by electromagnets (which will fit on a laboratory desktop)
+are typically about one hundred times bigger than this. Let us, therefore,
+consider a hypothetical experiment in which a 100 gauss magnetic field is
+switched on suddenly. Suppose that the field ramps up in one tenth of a second.
+What electromotive force is generated in a 10 centimeter square loop of wire
+located in this field? Faraday's law is written
+\begin{equation}
+V = -\frac{\partial}{\partial t} \oint {\bf B}\cdot d{\bf S} \sim  \frac{ B\,A}{t},
+\end{equation}
+where $B=0.01$ tesla is the field-strength, $A=0.01$ m$^2$ is the area of the loop,
+and $t=0.1$ seconds is the ramp time. It follows that $V \sim 1$ millivolt. Well,
+one millivolt is easily detectable. In fact, most hand-held laboratory voltmeters
+are calibrated in millivolts. It is, thus,  clear that we would have no difficulty
+whatsoever detecting the magnetic induction of electric fields in a nineteenth century
+style laboratory experiment. 
+
+Let us now consider the electric induction of magnetic fields. Suppose that our
+electric field is generated by a parallel plate capacitor of spacing one centimeter
+which is charged up 
+to $100$ volts. This gives a field of $10^4$ volts per meter. Suppose, 
+further, that the capacitor is discharged in one tenth of a second. The law
+of electric induction is obtained by integrating Equation~(\ref{e4.41}), and neglecting the
+first term on the right-hand side. Thus,
+\begin{equation}
+\oint {\bf B} \cdot d{\bf l} = \epsilon_0 \mu_0 \,\frac{\partial}{\partial t}\!
+\int {\bf E} \cdot d{\bf S}.
+\end{equation}
+Let us consider a loop 10 centimeters square. What is the magnetic field generated
+around this loop (which we could try to  measure with a Hall probe)? Very
+approximately, we find that
+\begin{equation}
+l \,B \sim \epsilon_0 \mu_0 \,\frac{ E\, l^2}{t},
+\end{equation}
+where $l=0.1$ meters is the dimensions of the loop, $B$ is the 
+magnetic field-strength,
+$E=10^4$ volts per meter is the electric field, and $t=0.1$ seconds is the decay
+time of the field. We obtain $B\sim 10^{-9}$ gauss. Modern technology is
+unable to detect such 
+a small magnetic field, so we cannot really blame nineteenth century physicists for not
+discovering electric induction experimentally.
+
+Note, however, that the displacement current {\em is}\/ detectable in some modern experiments. 
+Suppose that we  take an FM radio signal, amplify it so that its peak
+voltage is one hundred volts, and then apply it to
+the parallel plate capacitor in the previous hypothetical experiment.
+ What size of magnetic
+field would this generate? Well, a typical FM signal oscillates at $10^9$ Hz,
+so $t$ in the previous example changes from $0.1$ seconds to $10^{-9}$ seconds.
+Thus, the induced magnetic field is about $10^{-1}$ gauss. This
+is certainly detectable by modern technology.  Hence, we conclude that if the electric field is oscillating sufficiently rapidly then electric induction
+of magnetic fields is an observable effect. In fact, there is a virtually
+infallible rule for deciding whether or not the displacement current can be
+neglected in Equation~(\ref{e4.41}). If {\em electromagnetic radiation} is important
+then the displacement current must be included. On the other hand, if 
+electromagnetic radiation is unimportant then the displacement current can be
+safely neglected. Clearly, Maxwell's inclusion of the displacement current in
+Equation~(\ref{e4.41}) was a vital step in his later realization that his equations allowed
+propagating wave-like solutions. These solutions 
+are, of course, electromagnetic waves.
+But, more of this later.
+
+We are now in a position to write out the full set of Maxwell equations:
+\begin{eqnarray}\label{e4.45}
+\nabla\cdot{\bf E} &=& \frac{\rho}{\epsilon_0}, \\[0.5ex]
+\nabla\cdot{\bf B} &=& 0, \label{e4.46}\\[0.5ex]
+\nabla\times{\bf E} &=& - \frac{\partial {\bf B}}{\partial t},\label{e4.47} \\[0.5ex]
+\nabla\times{\bf B} &=& \mu_0\, {\bf j}+ \epsilon_0\mu_0\,
+\frac{\partial {\bf E}}{\partial
+t}.\label{e4.48}
+\end{eqnarray}
+These four partial differential equations constitute a {\em complete}\/ description 
+of the behaviour of electric and magnetic fields. The first equation describes
+how electric fields are induced by electric charges. The second equation says that there
+is no such thing as a magnetic monopole. The third equation describes the induction
+of electric fields by changing magnetic fields, and the fourth equation describes
+the generation of magnetic fields by electric currents, and the induction of
+magnetic fields by changing electric fields. Note that, with the inclusion of the
+displacement current, these equations treat electric and magnetic fields on
+an equal footing: {\em i.e.}, electric fields can induce magnetic fields, and 
+{\em vice versa}. Equations~(\ref{e4.45})--(\ref{e4.48}) succinctly sum up the experimental results of
+Coulomb, Amp\`{e}re, and Faraday.
+They are called {\em Maxwell's equations}\/ because
+James Clerk Maxwell was the first to write them down (in component form). 
+Maxwell also modified them so as to make them mathematically self-consistent.
+
+As an example of a calculation involving the displacement current,
+let us find the current and displacement current densities associated with the
+decaying charge distribution
+\begin{equation}
+\rho(r,t) = \frac{\rho_0\,\exp(-t/\tau)}{r^2+a^2},
+\end{equation}
+where $r$ is a spherical polar coordinate, $\rho_0$ is a constant, and $\tau$ and $a$ are positive constants.
+Now, according to charge conservation,
+\begin{equation}\label{edispx}
+\nabla\cdot{\bf j} = -\frac{\partial \rho}{\partial t}.
+\end{equation}
+By symmetry, we expect ${\bf j}={\bf j}(r,t)$. Hence, it follows that
+${\bf j} = j_r(r,t)\,{\bf e}_r$ [since only a radial current has a non-zero
+divergence when ${\bf j}= {\bf j}(r)$]. Hence, the above equation
+yields
+\begin{equation}
+\frac{1}{r^2}\,\frac{\partial (r^2\,j_r)}{\partial r} = - \frac{\partial \rho}{\partial t} = \frac{\rho_0\,\exp(-t/\tau)}{\tau\,(r^2+a^2)}.
+\end{equation}
+This expression can be integrated, subject to the sensible boundary condition
+$j_r(0)= 0$, to give
+\begin{equation}
+j_r(r) = \frac{\rho_0}{\tau}\,{\rm e}^{-t/\tau}\left[\frac{r-a\,\tan^{-1}(r/a)}{r^2}\right].
+\end{equation}
+Now, the electric field generated by the decaying charge
+distribution satisfies
+\begin{equation}\label{edispy}
+\nabla\cdot{\bf E} = \frac{\rho}{\epsilon_0}.
+\end{equation}
+Since $\partial\rho/\partial t=-\rho/\tau$, it can be seen, from a comparison
+of Equations~(\ref{edispx}) and (\ref{edispy}), that 
+\begin{equation}
+{\bf E} =\frac{\tau}{\epsilon_0}\,{\bf j}.
+\end{equation}
+However, the displacement current density is given by
+\begin{equation}
+{\bf j}_d = \epsilon_0\,\frac{\partial {\bf E}}{\partial t} = - {\bf j},
+\end{equation}
+since $\partial {\bf j}/\partial t = - {\bf j}/\tau$. Hence, we conclude that
+the displacement current density cancels out the true current density, so that ${\bf j} + {\bf j}_d = {\bf 0}$. This is just as well, since $\nabla\times {\bf B} = \mu_0\,({\bf j} + {\bf j}_d)$. But, if ${\bf B}= {\bf B}(r,t)$, by symmetry, then
+$\nabla\times {\bf B}$ has no radial component---see Equation~(\ref{spcurl1}). Thus, if the
+current and displacement current are constrained, by symmetry,  to be radial, 
+then they must sum to zero, else the fourth Maxwell equation cannot be
+satisfied. In fact, no magnetic field is generated in this particular example,
+which also implies that there is no induced electric field.
+
+\section{Potential Formulation}\label{s4.6}
+We have seen that Equations~(\ref{e4.46}) and (\ref{e4.47}) are automatically satisfied
+if we write the electric and magnetic fields in terms of potentials: {\em i.e.},
+\begin{eqnarray}
+{\bf E}& = &- \nabla\phi - \frac{\partial {\bf A}}{\partial t},\label{e4.48a}\\[0.5ex]
+{\bf B}& = & \nabla\times{\bf A}.\label{e4.49}
+\end{eqnarray}
+This prescription is not unique, but we can make it unique by adopting the
+following conventions:
+\begin{eqnarray}
+\phi({\bf r}) &\rightarrow & 0\mbox{\hspace{0.5cm}as~~~$|{\bf r}| \rightarrow \infty$},
+\\[0.5ex]
+\nabla\cdot {\bf A} &=& -\epsilon_0 \mu_0 \,\frac{\partial \phi}{\partial t}.
+\end{eqnarray}
+The above equations can be combined with Equation~(\ref{e4.45}) to give
+\begin{equation}
+\epsilon_0\mu_0\,\frac{\partial^2\phi}{\partial t^2} - \nabla^2\phi = \frac{\rho}
+{\epsilon_0}.
+\end{equation}
+
+Let us now consider Equation~(\ref{e4.48}). Substitution of Equations~(\ref{e4.48a}) and (\ref{e4.49}) into this formula
+yields
+\begin{equation}
+\nabla\times\nabla\times {\bf A} \equiv
+\nabla(\nabla\cdot{\bf A}) - \nabla^2 {\bf A} = \mu_0\,{\bf j}
+- \epsilon_0\mu_0 \,\frac{\partial\,\nabla\phi}{\partial t} - \epsilon_0\mu_0\,
+\frac{\partial^2 {\bf A}}{\partial t^2},
+\end{equation}
+or
+\begin{equation}
+\epsilon_0 \mu_0 \frac{\partial^2 {\bf A}}{\partial t^2} - \nabla^2 {\bf A}
+= \mu_0\, {\bf j} - \nabla\left(\nabla\cdot{\bf A} +\epsilon_0\mu_0\, \frac{\partial\phi}
+{\partial t}\right).
+\end{equation}
+We can now see quite clearly
+where  the Lorenz gauge condition (\ref{e4.26}) comes from. The above
+equation  is, in general, very complicated, since it involves both the vector and
+scalar potentials. But, if we adopt the Lorenz gauge then the last term on
+the right-hand side becomes zero, and the equation  simplifies considerably, and ends up
+only involving the vector potential. Thus, we find that Maxwell's equations
+reduce to the following equations:
+\begin{eqnarray}
+\epsilon_0\mu_0\,\frac{\partial^2\phi}{\partial t^2} - \nabla^2\phi& = &\frac{\rho}
+{\epsilon_0}, \\[0.5ex]
+\epsilon_0\mu_0\,\frac{\partial^2{\bf A} }{\partial t^2} - 
+\nabla^2{\bf A} & = &\mu_0\, {\bf j}.
+\end{eqnarray}
+Of course, this is the same (scalar) equation written four times over. In steady-state ({\em i.e.},
+$\partial/\partial t=0$),  the equation in question reduces to  Poisson's equation, which we know
+how to solve. With the $\partial^2/\partial t^2$ terms  included,
+it becomes  a slightly more complicated equation (in fact, a
+driven three-dimensional wave equation). 
+
+\section{Electromagnetic Waves}\label{sem}
+This is  an
+appropriate point at which to demonstrate that Maxwell's equations possess
+ wave-like solutions which can propagate through a vacuum. Let us start from Maxwell's equations
+in free space ({\em i.e.}, with no charges and no currents):
+\begin{eqnarray}
+\nabla\cdot{\bf E} &=& 0,\label{e4.56}\\[0.5ex]
+\nabla\cdot{\bf B} &=& 0,\label{e4.57}\\[0.5ex]
+\nabla\times{\bf E} &=& -\frac{\partial {\bf B}}{\partial t},\label{e4.58}\\[0.5ex]
+\nabla\times{\bf B} &=& \epsilon_0\mu_0\,\frac{\partial {\bf E}}{\partial t}.\label{e4.59}
+\end{eqnarray}
+Note that these equations exhibit a nice symmetry between the electric and magnetic
+fields. 
+
+There is an easy way to show that the above equations possess wave-like
+solutions, and a hard way. The easy way is to assume that the solutions  are
+going to be wave-like beforehand. Specifically, let us search for
+plane-wave solutions of the form:
+\begin{eqnarray}
+{\bf E}({\bf r}, t) &=& {\bf E}_0 \cos\,({\bf k}\cdot {\bf r} - \omega\, t),
+ \\[0.5ex]
+{\bf B}({\bf r}, t) &=& {\bf B}_0 \cos\,({\bf k}\cdot {\bf r} - \omega\, t-\phi).
+\end{eqnarray}
+Here, ${\bf E}_0$ and ${\bf B}_0$ are constant vectors, ${\bf k}$ is called
+the wave-vector, and $\omega$ is the angular frequency. The frequency
+in hertz, $f$, is related to the angular frequency via $\omega = 2\pi\,f$. 
+This frequency is conventionally defined to be positive. The quantity
+$\phi$ is a phase difference between the electric and magnetic fields. 
+Actually, it is more convenient to write 
+\begin{eqnarray}\label{e4.61a}
+{\bf E} &=& {\bf E}_0 \,{\rm e}^{\,{\rm i}\,({\bf k}\cdot{\bf r} - \omega \,t)},
+\\[0.5ex]
+{\bf B} &=& {\bf B}_0 \,{\rm e}^{\,{\rm i}\,({\bf k}\cdot{\bf r} - \omega \,t)},\label{e4.61b}
+\end{eqnarray}
+where, by convention, the physical solution is the {\em real part}\/ of the 
+above equations. The phase difference $\phi$ is  absorbed into the
+constant vector ${\bf B}_0$ by allowing it to become complex. Thus,
+${\bf B}_0 \rightarrow {\bf B}_0 \,{\rm e}^{-{\rm i}\,\phi}$. In general,
+the vector ${\bf E}_0$ is also complex. 
+
+Now, a  wave maximum of the electric field satisfies 
+\begin{equation}
+{\bf k}\cdot {\bf r}  = \omega\, t + n\,2\pi,
+\end{equation}
+where $n$ is an integer. The solution to
+this equation is a set of equally spaced parallel planes 
+(one plane for each possible value of $n$), whose normals are parallel
+to the wave-vector ${\bf k}$, and
+which propagate in the direction of ${\bf k}$ with  phase-velocity
+\begin{equation}\label{e4.63}
+v = \frac{\omega}{k}.
+\end{equation}
+The spacing between adjacent planes ({\em i.e.}, the wavelength) is given by
+\begin{equation}
+\lambda = \frac{2\pi}{k}
+\end{equation}
+---see Figure~\ref{f34}.
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter4/fig4.3.eps}}
+\caption{\em Wavefronts associated with a plane wave.}\label{f34}
+\end{figure}
+
+Consider a general plane-wave vector field
+\begin{equation}
+{\bf A} =  {\bf A}_0 \,{\rm e}^{\,{\rm i}\,({\bf k}\cdot{\bf r} - \omega \,t)}.
+\end{equation}
+What is the divergence of ${\bf A}$? This is easy to evaluate. We have
+\begin{eqnarray}
+\nabla\cdot{\bf A} &=&\frac{\partial A_x}{\partial x}+
+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z} 
+= (A_{0x} \,{\rm i}\, k_x +A_{0y} \,{\rm i}\, k_y +A_{0z} \,{\rm i}\, k_z)
+\,{\rm e}^{\,{\rm i}\,({\bf k}\cdot{\bf r} - \omega t)}\nonumber\\[0.5ex]
+&=&
+{\rm i}\, {\bf k}\cdot {\bf A}.\label{e4.66}
+\end{eqnarray}
+How about the curl of ${\bf A}$? This is slightly more difficult. We have
+\begin{eqnarray}
+(\nabla\times{\bf A})_x &=& \frac{\partial A_z}{\partial y}
+-\frac{\partial A_y}{\partial z} = ({\rm i}\,k_y A_z - {\rm i}\,
+k_z A_y)\nonumber\\[0.5ex]
+&=& {\rm i}\,({\bf k} \times {\bf A})_x,
+\end{eqnarray}
+which easily generalizes to
+\begin{equation}
+\nabla\times{\bf A} = {\rm i}\, {\bf k} \times{\bf A}.\label{e4.68}
+\end{equation}
+Hence, we can see that vector field operations on a plane-wave simplify to 
+replacing the $\nabla$ operator with ${\rm i}\,{\bf k}$.
+
+The first Maxwell equation (\ref{e4.56}) reduces to
+\begin{equation}\label{e4.69}
+{\rm i}\, {\bf k} \cdot {\bf E}_0  = 0,
+\end{equation}
+using the assumed electric and magnetic fields, (\ref{e4.61a}) and (\ref{e4.61b}), and
+Equation~(\ref{e4.66}). Thus, the electric field is {\em perpendicular}\/ to the direction
+of propagation of the wave. Likewise, the second Maxwell equation gives
+\begin{equation}
+{\rm i}\,{\bf k} \cdot {\bf B}_0 = 0,
+\end{equation}
+implying that the magnetic field is also {\em perpendicular}\/ to the direction of
+propagation. Clearly, the wave-like solutions of Maxwell's equation
+are a type of {\em transverse wave}. The third Maxwell equation yields
+\begin{equation}\label{e4.71}
+{\rm i}\,{\bf k}\times {\bf E}_0 = {\rm i}\, \omega\, {\bf B}_0,
+\end{equation}
+where use has been made of Equation~(\ref{e4.68}). Dotting this equation with ${\bf E}_0$
+gives
+\begin{equation}
+{\bf E}_0 \cdot {\bf B}_0 = \frac{
+{\bf E}_0 \cdot {\bf k} \times {\bf E}_0 }{ \omega }= 0.
+\end{equation}
+Thus, the electric and magnetic fields are mutually perpendicular. Dotting
+equation (\ref{e4.71}) with ${\bf B}_0$ yields 
+\begin{equation}
+{\bf B}_0 \cdot {\bf k}  \times{\bf E}_0 = \omega\,B_0^{~2} > 0.
+\end{equation}
+Thus, the vectors ${\bf E}_0$, ${\bf B}_0$, and ${\bf k}$ are {\em mutually
+perpendicular}, and form a right-handed set. The final Maxwell equation
+gives
+\begin{equation}
+{\rm i}\, {\bf k}\times{\bf B}_0 = -{\rm i}\,\epsilon_0\mu_0 \,\omega\,
+{\bf E}_0.
+\end{equation}
+Combining this with Equation~(\ref{e4.71}) yields
+\begin{equation}
+{\bf k}\times ({\bf k} \times {\bf E}_0) = 
+({\bf k} \cdot {\bf E}_0)\,{\bf k} - k^2\,{\bf E}_0 =-k^2\,{\bf E}_0
+= - \epsilon_0 \mu_0\,\omega^2\, {\bf E}_0,
+\end{equation}
+or
+\begin{equation}
+k^2 = \epsilon_0 \mu_0 \,\omega^2,
+\end{equation}
+where use has been made of Equation~(\ref{e4.69}). However, we know, from Equation~(\ref{e4.63}), that
+the phase-velocity $c$ is related to the magnitude of the wave-vector and the
+angular wave frequency via $c = \omega/k$. Thus, we obtain
+\begin{equation}\label{e4.77}
+c = \frac{1}{\sqrt{\epsilon_0 \mu_0}}.
+\end{equation}
+
+So, we have found transverse plane-wave solutions of the free-space Maxwell equations 
+propagating at some phase-velocity $c$, which is given by a combination of $\epsilon_0$ and
+$\mu_0$, and is thus the {\em same}\/ for all frequencies and wavelengths. The constants $\epsilon_0$ and
+$\mu_0$ are easily measurable. The former is related to the
+force acting between stationary electric charges, and the latter to the force acting between steady electric currents.
+Both of these constants were fairly well-known in Maxwell's time. Maxwell,
+incidentally, was the first person to look for  wave-like solutions of
+his equations, and, thus, to derive Equation~(\ref{e4.77}). The modern values of $\epsilon_0$
+and $\mu_0$ are
+\begin{eqnarray}
+\epsilon_0& =& 8.8542\times 10^{-12} \,{\rm C}^2\,{\rm N}^{-1}\,{\rm m}^{-2},
+\\[0.5ex]
+\mu_0 &=&4\pi\times 10^{-7}\,{\rm N} \,{\rm A}^{-2}.
+\end{eqnarray}
+Let us use these values to find the phase-velocity of  ``electromagnetic
+waves.'' We obtain
+\begin{equation}\label{e4.79}
+c = \frac{1}{\sqrt{\epsilon_0 \mu_0}} = 2.998\times 10^8\,{\rm m}\,{\rm s}^{-1}.
+\end{equation}
+Of course, we immediately recognize this as the velocity of light. Maxwell also made
+this connection back in the 1870's. He conjectured that light, whose nature had
+previously been unknown, was a form of electromagnetic radiation. This was
+a remarkable
+prediction. After all, Maxwell's equations were derived from the results of benchtop
+laboratory experiments involving charges, batteries, coils, and currents, which apparently
+had nothing
+whatsoever to do with light. 
+
+Maxwell was able to make another remarkable prediction. The wavelength of
+light was well-known in the late nineteenth century from studies of diffraction
+through slits, {\em etc.} 
+Visible light actually occupies a surprisingly
+narrow wavelength range. The shortest wavelength blue light which is visible
+ has $\lambda= 0.4$ microns (one micron is $10^{-6}$ meters).
+The longest wavelength red light which is visible has 
+$\lambda= 0.76$ microns. However, there is nothing in our analysis which suggests that
+this particular range of wavelengths is special. Electromagnetic waves
+can have {\em any}\/ wavelength. 
+Maxwell concluded that visible light was a small part of a vast spectrum of
+previously undiscovered
+types of electromagnetic radiation. Since Maxwell's time, virtually all of the
+non-visible parts of the electromagnetic spectrum have been observed. 
+
+Table~1 gives a brief guide to the electromagnetic spectrum. 
+Electromagnetic waves are of particular importance to us because they 
+are our main source of information regarding the Universe around us. 
+Radio waves and microwaves (which are comparatively
+hard to scatter) have provided much of
+our knowledge about the centre of our own galaxy. This is completely unobservable
+in visible light, which is strongly scattered by interstellar gas and dust
+lying in the galactic plane. 
+For the same reason, the spiral arms of our galaxy can only be mapped out using radio waves.
+Infrared radiation is useful for detecting 
+proto-stars, which are not yet hot enough to emit visible radiation.
+Of course, visible radiation is still the mainstay of Astronomy. 
+Satellite based ultraviolet observations have yielded invaluable insights into
+the structure and distribution of distant galaxies. Finally, X-ray and $\gamma$-ray
+Astronomy usually concentrates on  exotic objects, such as pulsars
+and supernova remnants. 
+\begin{table}
+\centering
+\begin{tabular}{lc}\hline
+{\bf Radiation type}& {\bf Wavelength range} ($m$)\\[0.5ex]\hline
+Gamma Rays & $<10^{-11}$ \\[0.5ex]
+X-Rays & $10^{-11}$--$10^{-9}$ \\[0.5ex]
+Ultraviolet & $10^{-9}$--$10^{-7}$\\[0.5ex]
+Visible & $10^{-7}$--$10^{-6}$\\[0.5ex]
+Infrared& $10^{-6}$--$10^{-4}$\\[0.5ex]
+Microwave & $10^{-4}$--$10^{-1}$\\[0.5ex]
+TV-FM & $10^{-1}$--$10^1$ \\[0.5ex]
+Radio& $>10^1$
+\end{tabular}
+\caption{\em The electromagnetic spectrum}
+\end{table}
+
+Equations~(\ref{e4.69}), (\ref{e4.71}), and the relation $c = \omega/k$, imply that
+\begin{equation}
+B_0= \frac{E_0}{c}.
+\end{equation}
+Thus, the magnetic field associated with  an electromagnetic wave is smaller
+in magnitude than the electric field by a factor $c$. Consider
+a free charge interacting with an electromagnetic wave. The force exerted on the
+charge is given by the Lorentz formula
+\begin{equation}
+{\bf f} = q \,({\bf E} +{\bf v}\times{\bf B}).
+\end{equation}
+The ratio of the electric and magnetic forces is
+\begin{equation}
+\frac{f_{\rm magnetic}}{f_{\rm electric}} \sim \frac{v\,B_0}{E_0} \sim 
+\frac{v}{c}.
+\end{equation}
+So, unless the charge  is moving close to the velocity of light ({\em i.e.}, unless the charge is relativistic), the electric force greatly exceeds the
+magnetic force. Clearly, in most terrestrial situations, electromagnetic waves are
+an essentially {\em electrical}\/ phenomenon (as far as their interaction with matter goes).
+For this reason, electromagnetic waves are usually characterized by their wave-vector ${\bf k}$
+(which specifies the direction of propagation and the wavelength) and
+the plane of polarization ({\em i.e.}, the plane of oscillation) of the associated electric
+field. For a given wave-vector ${\bf k}$, the electric field can have any direction in
+the plane normal to ${\bf k}$. However, there are only two {\em independent}\/
+directions in a plane ({\em i.e.}, we can only define two linearly independent 
+vectors in a plane). This implies that there are only two independent polarizations
+of an electromagnetic wave, once its direction of propagation is 
+specified.
+
+But, how do electromagnetic waves propagate through a vacuum? After
+all, most types of wave require a medium before they can propagate
+({\em e.g.}, sound waves require air). The answer to this question
+is evident from Equations~(\ref{e4.58}) and (\ref{e4.59}). According to these
+equations, the time variation of the electric component of the
+wave induces the magnetic component, and the time variation of
+the magnetic component induces the electric. In other words, electromagnetic
+waves are {\em self-sustaining}, and therefore require no medium through which
+to propagate.
+
+Let us now   search for the wave-like solutions of Maxwell's equations in free-space the hard way.
+Suppose that we take the curl of the fourth Maxwell equation, (\ref{e4.59}). We obtain
+\begin{equation}
+\nabla\times\nabla\times{\bf B} = \nabla(\nabla\cdot{\bf B}) - \nabla^2{\bf B}
+= -\nabla^2 {\bf B} = \epsilon_0\mu_0\,\frac{\partial\, \nabla\times {\bf E}}{\partial t}.
+\end{equation}
+Here, we have made use of the fact that $\nabla\cdot{\bf B} = 0$. The third Maxwell equation,
+(\ref{e4.58}), yields
+\begin{equation}
+\left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2}\right) {\bf B} = {\bf 0},
+\end{equation}
+where use has been made of Equation~(\ref{e4.79}). A similar equation can obtained for the electric field
+by taking the curl of Equation~(\ref{e4.58}):
+\begin{equation}
+\left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2}\right) {\bf E} = {\bf 0},
+\end{equation}
+
+We have found that  electric and magnetic fields both satisfy equations of the
+form
+\begin{equation}
+\left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2}\right) {\bf A} = {\bf 0}
+\end{equation}
+in free space. As is easily verified, the
+ most general solution to this equation is
+\begin{eqnarray}
+ A_x& = & F_x ({\bf n}\cdot{\bf r} -c\,t),\\[0.5ex]
+ A_y& = & F_y ({\bf n}\cdot{\bf r} - c\,t),\\[0.5ex]
+ A_z& = & F_z ({\bf n}\cdot{\bf r} - c\,t),
+\end{eqnarray}
+where ${\bf n}$ is a unit vector, and $F_x(\phi)$, $F_y(\phi)$, and $F_z(\phi)$ are arbitrary
+ one-dimensional
+scalar functions. Looking along the direction of ${\bf n}$, so that ${\bf n}\cdot {\bf r} = r$,
+we find that
+\begin{eqnarray}
+ A_x& = & F_x (r-c\,t),\\[0.5ex]
+ A_y& = & F_y (r-c\,t),\\[0.5ex]
+ A_z& = & F_z (r-c\,t).
+\end{eqnarray}
+The $x$-component of this solution is shown schematically in Figure~\ref{f35}. It clearly propagates in $r$
+with velocity $c$. 
+If we look along a direction which is perpendicular to ${\bf n}$ then
+${\bf n}\cdot{\bf r} = 0$, and there is no propagation.
+Thus,  the components
+of ${\bf A}$ 
+are  {\em arbitrarily shaped pulses}\/ which propagate, {\em without changing shape}, along
+ the direction of ${\bf n}$
+with velocity $c$. 
+These pulses can be related to the sinusoidal plane-wave solutions which we found earlier
+by Fourier transformation: {\em e.g.},
+\begin{equation}
+F_x(r-c\,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \bar{F}_x(k)\,{\rm e}^{\,{\rm i}\,k\,(r-c\,t)}\,dk,
+\end{equation}
+where 
+\begin{equation}
+\bar{F}_x(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} F_x(x)\,{\rm e}^{-{\rm i}\,k\,x}\,dx.
+\end{equation}
+ Thus, any arbitrary shaped pulse propagating in the direction of
+${\bf n}$ with velocity $c$ can be broken down into a superposition of sinusoidal oscillations of different wavevectors, $k\,{\bf n}$, propagating
+in the same direction with the same velocity.
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter4/fig4.4.eps}}
+\caption{\em An arbitrary wave-pulse.}\label{f35}
+\end{figure}
+
+\section{Green's Functions}
+The solution of the steady-state Maxwell equations essentially
+boils down to solving
+ Poisson's equation
+\begin{equation}\label{e4.92}
+\nabla^2 u = v,
+\end{equation}
+where $v({\bf r})$ is denoted the source function. The potential $u({\bf r})$ 
+satisfies the boundary condition 
+\begin{equation}
+u({\bf r},t) \rightarrow 0 \mbox{\hspace{1cm} as $|{\bf r}|\rightarrow\infty$},
+\end{equation}
+provided  that the source function 
+ is reasonably localized. The solutions to Poisson's equation
+are superposable (because the equation is linear). This property  is exploited in the Green's
+function method of solving this equation. The Green's function $G({\bf r}, {\bf r}')$ is the 
+potential
+generated by a unit amplitude
+point source, located at ${\bf r}'$, which satisfies the appropriate boundary conditions.
+Thus,
+\begin{equation}\label{e4.94}
+\nabla^2 G({\bf r}, {\bf r}') = \delta({\bf r} - {\bf r}').
+\end{equation}
+Any source function $v({\bf r})$ can be represented as a weighted sum of point
+sources
+\begin{equation}
+v({\bf r}) = \int \delta({\bf r} - {\bf r}')\, v({\bf r}') \,d^3{\bf r}'.
+\end{equation}
+It follows from superposability that the potential generated by the source $v({\bf r})$
+can be written as the similarly weighted sum of point source driven
+potentials ({\em i.e.}, Green's functions)
+\begin{equation}\label{e4.96}
+u({\bf r} ) = \int G({\bf r}, {\bf r}')\, v({\bf r}') \, d^3{\bf r}'.
+\end{equation}
+We found earlier that the Green's function for Poisson's equation is
+\begin{equation}\label{e4.97}
+G({\bf r}, {\bf r}') = - \frac{1}{4\pi} \frac{1}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+It follows that the general solution to Equation~(\ref{e4.92}) is written
+\begin{equation}
+u({\bf r}) = -\frac{1}{4\pi} \int \frac{v({\bf r}')}{|{\bf r} - {\bf r}'|}\,d^3{\bf r}'.
+\end{equation}
+Note that the point source driven potential (\ref{e4.97}) is perfectly sensible. It is spherically symmetric
+about the source, and  falls off smoothly with increasing distance from the source. 
+
+The solution of the time-dependent Maxwell equations essentially
+boils down to solving the three-dimensional wave equation
+\begin{equation}\label{e4.99}
+\left(\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)u = v,
+\end{equation}
+where $v({\bf r}, t)$ is a time-varying source function. The potential $u({\bf r}, t)$
+satisfies the boundary conditions
+\begin{equation}
+u({\bf r},t)\rightarrow 0 \mbox{\hspace{1cm} as $|{\bf r}|\rightarrow\infty$ and $|t|\rightarrow
+\infty$.}
+\end{equation}
+The solutions to Equation~(\ref{e4.99}) are superposable (since the equation is linear), so
+a Green's function method of solution is again appropriate. The Green's function
+$G({\bf r}, {\bf r}'; t, t')$ is the potential generated by a point {\em impulse}\/ located at
+position ${\bf r}'$ and applied at time $t'$. Thus,
+\begin{equation}
+\left(\nabla^2- \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)
+ G({\bf r}, {\bf r}'; t, t')= \delta({\bf r} - {\bf r'})\, \delta(t-t').
+\end{equation}
+Of course, the Green's function must satisfy the correct boundary conditions. A general
+source $v({\bf r}, t)$ can be built up from a weighted sum of point impulses
+\begin{equation}
+v({\bf r}, t) = \int\int \delta({\bf r} - {\bf r'}) \,\delta (t-t')\,v({\bf r}', t')\,
+d^3{\bf r}' \,dt'.
+\end{equation}
+It follows that the potential generated by $v({\bf r}, t)$ can be written as the similarly weighted
+sum of point impulse driven potentials
+\begin{equation}\label{e4.103}
+u({\bf r}, t) = \int\int G({\bf r}, {\bf r}'; t, t')\,v({\bf r}', t')\,
+d^3{\bf r}'\,dt'.
+\end{equation}
+So, how do we find the Green's function?
+
+Consider 
+\begin{equation}
+G({\bf r}, {\bf r}'; t, t') = \frac{F(t-t' - |{\bf r} - {\bf r}'|/c)}{|{\bf r} - {\bf r}'|},
+\end{equation}
+where $F(\phi)$ is a general scalar function. Let us try to prove the following theorem:
+\begin{equation}
+\left(\nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right)
+G = - 4\pi \,F(t-t')\,\delta({\bf r}- {\bf r}').
+\end{equation}
+At a general point, ${\bf r} \neq {\bf r'}$, the above expression reduces to
+\begin{equation}
+\left(\nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right)
+G=0.
+\end{equation}
+Hence, we basically have to show that $G$ is a valid  solution of the free-space
+wave equation. 
+Now, we can easily demonstrate that
+\begin{equation}
+\frac{\partial |{\bf r} - {\bf r}'|}{\partial x} = \frac{x-x'}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+It follows by simple differentiation that
+\begin{eqnarray}\label{e4.108}
+\frac{\partial^2 G}{\partial x^2}& =& \left(\frac{3(x-x')^2 - |{\bf r} - {\bf r}'|^2}
+{|{\bf r} - {\bf r}'|^5 } \right) F
+\nonumber\\[0.5ex]
+&&  +\left(\frac{3(x-x')^2 - |{\bf r} - {\bf r}'|^2}{|{\bf r} - {\bf r}'|^4 } \right)
+\frac{ F'}{c} + \frac{(x-x')^2}{|{\bf r} - {\bf r}'|^3} \frac{F''}{c^2},
+\end{eqnarray}
+where $F'(\phi) = d F(\phi)/d\phi$, {\em etc.} We can derive analogous equations for $\partial^2 G/\partial y^2$
+and $\partial^2 G/\partial z^2$. 
+Thus,
+\begin{equation}
+\nabla^2 G = \frac{\partial^2 G}{\partial x^2} + \frac{\partial^2 G}
+{\partial y^2} + \frac{\partial^2 G}{\partial z^2} = \frac{F''}{|{\bf r} - {\bf r'}|\,
+c^2} = \frac{1}{c^2} \frac{\partial^2 G}{\partial t^2},
+\end{equation}
+giving
+\begin{equation}
+\left(\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2} \right) G = 0,
+\end{equation}
+which is the desired result. Consider, now, the region around ${\bf r} = {\bf r}'$. It is
+clear that the dominant term on the right-hand
+side  of Equation~(\ref{e4.108}) as $|{\bf r} - {\bf r}'|\rightarrow 0$ is
+the first one, which is essentially
+$F\, \partial^2(|{\bf r} - {\bf r'}|^{-1})/\partial x^2$.
+It is also clear that $(1/c^2)(\partial^2 G/\partial t^2)$ is negligible compared to this term.
+ Thus, as $|{\bf r} - {\bf r}'| \rightarrow 0$ we find
+that
+\begin{equation}
+\left(\nabla^2- \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)
+ G \rightarrow F(t-t')\, \nabla^2\left(\frac{1}{|{\bf r} - {\bf r}'|}\right).
+\end{equation}
+However, according to Equations~(\ref{e4.94}) and (\ref{e4.97}),
+\begin{equation}
+\nabla^2 \left(\frac{1}{|{\bf r} - {\bf r}'|} \right)= - 4\pi\,\delta({\bf r} - {\bf r}').
+\end{equation}
+We conclude that
+\begin{equation}\label{e4.113}
+\left(\nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right)
+G = - 4\pi \,F(t-t')\,\delta({\bf r}- {\bf r}'),
+\end{equation}
+which is the desired result.
+
+Let us now make the special choice
+\begin{equation}
+F(\phi) = -\frac{\delta(\phi)}{4\pi}.
+\end{equation}
+It follows from Equation~(\ref{e4.113}) that
+\begin{equation}
+\left(\nabla^2 - \frac{1}{c^2} \frac{\partial^2}{\partial t^2} \right)G=
+\delta({\bf r} - {\bf r}') \,\delta(t-t').
+\end{equation}
+Thus,
+\begin{equation}\label{e4.130}
+G({\bf r}, {\bf r}'; t, t') = -\frac{1}{4\pi} \frac{\delta(t-t'-|{\bf r} - {\bf r}'|/c)}
+{|{\bf r} - {\bf r}'|}
+\end{equation}
+is the Green's function for the driven wave equation (\ref{e4.99}).
+
+The time-dependent Green's function (\ref{e4.130}) is the same as the steady-state Green's function
+(\ref{e4.97}), apart from the delta-function appearing in the former. What does this delta-function do?
+Well, consider an observer at point ${\bf r}$. Because of the delta-function, our observer 
+only measures a non-zero potential at one particular time
+\begin{equation}
+t = t' +\frac{ |{\bf r} - {\bf r'}|}{c}.
+\end{equation}
+It is clear that this is the time the impulse was applied at position ${\bf r'}$ ({\em i.e.}, $t'$)
+{\em plus} the time taken for a light signal to travel between points ${\bf r'}$ and
+${\bf r}$. At time $t>t'$, the locus of all the points at which the potential is non-zero
+is
+\begin{equation}
+|{\bf r} - {\bf r'}| = c\,(t-t').
+\end{equation}
+In other words, it is a sphere centred on ${\bf r}'$ whose radius is the distance traveled by
+light in the time interval since the impulse was applied at position ${\bf r'}$.
+Thus, the Green's function (\ref{e4.130}) describes a {\em spherical wave}\/ which emanates from position
+${\bf r'}$ at time $t'$, and propagates at the speed of light. The amplitude of the wave
+is inversely proportional to the distance from the source. 
+
+\section{Retarded Potentials}\label{s4.9}
+We are now in a position to solve Maxwell's equations. Recall that the
+steady-state Maxwell
+equations reduce to
+\begin{eqnarray}
+\nabla^2 \phi &=& - \frac{\rho}{\epsilon_0},\\[0.5ex]
+\nabla^2 {\bf A} &=& - \mu_0 \,{\bf j}.
+\end{eqnarray}
+The solutions to these equations are  easily found using the Green's function for Poisson's
+equation, (\ref{e4.97}):
+\begin{eqnarray}\label{e4.120a}
+\phi({\bf r}) &=& \frac{1}{4\pi\epsilon_0} \int \frac{\rho({\bf r'})}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r'}\\[0.5ex]
+{\bf A}({\bf r}) &=& \frac{\mu_0}{4\pi } \int \frac{{\bf j}({\bf r'})}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r'}.\label{e4.120b}
+\end{eqnarray}
+The time-dependent Maxwell equations reduce to
+\begin{eqnarray}
+\left(\nabla^2-\frac{1}{c^2}\,\frac{\partial^2}{\partial t^2}\right) \phi &=& - \frac{\rho}{\epsilon_0},\\[0.5ex]
+\left(\nabla^2-\frac{1}{c^2}\,\frac{\partial^2}{\partial t^2}\right)  {\bf A} &=& - \mu_0 \,{\bf j}.
+\end{eqnarray}
+We can solve these equations using the time-dependent Green's function, (\ref{e4.130}). From Equation~(\ref{e4.103}),
+we find that
+\begin{equation}
+\phi({\bf r}, t) =\frac{1}{4\pi\epsilon_0}  \int\int\frac{ \delta (t-t'- |{\bf r}- {\bf r}'|/c)
+\, \rho({\bf r'}, t')}{|{\bf r} - {\bf r}'|}\,d^3{\bf r}'\,dt',
+\end{equation}
+with a similar equation for ${\bf A}$. Using the well-known property of delta-functions,
+these equations yield
+\begin{eqnarray}\label{e4.123a}
+\phi({\bf r},t) &=& \frac{1}{4\pi\epsilon_0} \int \frac{\rho({\bf r'}, t- |{\bf r}
+-{\bf r '}|/c)}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r'}\\[0.5ex]
+{\bf A}({\bf r}, t) &=& \frac{\mu_0}{4\pi } \int \frac{{\bf j}({\bf r'},t- |{\bf r}
+-{\bf r '}|/c
+)}{|{\bf r} - {\bf r}'|}
+\,d^3{\bf r'}.\label{e4.123b}
+\end{eqnarray}
+These  are  the general solutions to Maxwell's equations. Note that the time-dependent solutions,
+(\ref{e4.123a}) and (\ref{e4.123b}), are the same as the steady-state solutions,
+ (\ref{e4.120a}) and (\ref{e4.120b}), apart from the weird way in which
+time appears in the former. According to 
+Equations~(\ref{e4.123a}) and (\ref{e4.123b}), if we want to work out the potentials
+at position ${\bf r}$ and time $t$ then we have to perform integrals of  the charge density and current
+density over all space (just like in the steady-state situation). However, when we calculate the
+contribution of charges and currents at position ${\bf r}'$ to these integrals we do not use
+the values at time $t$, instead we use the values at some earlier time
+$t-|{\bf r} - {\bf r}'|/c$. What is this earlier time? It is simply the latest
+time at which a light signal emitted from position ${\bf r}'$ would be received at position
+${\bf r}$ before time $t$. This is called the {\em retarded time}. Likewise, the potentials
+(\ref{e4.123a}) and (\ref{e4.123b}) are called {\em retarded potentials}. It is often useful to adopt the following notation
+\begin{equation}
+A({\bf r}', t- |{\bf r} - {\bf r}'|/c) \equiv \left[ A({\bf r}', t)\right].
+\end{equation}
+The square brackets denote retardation ({\em i.e.}, using the retarded time instead of the real time).
+Using this notation Equations~(\ref{e4.123a}) and (\ref{e4.123b}), become
+\begin{eqnarray}\label{e4.125a}
+\phi({\bf r}) &=& \frac{1}{4\pi \epsilon_0} \int
+\frac{\left[\rho({\bf r}')\right]}{|{\bf r} - {\bf r}'|}\,d^3{\bf r'},
+\\[0.5ex]
+{\bf A}({\bf r}) &=& \frac{\mu_0}{4\pi} \int
+\frac{\left[{\bf j}({\bf r}')\right]}{|{\bf r} - {\bf r}'|}\,d^3{\bf r'}.\label{e4.125b}
+\end{eqnarray}
+The time dependence in the above equations is taken as read. 
+
+We are now in a position to understand electromagnetism at its most fundamental level.
+A charge distribution $\rho({\bf r}, t)$ can be thought of theoretically as being built up
+out of a  collection, or series, of charges which
+instantaneously come into existence, at some point ${\bf r}'$ and some time $t'$, and 
+then disappear again. Mathematically, this is written
+\begin{equation}
+\rho({\bf r}, t) = \int\int \delta({\bf r} - {\bf r}') \delta(t-t') \,
+\rho({\bf r}', t')\,d^3 {\bf r}' dt'.
+\end{equation}
+Likewise, we can think of a current distribution ${\bf j}({\bf r}, t)$ as built up
+out of a collection, or series, of currents which instantaneously appear and then disappear:
+\begin{equation}
+{\bf j} ({\bf r}, t) = \int\int \delta({\bf r} - {\bf r}') \delta(t-t') \,
+{\bf j} ({\bf r}', t')\,d^3 {\bf r}' dt'.
+\end{equation}
+Each of these ephemeral charges and currents excites a spherical wave in the appropriate
+potential. Thus, the charge density at ${\bf r'}$ and $t'$ sends out a wave in the
+scalar potential:
+\begin{equation}
+\phi({\bf r}, t) = \frac{\rho({\bf r'}, t')}{4\pi\epsilon_0}
+\frac{\delta(t-t' - |{\bf r} - {\bf r'}|/c)}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+Likewise, the current density at ${\bf r}'$ and $t'$ sends out a wave in the vector potential:
+\begin{equation}
+{\bf A}({\bf r}, t) = \frac{\mu_0\,{\bf j}({\bf r'}, t')}{4\pi }
+\frac{\delta(t-t' - |{\bf r} - {\bf r'}|/c)}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+These waves can be thought of as  messengers which  inform other charges and currents about
+the charges and currents present at position ${\bf r}'$ and time $t'$. However,  these
+messengers travel at a finite speed: {\em i.e.}, 
+the speed of light. So, by the time they reach other charges
+and currents their message is a little out of date. Every charge and every current in the Universe
+emits these spherical waves. The resultant scalar and vector
+potential fields are given by Equations~(\ref{e4.125a}) and (\ref{e4.125b}). Of course, we can turn these fields into
+electric and magnetic fields using Equations~(\ref{e4.48a}) and
+(\ref{e4.49}). We can then evaluate the force exerted on charges
+using the Lorentz formula. We can see that we have now escaped from the apparent action at a distance
+nature of Coulomb's law and the Biot-Savart law. Electromagnetic information
+is carried by spherical waves in the vector and scalar potentials,  and, therefore,   travels at the
+velocity of light. Thus, if we change the position of a charge then a distant charge can only 
+ respond after a time delay sufficient for a spherical wave to propagate from the former to
+the latter charge. 
+
+Consider a thought experiment in which a charge $q$ appears at position ${\bf r}_0$ at time
+$t_1$, persists for a while, and then disappears at time $t_2$. What is the electric field
+generated by such a charge? Using Equation~(\ref{e4.123b}), we find that
+\begin{eqnarray}
+\phi({\bf r},t) &=& \frac{q}{4\pi \epsilon_0} \frac{1}{|{\bf r} - {\bf r}_0|}
+\mbox{\hspace{1cm} for\, $ t_1\leq t-|{\bf r} - {\bf r}_0|/c \leq t_2$}\nonumber
+\\[0.5ex] &=& 0 \mbox{\hspace{3.5cm} otherwise}.
+\end{eqnarray}
+Now, ${\bf E} = - \nabla \phi$ (since there are no currents, and therefore no vector potential
+is generated), so
+\begin{eqnarray}
+{\bf E}({\bf r},t) &=& \frac{q}{4\pi\epsilon_0} \frac{{\bf r} - {\bf r}_0}{|{\bf r} - {\bf r}_0|^3}
+\mbox{\hspace{1cm} for \,$ t_1\leq t-|{\bf r} - {\bf r}_0|/c \leq t_2$}\nonumber\\[0.5ex] 
+ &=& {\bf 0} \mbox{\hspace{3.6cm} otherwise}.
+\end{eqnarray}
+This solution is shown pictorially in Figure~\ref{f36}. We can see that the charge effectively emits
+a Coulomb electric field which propagates radially away from the charge at the speed of
+light. Likewise, it is easy to show that a current carrying wire effectively emits an Amp\`{e}rian
+magnetic field at the speed of light.
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter4/fig4.5.eps}}
+\caption{\em Electric field due to a charge which appears at $t=t_1$ and
+disappears at $t=t_2$.}\label{f36}
+\end{figure}
+
+We can now appreciate the essential difference between time-dependent electromagnetism and
+the action at a distance laws of Coulomb and Biot-Savart. In the latter
+theories, the field-lines act
+rather like rigid 
+ wires attached to charges (or circulating around currents). If the charges (or currents) move then
+so do the field-lines, leading inevitably to unphysical action at a distance type behaviour. 
+In the time-dependent theory, charges act rather like water sprinklers: {\em i.e.}, they spray out the
+Coulomb field in all directions at the speed of light. Similarly,
+current carrying  wires throw out magnetic field
+loops at the speed of light. If we move a charge (or current) then field-lines emitted beforehand
+are not affected, so the field at a distant charge (or current) only responds to the change 
+in position 
+after a time delay sufficient for the field to propagate between the two charges (or currents) at
+the speed of light. 
+
+As we mentioned previously, it is not entirely obvious that electric and magnetic fields
+have a real existence  in Coulomb's law and the Biot-Savart law. After all, the only measurable quantities are the forces acting  between charges and
+currents. We can certainly describe the force  on a given charge or current, due to the other charges
+and currents in the Universe, 
+in terms of the local electric and magnetic fields, but we have no way of knowing whether these
+fields persist when the charge or current is not present ({\em i.e.}, we could argue that electric and
+magnetic fields are just a convenient way of calculating  forces, but, in reality, the forces
+are transmitted directly between charges and currents by some form  of magic).
+On the other hand, it is patently obvious that 
+electric and magnetic fields have a real existence in the time-dependent theory of electromagnetism. For instance, consider the following thought experiment.
+Suppose that a charge $q_1$ comes into existence for a period of time, emits a Coulomb
+field, and then disappears. Suppose that a distant charge $q_2$ interacts with this field,
+but is sufficiently far from the first charge that by the time the field arrives the
+first charge has already disappeared. The force exerted on the second charge is only ascribable
+to the electric field---it cannot be ascribed to the first charge, because this charge no longer exists
+by the time the force is exerted. In this example, the electric field clearly  transmits energy and momentum
+between the two charges. Anything which possesses energy and momentum is ``real'' in a physical
+sense. Later on in this book, we shall demonstrate that electric and magnetic  fields conserve
+energy and momentum. 
+
+Let us now consider a moving charge. Such a charge is continually emitting spherical waves in the
+scalar potential, and the resulting  wavefront pattern is sketched in Figure~\ref{f37}.
+Clearly, the wavefronts are more closely spaced in front of the charge than they are
+behind it, suggesting
+that the electric field in front is stronger than the field behind. 
+\begin{figure}
+\epsfysize=1.75in
+\centerline{\epsffile{chapter4/fig4.6.eps}}
+\caption{\em Spherical wavefronts emitted by a moving charge.}\label{f37}
+\end{figure}
+In a medium, such as  water or air, where
+waves travel at a finite speed, $c$ (say), it is possible to get a very interesting effect
+if the wave source travels at some velocity $v$ which {\em exceeds}\/ the wave speed. This
+is illustrated in Figure~\ref{f38}.
+The locus of the outermost wave front is now a cone instead of a sphere.
+The wave intensity on the cone is extremely large. In fact, this is a {\em shock-wave}\/ The half-angle $\theta$
+of the shock-wave cone is simply $\sin^{-1}(c/v)$. In water, shock-waves are produced by fast moving
+boats. We call these {\em bow waves}. In air, shock-waves are produced by speeding bullets
+and supersonic jets. In the latter case, they are called {\em sonic booms}. Is there any such thing
+as an electromagnetic shock-wave? At first sight, it would appear not. After all, electromagnetic waves travel at the speed of light, and no wave source
+({\em i.e.}, electrically charged particle) can travel faster than this velocity. This is
+a rather disappointing conclusion. However, when an electromagnetic wave travels through a transparent dielectric medium
+a remarkable thing happens. The oscillating electric field of the wave induces a slight
+separation of the positive and negative charges in the atoms which
+make up the medium.  We call separated positive and negative charges  an electric
+dipole. Of course, the atomic dipoles oscillate in sympathy
+with the field which induces them. However, an oscillating electric dipole  radiates electromagnetic
+waves. Amazingly, when we add the original wave to these induced waves, it is exactly as if
+the original wave propagates through the medium in question at a velocity which is
+{\em slower}\/ than the velocity of light in  vacuum. 
+Suppose, now, that we shoot a charged particle through the medium faster than the slowed down
+velocity of electromagnetic waves. This is possible since the waves  are traveling slower
+than the velocity of light in vacuum. In practice, the particle has to be traveling pretty
+close to the velocity of
+light in vacuum ({\em i.e.}, it has to be relativistic), but modern particle accelerators produce
+copious amounts of such particles. We can now get an electromagnetic 
+shock-wave. We expect such a wave to generate
+an intense cone of radiation,  similar to the bow wave produced by a fast ship. In fact, this
+type of 
+radiation has been observed. It is called {\em Cherenkov radiation}, and it is very useful in
+High Energy Physics. Cherenkov radiation is typically produced by surrounding a particle accelerator
+with perspex blocks. Relativistic charged particles emanating from the accelerator pass through the perspex
+traveling faster than the local velocity of light,  and therefore emit
+Cherenkov radiation. We know the velocity of light ($c_\ast$, say)
+ in perspex (this can be worked out from the
+refractive index), so if we can measure the half angle $\theta$ of the Cherenkov radiation  cone
+ emitted by each particle
+then  we can evaluate the particle speed  $v$ via the geometric relation
+$\sin\theta= c_\ast/v$. 
+\begin{figure}
+\epsfysize=2.25in
+\centerline{\epsffile{chapter4/fig4.7.eps}}
+\caption{\em A shock-wave.}\label{f38}
+\end{figure}
+
+\section{Advanced Potentials?}
+We have defined the retarded time
+\begin{equation}
+t_r = t - |{\bf r} - {\bf r}'|/c
+\end{equation}
+as the latest time at which a light signal emitted from position ${\bf r}'$ would
+reach position ${\bf r}$ before time $t$. We have also shown that the solution to Maxwell's equations
+can be written in terms of retarded potentials:
+\begin{equation}
+\phi({\bf r}, t) = \frac{1}{4\pi\epsilon_0} \int \frac{ \rho({\bf r}', t_r)}{|{\bf r} - {\bf r}'|}\,
+d^3{\bf r}',
+\end{equation}
+{\em etc.}
+But, is this the most general solution? Suppose that we define the {\em advanced time}.
+\begin{equation}
+t_a = t + |{\bf r} - {\bf r}'|/c.
+\end{equation}
+This is the time a light signal emitted at time $t$ from position ${\bf r}$ would reach position
+${\bf r}'$. It turns out that we can also write a solution to Maxwell's equations in
+terms of {\em advanced potentials}:
+\begin{equation}
+\phi({\bf r}, t) = \frac{1}{4\pi\epsilon_0} \int \frac{ \rho({\bf r}', t_a)}{|{\bf r} - {\bf r}'|}\,
+d^3{\bf r}',
+\end{equation}
+{\em etc.} In fact, mathematically speaking, this is just as good a solution to  Maxwell's equation as the one involving retarded
+potentials. Consider the Green's function corresponding
+to our retarded potential solution:
+\begin{equation}\label{e4.157}
+\phi({\bf r}, t) = \frac{\rho({\bf r}' ,t ')} {4\pi\epsilon_0} \frac{\delta(
+t -t' - |{\bf r} - {\bf r}'|/c)}{|{\bf r} - {\bf r}'|},
+\end{equation}
+with a similar equation for the vector potential. This says that the charge density present
+at position ${\bf r}'$ and time $t'$ emits a spherical wave in the scalar potential {\em
+which propagates forwards in time}. The Green's function corresponding to our advanced potential
+solution is
+\begin{equation}
+\phi({\bf r}, t) = \frac{\rho({\bf r}' ,t ')} {4\pi\epsilon_0} \frac{\delta(
+t -t' + |{\bf r} - {\bf r}'|/c)}{|{\bf r} - {\bf r}'|}.
+\end{equation}
+This  says that the   charge density present
+at position ${\bf r}'$ and time $t'$ emits a spherical wave in the scalar potential {\em
+which propagates backwards in time}. Obviously, the advanced solution
+is usually rejected, on physical grounds, because it violates causality ({\em i.e.}, it allows effects to exist prior to causes). 
+
+Now, the wave equation
+for the scalar potential,
+\begin{equation}
+\left( \nabla^2 - \frac{1}{c^2} \frac{\partial^2 }{\partial t^2}\right) \phi = -\frac{\rho}
+{\epsilon_0},
+\end{equation}
+is manifestly symmetric in time ({\em i.e.}, it is invariant under the transformation
+$t\rightarrow -t$). Thus, mathematically speaking, backward traveling waves are just as good a solution to this
+equation as forward traveling waves. The equation is also symmetric in space ({\em i.e.}, it
+is invariant under the transformation ${\bf r} \rightarrow -{\bf r}$). So, why do we adopt the Green's
+function (\ref{e4.157}) which is symmetric in space ({\em i.e.},  invariant under ${\bf r}\rightarrow -{\bf r}$)
+but asymmetric in time ({\em i.e.},  not invariant under $t\rightarrow -t$)? Would it not
+be more consistent to adopt the  completely symmetric Green's function
+\begin{equation}
+\phi({\bf r}, t) = \frac{\rho({\bf r}' ,t ')} {4\pi\epsilon_0}\frac{1}{2}\left(
+ \frac{\delta(
+t -t' - |{\bf r} - {\bf r}'|/c)}{|{\bf r} - {\bf r}'|}+ \frac{\delta(
+t -t' + |{\bf r} - {\bf r}'|/c)}{|{\bf r} - {\bf r}'|}\right)\,?
+\end{equation}
+According to this Green's function, a given charge emits half of its waves running forwards in time ({\em i.e.},
+retarded waves), and the other half running backwards in time ({\em i.e.}, advanced waves).
+This sounds completely crazy! However, in the 1940's Richard P.\ Feynman and John A.\ Wheeler 
+pointed out that under certain circumstances this prescription gives the right answer. Consider
+a charge interacting with ``the rest of the Universe,'' where the ``rest of the Universe'' 
+denotes  all of the distant charges in the Universe, and is, by implication, a
+very  long way 
+from our original charge. Suppose that the ``rest of the Universe'' is a perfect reflector of
+advanced waves and a perfect absorber of retarded waves. The waves emitted by the charge can
+be written schematically as
+\begin{equation}
+F = \frac{1}{2} ({\rm retarded}) + \frac{1}{2} ({\rm advanced}).
+\end{equation}
+Likewise, the response of the rest of the universe is written
+\begin{equation}\label{e4.126}
+R =  \frac{1}{2} ({\rm retarded}) - \frac{1}{2} ({\rm advanced}).
+\end{equation}
+This is illustrated in the space-time diagram shown in Figure~\ref{f39}.
+Here, $A$ and $R$  denote the advanced and retarded waves emitted by the charge, respectively. 
+The advanced wave travels to ``the rest of the Universe'' and is reflected: {\em i.e.}, the 
+distant charges oscillate in response to the advanced wave and emit a retarded wave $a$, 
+as shown. The retarded wave $a$ is spherical wave which
+converges on the original charge, passes through the charge, and then diverges again. The
+divergent wave is denoted $aa$. Note that $a$ looks like a negative advanced wave emitted by
+the charge, whereas $aa$ looks like a positive retarded wave. This is
+essentially what Equation~(\ref{e4.126}) says. The retarded waves $R$ and $aa$ are absorbed by 
+``the rest of the Universe.''  
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter4/fig4.8.eps}}
+\caption{\em A space-time diagram illustrating the  Feynman-Wheeler solution.}\label{f39}
+\end{figure}
+
+If we add the waves emitted by the charge to the response of ``the rest of the Universe'' 
+we obtain
+\begin{equation}
+F' = F+R = ({\rm retarded}).
+\end{equation}
+Thus, charges {\em appear} to emit only retarded waves, which agrees with our everyday experience.
+Clearly, we have side-stepped the problem of adopting a time asymmetric Green's function
+by adopting time asymmetric boundary conditions to the Universe: {\em i.e.}, the distant charges in the
+Universe absorb retarded waves and reflect  advanced waves. This is possible because the
+absorption takes place at the end of the Universe, and the reflection takes place at
+the beginning of the Universe. It is quite plausible that the
+state of the Universe (and, hence, its interaction with electromagnetic
+waves) is completely different at these two epochs. It should be pointed out that the Feynman-Wheeler
+model runs into trouble when an attempt is made to combine Electromagnetism with Quantum Mechanics. 
+These difficulties have yet to be resolved, so the present status of this model
+is that it is  ``an interesting
+idea,'' but it is still not fully accepted into the canon of Physics. 
+
+\section{Retarded Fields}\label{sret}
+We have found the solution to Maxwell's equations in terms of retarded potentials. Let us now
+construct the associated retarded  electric and magnetic fields using
+\begin{eqnarray}\label{e4.164a}
+{\bf E} &= &- \nabla\phi - \frac{\partial {\bf A}}{\partial t},\\[0.5ex]
+{\bf B} &=& \nabla\times{\bf A}.\label{e4.164b}
+\end{eqnarray}
+It is helpful to write
+\begin{equation}
+{\bf R} = {\bf r} - {\bf r}',
+\end{equation}
+where  $R = |{\bf r} - {\bf r}'|$. The retarded time becomes $t_r = t- R/c$, and a general retarded
+quantity is written $[F({\bf r}', t)]\equiv F({\bf r}', t_r)$. Thus, we can write the retarded
+potential solutions of Maxwell's equations in the especially compact form:
+\begin{eqnarray}
+\phi({\bf r},t)& = &\frac{1}{4\pi \epsilon_0} \int \frac{[\rho]}{R} \,d^3{\bf r}',\\[0.5ex]
+{\bf A} ({\bf r},t)&=& \frac{\mu_0}{4\pi} \int \frac{[{\bf j}]}{R} \,d^3{\bf r}'.
+\end{eqnarray}
+
+It is easily seen that
+\begin{eqnarray}
+\nabla\phi &=& \frac{1}{4\pi\epsilon_0}\int \left(
+[\rho] \nabla(R^{-1}) + \frac{[\partial\rho/\partial t]}{R}\, \nabla t_r\right)d^3{\bf r}'
+\nonumber\\[0.5ex]
+&=& - \frac{1}{4\pi\epsilon_0} \int \left(
+\frac{[\rho]}{R^3}\,{\bf R}  + \frac{[\partial\rho/\partial t]}{c\,R^2}\,{\bf R} \right) \,d^3{\bf r}',\label{e4.167}
+\end{eqnarray}
+where use has been made of
+\begin{equation}
+\nabla R = \frac{\bf R}{R},~~~\nabla( R^{-1})= - \frac{\bf R}{R^3},~~~\nabla t_r = - \frac{\bf R}{c\,R}.
+\end{equation}
+Likewise, 
+\begin{eqnarray}
+\nabla\times{\bf A} &= &\frac{\mu_0}{4\pi} \int \left(
+\nabla(R^{-1}) \times [{\bf j}] + \frac{\nabla t_r\times [\partial {\bf j}/\partial t]}{R}
+\right)d^3{\bf r}'\nonumber\\[0.5ex]
+&=& -\frac{\mu_0}{4\pi} \int \left( \frac{{\bf R} \times [{\bf j}]}{R^3} +
+\frac{{\bf R} \times [\partial {\bf j}/\partial t]}{c\,R^2} \right)d^3{\bf r}'.\label{e4.169}
+\end{eqnarray}
+Equations (\ref{e4.164a}), (\ref{e4.164b}), (\ref{e4.167}), and (\ref{e4.169}) can be combined to give
+\begin{equation}\label{e4.172}
+{\bf E} = \frac{1}{4\pi\epsilon_0} \int \left(
+[\rho] \,\frac{\bf R}{R^3} + \left[\frac{\partial\rho}{\partial t}\right]\, \frac{\bf R}{c\,R^2}
+- \frac{[\partial {\bf j}/\partial t]}{c^2 \,R} \right)d^3{\bf r}',
+\end{equation}
+which is the time-dependent generalization of Coulomb's law, 
+and
+\begin{equation}\label{e4.173}
+{\bf B} = \frac{\mu_0}{4\pi} \int \left(
+\frac{ [{\bf j}]\times {\bf R} }{R^3} + \frac{ [\partial {\bf j}/\partial t]\times {\bf R} }
+{c\,R^2} \right)d^3{\bf r}',
+\end{equation}
+which is the time-dependent generalization of the Biot-Savart law.
+
+Suppose that the typical variation time-scale of our charges and currents is $t_0$. Let
+us define $R_0 = c\, t_0$, which is the distance a light ray travels in time $t_0$. We
+can evaluate Equations~(\ref{e4.172}) and (\ref{e4.173}) in two asymptotic limits: the {\em near field}
+region $R\ll R_0$, and the {\em far field} region $R\gg R_0$. In the near field region,
+\begin{equation}
+\frac{|t -t_r|}{t_0} = \frac{R}{R_0} \ll 1,
+\end{equation}
+so the difference between retarded time and standard time is relatively small.  This
+allows us to expand retarded quantities in a Taylor series. Thus,
+\begin{equation}
+[\rho] \simeq \rho + \frac{\partial\rho}{\partial t} \,(t_r-t)
++ \frac{1}{2} \frac{\partial^2 \rho}{\partial t^2}\,(t_r -t )^2+\cdots,
+\end{equation}
+giving 
+\begin{equation}
+[\rho] \simeq \rho - \frac{\partial \rho}{\partial t} \frac{R}{c} + \frac{1}{2} 
+\frac{\partial^2 \rho}{\partial t^2} \frac{R^2}{c^2} + \cdots.
+\end{equation}
+Expansion of the retarded quantities in the near field region yields
+\begin{eqnarray}\label{e4.177}
+{\bf E}({\bf r},t) &\simeq &\frac{1}{4\pi \epsilon_0} \int \left(
+\frac{\rho\,{\bf R}}{R^3} - \frac{1}{2} \frac{\partial^2\rho}{\partial t^2}
+\frac{\bf R}{c^2\, R} - \frac{\partial {\bf j}/\partial t}{c^2 \,R}+\cdots\right)d^3{\bf r}',\\[0.5ex]
+{\bf B} ({\bf r},t)&\simeq& \frac{\mu_0}{4\pi} \int \left(\frac{{\bf j}\times{\bf R}}{R^3} - \frac{1}{2}
+\frac{(\partial^2 {\bf j}/ \partial t^2)\times{\bf R}}{c^2\, R} +\cdots \right)
+d^3{\bf r}'.\label{e4.178}
+\end{eqnarray}
+In Equation~(\ref{e4.177}), the first term on the right-hand side corresponds to Coulomb's law, the second
+term is the lowest order correction to Coulomb's law due to retardation effects, and the third term corresponds to Faraday
+induction. In Equation~(\ref{e4.178}), the first term on the right-hand side is the Biot-Savart law,
+and the second term is the lowest order correction to the Biot-Savart law due to retardation effects. Note that the retardation
+corrections are only of order $(R/R_0)^2$. We might suppose, from looking at Equations~(\ref{e4.172}) and
+(\ref{e4.173}), that the corrections should be of order $R/R_0$.  However, all of the order $R/R_0$
+terms canceled out in the previous  expansion. Suppose, then, that we have an electric circuit
+sitting on a laboratory benchtop. Let the currents in the circuit change on a
+typical  time-scale of
+one tenth of a second. In this time, light can travel about $3\times 10^7$ meters, so
+$R_0\ \sim 30,000$ kilometers. The length-scale of the experiment is about one meter, so
+$R = 1$ meter. Thus, the retardation corrections are of relative order $(3\times 10^7)^{-2}
+\sim 10^{-15}$. It is clear that we are fairly safe just using Coulomb's law, Faraday's law,
+and the Biot-Savart law to analyze the fields generated by  this type of circuit. 
+
+In the far field region, $R\gg R_0$, Equations~(\ref{e4.172}) and (\ref{e4.173}) are dominated by the terms which
+vary like $R^{-1}$, so that
+\begin{eqnarray}
+{\bf E}({\bf r},t) & \simeq &-\frac{1}{4\pi\epsilon_0}\int\frac{[\partial {\bf j}_\perp /\partial t]}{c^2 \,R}
+\,d^3{\bf r}',\\[0.5ex]
+{\bf B}({\bf r},t) &\simeq &\frac{\mu_0}{4\pi} \int  \frac{ [\partial {\bf j}_\perp/\partial t]\times {\bf R} }
+{c\,R^2}\,d^3{\bf r}',
+\end{eqnarray}
+where 
+\begin{equation}
+{\bf j}_\perp = {\bf j} - \frac{({\bf j} \cdot {\bf R})}{R^2}\, {\bf R}.
+\end{equation}
+Here, use has been made of $[\partial \rho/\partial t] = -[\nabla\cdot {\bf j}]$ and 
+$[\nabla\cdot {\bf j} ] \simeq -[\partial {\bf j}/\partial t]\cdot {\bf R}/c R$. 
+Suppose that our charges and currents are localized to some finite region of space  in the vicinity of the origin, and that the extent of the current and charge containing region is much less than $|{\bf r}|$. 
+It follows that retarded quantities can be written
+\begin{equation}
+[ \rho({\bf r}', t)] \simeq \rho({\bf r}', t - r/c),
+\end{equation}
+{\em etc.} Thus, the electric field reduces to
+\begin{equation}\label{e4.183}
+{\bf E}({\bf r},t) \simeq -\frac{1}{4\pi\epsilon_0} \frac{\left[
+\int \partial {\bf j}_\perp/\partial t\,\,d^3{\bf r}'\right]}{c^2\, r},
+\end{equation}
+whereas the magnetic field is given by
+\begin{equation}\label{e4.184}
+{\bf B}({\bf r},t) \simeq \frac{1}{4\pi\epsilon_0} \frac{ \left[ \int  \partial {\bf j}_\perp
+/\partial t\,\,d^3{\bf r}'\right]
+\times{\bf r} }{c^3 \,r^2}.
+\end{equation}
+Here, $[\cdots]$ merely denotes evaluation at the retarded time $t-r/c$.
+Note that 
+\begin{equation}
+\frac{E}{B} = c,
+\end{equation}
+and
+\begin{equation}
+{\bf E} \cdot {\bf B} = 0.
+\end{equation}
+This configuration of  electric and magnetic fields is characteristic of an {\em electromagnetic wave}\/
+(see Section~\ref{sem}).
+Thus, Equations~(\ref{e4.183}) and (\ref{e4.184}) describe an electromagnetic wave propagating {\em  radially}
+away from the 
+charge and current containing region. Note that the wave is driven by time-varying electric
+currents. Now, charges moving with a constant velocity constitute a steady current, so a
+non-steady current is associated with {\em accelerating charges}. We conclude that accelerating
+electric charges emit electromagnetic waves. The wave fields, (\ref{e4.183}) and (\ref{e4.184}), fall off
+like the inverse of the distance from the wave source. This behaviour should be contrasted with
+that of  Coulomb or Biot-Savart fields, which fall off like the inverse square of
+the distance from the source.  It is the fact that wave fields attenuate fairly gently with increasing
+distance from the source which makes Astronomy possible. If wave fields obeyed an inverse square
+law then no appreciable radiation would reach us from the rest of the Universe.
+
+In conclusion, electric and magnetic fields look simple in the near field region (they are
+just Coulomb fields, {\em etc.}) and also in the far field region (they are just electromagnetic
+waves). Only in the intermediate region, $R\sim R_0$, do things start to get really complicated
+(so we generally avoid looking in this region!).
+
+\section{Maxwell's Equations}\label{s4.12}
+This marks the end of our theoretical investigation of Maxwell's equations. Let us now summarize
+what we have learned so far. The field equations which govern electric and magnetic fields
+are written:
+\begin{eqnarray}
+\nabla\cdot{\bf E} &=& \frac{\rho}{\epsilon_0},\label{e4.117}\\[0.5ex]
+\nabla\cdot{\bf B} &=& 0,\label{e4.118}\\[0.5ex]
+\nabla\times{\bf E} &=& - \frac{\partial {\bf B}}{\partial t},\label{e4.119}\\[0.5ex]
+\nabla\times{\bf B}&=& \mu_0\,{\bf j} + \frac{1}{c^2} \frac{\partial {\bf E}}{\partial t}.\label{e4.120}
+\end{eqnarray}
+These equations can be integrated to give
+\begin{eqnarray}
+\oint_S {\bf E} \cdot d{\bf S} &=& \frac{1}{\epsilon_0}\int_V \rho\,dV,\label{e4.191}\\[0.5ex]
+\oint_S {\bf B}\cdot d{\bf S} &=& 0,\\[0.5ex]
+\oint_C{\bf E}\cdot d{\bf l}  &=& - \frac{\partial }{\partial t}\!
+\int_S {\bf B}\cdot d{\bf S},\\[0.5ex]
+\oint_C{\bf B}\cdot d{\bf l} &=& \mu_0\int_{S'} {\bf j}\cdot
+d{\bf S}  + \frac{1}{c^2}\frac{\partial }{\partial t}\!\int_{S'} {\bf E} \cdot d{\bf S}.\label{e4.194}
+\end{eqnarray}
+Here, $S$ is a surface enclosing a volume $V$, and $S'$ a surface attached
+to a closed curve $C$.
+
+Equations~(\ref{e4.118}) and (\ref{e4.119}) are automatically satisfied by writing
+\begin{eqnarray}\label{e4.195}
+{\bf E} &=& - \nabla\phi - \frac{\partial {\bf A}}{\partial t},\\[0.5ex]
+{\bf B} &=& \nabla\times {\bf A}.\label{e4.196}
+\end{eqnarray}
+This prescription is not unique (there are many choices of $\phi$ and ${\bf A}$ which
+generate the same fields), but we can make it unique by adopting the following conventions:
+\begin{equation}
+\phi({\bf r},t) \rightarrow 0 \mbox{\hspace{1cm} as~$|{\bf r}|\rightarrow \infty$},
+\end{equation}
+and
+\begin{equation}
+\frac{1}{c^2} \frac{\partial\phi}{\partial t} +\nabla\cdot{\bf A} = 0.
+\end{equation}
+The latter convention is known as the {\em Lorenz gauge condition}.
+Equations (\ref{e4.117}) and (\ref{e4.120}) reduce to 
+\begin{eqnarray}\label{e4.199}
+ \left(\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right) \phi &=& - \frac{\rho}{\epsilon_0},\\[0.5ex]
+  \left(\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right){\bf A} &=& - \mu_0\, {\bf j}.\label{e4.200}
+\end{eqnarray}
+These are driven wave equations of the general form
+\begin{equation}
+ \left(\nabla^2 - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right) u = v.
+\end{equation}
+The Green's function for this equation which satisfies sensible boundary conditions, and is
+consistent with causality, is
+\begin{equation}
+G({\bf r}, {\bf r}'; t, t') = - \frac{1}{4\pi}
+\frac{\delta (t-t' - |{\bf r} - {\bf r}'|/c)}{|{\bf r}- {\bf r}'|}.
+\end{equation}
+Thus, the solutions to Equations~(\ref{e4.199}) and (\ref{e4.200}) are
+\begin{eqnarray}\label{e4.203}
+\phi({\bf r}, t) &= &\frac{1}{4\pi\epsilon_0}\int \frac{[\rho]}{R} \,d^3{\bf r}',\\[0.5ex]
+{\bf A}({\bf r}, t)  &=& \frac{\mu_0}{4\pi} \int \frac{[{\bf j}]}{R}\,d^3{\bf r}',\label{e4.204}
+\end{eqnarray}
+where $R = |{\bf r} - {\bf r}'|$, and
+$[A] \equiv A({\bf r}', t-R/c)$. These solutions can be combined with
+Equations~(\ref{e4.195}) and (\ref{e4.196}) to give
+\begin{eqnarray}\label{e4.205}
+{\bf E}({\bf r}, t)& = &\frac{1}{4\pi\epsilon_0} \int \left(
+[\rho] \,\frac{\bf R}{R^3} + \left[\frac{\partial\rho}{\partial t}\right]\, \frac{\bf R}{c\,R^2}
+- \frac{[\partial {\bf j}/\partial t]}{c^2 \,R} \right)d^3{\bf r}',\\[0.5ex]
+{\bf B}({\bf r}, t) &=& \frac{\mu_0}{4\pi} \int \left(
+\frac{ [{\bf j}]\times {\bf R} }{R^3} + \frac{ [\partial {\bf j}/\partial t]\times {\bf R} }
+{c\,R^2} \right)d^3{\bf r}'.\label{e4.206}
+\end{eqnarray}
+
+Equations (\ref{e4.117})--(\ref{e4.206}) constitute the complete theory of classical electromagnetism.
+We can express the same information in terms of field equations [Equations~(\ref{e4.117})--(\ref{e4.120})],
+integrated field equations [Equations~(\ref{e4.191})--(\ref{e4.194})], retarded electromagnetic
+potentials [Equations~(\ref{e4.203}) and (\ref{e4.204})], and retarded electromagnetic
+fields [Equations~(\ref{e4.205}) and (\ref{e4.206})]. Let us now consider the applications of this theory.
+
+{\small
+\section{Exercises}
+\renewcommand{\theenumi}{4.\arabic{enumi}}
+\begin{enumerate}
+\item Consider a particle accelerator in which charged particles are constrained to move in a circle in the $x$-$y$ plane by a $z$-directed magnetic field. If the magnetic field-strength is gradually increased then the
+particles are accelerated by the induced electric field. This type of accelerator
+is called a {\em betatron}. It is preferable to keep the radius of the particle
+orbit constant during the acceleration. Show that this is possible
+provided that the magnetic field distribution is such that the average
+field over the area of the  orbit is twice the field at the circumference.
+Assume that the field is symmetric about the center of the orbit, and that the
+particles are sub-relativistic.
+
+\item A charged particle executes a circular orbit  in the
+plane perpendicular to a uniform magnetic field of strength $B$. If the magnitude
+of the field is very gradually increased then the induced electric field
+accelerates the charge. Demonstrate that in a single rotation
+$$
+\frac{\Delta K}{K} \simeq \frac{\Delta B}{B},
+$$
+where $K$ is the particle's kinetic energy. Hence, deduce that
+the ratio
+$K/B$
+is approximately constant during the field ramp. By considering the circulating charge as a circular current loop, show that the charge's effective magnetic moment\index{Magnetic!moment} is
+$$
+m = \frac{K}{B},
+$$
+and is, thus, approximately conserved during the field ramp. Does the
+radius of the orbit increase or decrease as the magnetic  field-strength increases?
+\item Demonstrate that
+$$
+\int_V {\bf j}\,d^3{\bf r} = \int_S {\bf r}\,\,{\bf j}\cdot d{\bf S} - \int_V{\bf r}\,\nabla\cdot{\bf j}\,d^3 {\bf r},
+$$
+where $S$ is a surface enclosing some volume $V$. Hence, deduce that
+for a distribution of charges and currents localized to some finite region of
+space
+$$
+\int {\bf j}\,d^3{\bf r} = \frac{d{\bf p}}{dt},
+$$
+where the integral is over the whole volume of the distribution, and
+$$
+{\bf p} = \int {\bf r}\,\rho\,d^3{\bf r}
+$$
+is the distribution's electric dipole moment.
+\item Given that Amp\`{e}re's circuital law implies the Biot-Savart law,
+show that Faraday's law implies that
+$$
+{\bf E}({\bf r},t) = - \frac{1}{4\pi}\int \frac{[\partial {\bf B}({\bf r}',t)/\partial t]
+\times ({\bf r}-{\bf r}')}{|{\bf r}-{\bf r}'|^3}\,d^3{\bf r}'.
+$$
+Consider a thin iron ring of major radius $a$ and minor cross-sectional
+area $A$. A uniform circulating magnetic field $B(t)$ is produced inside the iron by current flowing
+in a wire wound toroidally onto the ring. Show that the electric field
+induced on the major axis of the ring is
+$$
+{\bf E}(z,t) = - \frac{a^2\,A}{2\,(a^2+z^2)^{3/2}}\left(\frac{d B}{dt}\right){\bf e}_z,
+$$
+where $z$ is measured from the plane of the ring,  in a right-handed sense
+with respect to the circulating magnetic field. Demonstrate that
+$$
+\int_{-\infty}^\infty E_z(z,t)\,dz = - A\,\frac{dB}{dt}.
+$$
+Derive this result directly from Faraday's law.
+\item A Rogowski coil consists of a thin wire wound uniformly onto a non-magnetic
+ring-shaped former of major radius $a$ and constant cross-sectional area $A$. 
+Suppose that there are $N$ turns around the ring. If a time dependent current
+$I(t)$ passes {\em anywhere}\/ through the ring show that the voltage induced
+in the wire is
+$$
+V = \frac{\mu_0}{2\pi}\frac{N\,A}{a}\,\frac{dI}{dt}.
+$$
+\item In a certain region of space the charge density takes the form 
+$$
+\rho = \rho_0\,{\rm e}^{-\lambda\,r},
+$$
+where $r$ is a spherical polar coordinate, $\rho_0$ a spatial constant, and
+$\lambda$ a positive constant. Find the electric field generated by this
+charge distribution. Suppose that
+$$
+\rho_0 = \rho_{00}\,{\rm e}^{-\gamma\,t},
+$$
+where $\rho_{00}$ is a spatial and temporal constant, and $\gamma$
+a positive constant. What is the current density associated with the time-varying charge density? What is the displacement current generated by the changing electric field? Find the magnetic field generated by these
+current distributions.
+\item An alternating current $I=I_0\,\cos(\omega\,t)$ flows down a long
+straight wire of negligible thickness, and back along a thin co-axial conducting cylindrical shell of radius $R$.
+\begin{enumerate}
+\item In which direction does the induced electric field ${\bf E}$ point (radial, circumferential, or longitudinal)?
+\item  Find ${\bf E}$ as a function of $r$ (perpendicular distance from the wire).
+\item Find the displacement current density ${\bf j}_d$.
+\item Integrate ${\bf j}_d$ to obtain the total displacement current
+$$
+I_d = \int {\bf j}_d\cdot d{\bf S}.
+$$
+\item What is the ratio of $I_d$ to $I$? If the outer cylinder were 2\,mm
+in diameter, how high would the frequency $\omega$ have to be (in Hz)
+for $I_d$ to be $1\%$ of $I$?
+\end{enumerate}
+\item Consider the one-dimensional free-space electromagnetic wave equation
+$$
+\frac{\partial^2 E}{\partial z^2} = \epsilon_0\mu_0\,\frac{\partial^2 E}{\partial t^2},
+$$
+where $E$ is the electric field-strength in the $x$-direction. Show that a change
+of variables,
+\begin{eqnarray}
+\alpha &=& t + \sqrt{\epsilon_0\mu_0}\,z,\nonumber\\[0.5ex]
+\beta &=& t-\sqrt{\epsilon_0\,\mu_0}\,z,\nonumber
+\end{eqnarray}
+causes the equation to assume a form which can easily be integrated.
+Hence, deduce that
+$$
+E(z,t) = F(\alpha) + G(\beta),
+$$
+where $F$ and $G$ are arbitrary functions. Interpret this solution.
+\item Given the free-space electromagnetic wave electric field
+$$
+{\bf E} = E_0\,\cos[k\,(z-c\,t)]\,{\bf e}_x
++ E_0\,\sin[k\,(z+c\,t)]\,{\bf e}_y,
+$$
+where $k$ is real, find the corresponding magnetic field ${\bf B}$.
+\item Given a plane  electromagnetic wave propagating in free-space along the positive $z$-direction, and polarized such that
+$$
+{\bf E} = {\bf E}_0 \sin\left[k\,(z-c\,t)\right],
+$$
+where $k$ is real, and ${\bf E}_0$ is a constant vector,
+show that it is possible to set the scalar potential $\phi$ to zero. Find a possible vector potential ${\bf A}$ which satisfies the Lorenz gauge. 
+\item The electric field of a plane electromagnetic wave propagating
+in the $z$-direction is written
+$$
+{\bf E} = A\,{\rm e}^{\,{\rm i}\,(k\,z-\omega\,t)}\,{\bf e}_x
++ B\,{\rm e}^{\,{\rm i}\,(k\,z-\omega\,t)}\,{\bf e}_y,
+$$
+where $A$ and $B$ are  complex numbers, and
+$k$ and $\omega$ are positive real numbers. Of course, the
+physical electric field is the real part of the above expression. Suppose
+that
+$$
+A = |E|/\sqrt{2},\mbox{\hspace{1cm}}B = A\, {\rm e}^{\,{\rm i}\,\phi},
+$$
+where $|E|$ is the maximum magnitude of the electric field vector, and $\phi$ is real.
+Demonstrate that, in general, the tip of the electric field vector traces
+out an ellipse in the $x$-$y$ plane whose major axis is tilted
+at $45^\circ$ with respect to the $x$-axis. Show that the major/minor
+radii of the ellipse are $|E|\,|\!\cos\phi/2|$ and $|E|\,|\!\sin\phi/2|$, and
+that the electric field vector rotates clockwise (looking down the $z$-axis)
+when $0^\circ\leq\phi\leq 180^\circ$, and anti-clockwise otherwise.
+Demonstrate that for the special cases when $\phi=0^\circ, 180^\circ$,
+the electric field vector traces out a {\em straight-line}, passing through the
+origin, in the $x$-$y$ plane. These cases correspond to so-called {\em linearly polarized}\/
+waves. Show that for the special cases when $\phi=90^\circ, 270^\circ$
+the electric field vector traces out a {\em circle}\/ in the $x$-$y$
+plane, rotating clockwise and anti-clockwise, respectively. These
+ cases correspond to left-hand and right-hand {\em circularly polarized}\/
+waves, respectively. (The handedness is determined with respect to
+the direction of wave propagation and the sense of rotation of the
+electric field in the plane perpendicular to this direction.) Note that in the general case the electric field vector traces
+out an {\em ellipse}\/ in the $x$-$y$ plane, rotating clockwise
+and anti-clockwise, respectively, depending on whether or not $0^\circ\leq
+\phi\leq 180^\circ$. These cases correspond to  left-hand and right-hand {\em elliptically polarized}\/
+waves, respectively. 
+\item A magnetic monopole of monopole charge $q_m$ placed at the
+origin generates a radial magnetic field of the form
+$$
+B_r(r) = \frac{\mu_0\,c\,q_m}{4\pi\,r^2}.
+$$
+Using this result, and assuming that the number of magnetic
+monopoles in the Universe is a conserved quantity (like the number of electric
+charges), show that when Maxwell's equations are generalized to take
+magnetic monopoles into account they take the form
+\begin{eqnarray}
+\nabla\cdot{\bf E} &=& \frac{\rho}{\epsilon_0},\nonumber\\[0.5ex]
+\nabla\cdot {\bf H} &=&\frac{\rho_m}{\epsilon_0},\nonumber\\[0.5ex]
+\nabla\times {\bf E} &=&-\mu_0 c\,{\bf j}_m -\frac{\partial {\bf H}}{\partial \tau},\nonumber\\[0.5ex]
+\nabla\times {\bf H} &=& \mu_0 c\,{\bf j} + \frac{\partial {\bf E}}{\partial \tau},\nonumber
+\end{eqnarray}
+where ${\bf H} = c\,{\bf B}$ and $\tau= c\,t$.
+Here, $\rho_m$ is the number density of monopoles, and ${\bf j}_m$ is
+the monopole current density.
+\item Consider a distribution of charges and currents which is localized in a region
+of linear extent $a$ in the vicinity of the origin. Demonstrate that
+the lowest order electric and magnetic field generated by such a
+distribution in the far field region, $|{\bf r}|\gg a$, is
+\begin{eqnarray}
+{\bf E}({\bf r},t) &\simeq & - \frac{1}{4\pi\epsilon_0\,c^2}\,\frac{{\bf e}_r\times([\ddot{\bf p}]\times {\bf e}_r)}{r},\nonumber\\[0.5ex]
+{\bf B}({\bf r},t) &\simeq & \frac{1}{4\pi\epsilon_0\,c^3}\,\frac{[\ddot{\bf p}]\times{\bf e}_r}{r},\nonumber
+\end{eqnarray}
+where ${\bf e}_r = {\bf r}/r$,  ${\bf p} = \int {\bf r}\,\rho\,d^3{\bf r}$
+is the electric dipole moment of the distribution, and $\dot{~}$ denotes a time derivative. Here, $[\cdots]$ implies evaluation at the retarded time $t-r/c$. Suppose that
+${\bf p} = p_0\,\cos(\omega\,t)\,{\bf e}_z$. Show that the far field
+electric and magnetic fields take the form
+\begin{eqnarray}
+{\bf E}({\bf r},t) &=& - \frac{\omega^2\,p_0}{4\pi\epsilon_0\,c^2}\,\cos[\omega\,(t-r/c)]\,\frac{\sin\theta}{r}\,{\bf e}_\theta,\nonumber\\[0.5ex]
+{\bf B}({\bf r},t) &=& - \frac{\omega^2\,p_0}{4\pi\epsilon_0\,c^3}\,\cos[\omega\,(t-r/c)]\,\frac{\sin\theta}{r}\,{\bf e}_\phi.\nonumber
+\end{eqnarray}
+Here, $\theta$ and $\phi$ are spherical polar coordinates.
+\end{enumerate}
+\renewcommand{\theenumi}{\arabic{enumi}}
+}

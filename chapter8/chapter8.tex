@@ -1,0 +1,657 @@
+\chapter{Electromagnetic Energy and Momentum}\label{energy}
+\section{Introduction}
+In this chapter, we shall demonstrate that Maxwell's
+equations conserve both energy and momentum.
+
+\section{Energy Conservation}\label{s8.2}
+We have seen that the energy density of an electric field is given by
+[see Equation~(\ref{eeu})]
+\begin{equation}
+U_E = \frac{\epsilon_0\,E^2}{2},
+\end{equation}
+whereas the energy density of a magnetic field satisfies 
+[see Equation~(\ref{eeb})]
+\begin{equation}
+U_B = \frac{B^2}{2\mu_0}.
+\end{equation}
+This suggests that the energy density of a general electromagnetic field is
+\begin{equation}
+U= \frac{\epsilon_0\,E^2}{2}+\frac{B^2}{2\mu_0}.
+\end{equation}
+We are now in a position to demonstrate that the classical theory of
+electromagnetism conserves energy. We have already come across one conservation
+law in electromagnetism: {\em i.e.},
+\begin{equation}
+\frac{\partial\rho}{\partial t} +\nabla\cdot {\bf j} = 0.
+\end{equation}
+This is the equation of charge conservation. Integrating over some volume
+$V$, bounded by a surface $S$, and making use of Gauss' theorem, we obtain
+\begin{equation}
+-\frac{\partial}{\partial t}\!\int_V \rho\,d V = \oint_S {\bf j}\cdot d{\bf S}.
+\end{equation}
+In other words, the rate of decrease of the charge contained in volume $V$ equals
+the net flux of charge across surface $S$. This suggests that an energy conservation
+law for electromagnetism should have the form
+\begin{equation}\label{e8.6}
+-\frac{\partial}{\partial t}\!\int_V U\,d V = \oint_S {\bf u}\cdot d{\bf S}.
+\end{equation}
+Here, $U$ is the energy density of the electromagnetic field, and ${\bf u}$ is
+the flux of electromagnetic energy ({\em i.e.}, 
+energy  $|{\bf u}|$ per unit time, per unit cross-sectional area, passes a given
+point in the direction of ${\bf u}$). According to the above equation, the
+rate of decrease of the electromagnetic energy in volume $V$ equals the net flux
+of electromagnetic energy across surface $S$.
+
+However, Equation~(\ref{e8.6}) is incomplete, because electromagnetic fields can gain or lose energy
+by interacting with matter. We need to factor this into our analysis. 
+We saw earlier (see Section~\ref{s4.2}) 
+that the rate of heat dissipation per unit volume in a
+conductor (the so-called ohmic heating rate) is ${\bf E}\cdot{\bf j}$. 
+This energy is extracted from electromagnetic fields, so the rate of energy
+loss of the fields in volume $V$ due to interaction with matter is 
+$\int_V {\bf E}\cdot{\bf j}\,dV$. Thus, Equation~(\ref{e8.6})  generalizes to 
+\begin{equation}
+-\frac{\partial}{\partial t} \!\int_V U\,dV= \oint_S {\bf u}\cdot d{\bf S}
++ \int_V {\bf E}\cdot{\bf j}\,dV.
+\end{equation}
+From Gauss' theorem, the above equation is equivalent to
+\begin{equation}
+\frac{\partial U}{\partial t} +\nabla\cdot {\bf u} = - {\bf E} \cdot {\bf j}.
+\end{equation}
+Let us now see if we can derive an expression of this form from Maxwell's equations. 
+
+We start from the differential form of Amp\`{e}re's law (including the displacement current):
+\begin{equation}
+\nabla\times{\bf B} = \mu_0\, {\bf j} +\epsilon_0\mu_0 \frac{\partial {\bf E}}
+{\partial t}.
+\end{equation}
+Dotting this equation with the electric field yields
+\begin{equation}
+- {\bf E} \cdot {\bf j} = - \frac{ {\bf E}\cdot \nabla\times{\bf B}}{\mu_0}
++\epsilon_0 \,{\bf E}\cdot \frac{\partial {\bf E}}{\partial t}.
+\end{equation}
+This can be rewritten
+\begin{equation}
+- {\bf E} \cdot {\bf j} = - \frac{ {\bf E}\cdot \nabla\times{\bf B}}{\mu_0}
++\frac{\partial}{\partial t}\!\left(\frac{\epsilon_0 \,E^2}{2}\right).
+\end{equation}
+Now, from vector field theory,
+\begin{equation}
+\nabla\cdot({\bf E}\times{\bf B}) \equiv {\bf B}\cdot\nabla\times{\bf E} - {\bf E}
+\cdot \nabla\times{\bf B},
+\end{equation}
+so
+\begin{equation}
+- {\bf E} \cdot {\bf j} = \nabla \!\cdot\!
+\left(\frac{{\bf E}\times{\bf B}}{\mu_0}\right)
+- \frac{{\bf B}\cdot\nabla\times {\bf E}}{\mu_0} + 
+\frac{\partial}{\partial t}\!\left(\frac{\epsilon_0\, E^2}{2}\right).
+\end{equation}
+The differential form of Faraday's law yields
+\begin{equation}
+\nabla\times{\bf E} = - \frac{\partial {\bf B}}{\partial t},
+\end{equation}
+so
+\begin{equation}
+- {\bf E} \cdot {\bf j} = \nabla \!\cdot\!
+\left(\frac{{\bf E}\times{\bf B}}{\mu_0}\right)
++\mu_0^{-1}\,  {\bf B}\cdot\frac{\partial {\bf B}}{\partial t}  + 
+\frac{\partial}{\partial t}\!\left(\frac{\epsilon_0\,E^2}{2}\right).
+\end{equation}
+This can be rewritten
+\begin{equation}
+- {\bf E} \cdot {\bf j} = \nabla\! \cdot
+\!\left(\frac{{\bf E}\times{\bf B}}{\mu_0}\right)
++ \frac{\partial}{\partial t}\!\left( \frac{\epsilon_0\,E^2}{2} +\frac{B^2}{2\mu_0}
+\right).
+\end{equation}
+Thus, we obtain the desired conservation law,
+\begin{equation}\label{econs}
+\frac{\partial U}{\partial t} + \nabla\cdot{\bf u} = -{\bf E}\cdot {\bf j},
+\end{equation}
+where 
+\begin{equation}\label{e8.18}
+U  = \frac{\epsilon_0\,E^2}{2} + \frac{B^2}{2\mu_0}
+\end{equation}
+is the electromagnetic energy density,
+and
+\begin{equation}\label{e8.19}
+{\bf u} = \frac{{\bf E}\times{\bf B}}{\mu_0}
+\end{equation}
+is the electromagnetic energy flux. The latter quantity is usually called the 
+{\em Poynting flux}, after its discoverer.
+
+Let us see whether our expression for the electromagnetic energy flux makes sense.
+We all know that if we stand in the sun we get hot. This
+occurs because we absorb electromagnetic radiation emitted by the Sun. So,
+radiation must transport energy. The electric and magnetic fields in electromagnetic
+radiation are mutually perpendicular, and are also perpendicular to the direction
+of propagation $\hat{\bf k}$ (this is a unit vector). Furthermore, $B=E/c$. 
+Equation (\ref{e4.71}) can easily be transformed into the following relation between
+the electric and magnetic fields of an electromagnetic wave:
+\begin{equation}
+{\bf E} \times{\bf B} = \frac{E^2}{c}\, \hat{\bf k}.
+\end{equation}
+Thus, the Poynting flux for electromagnetic radiation is
+\begin{equation}\label{e8.21}
+{\bf u} = \frac{E^2}{\mu_0\, c} \,\hat{\bf k} = \epsilon_0 \,c \,E^2\, \hat{\bf k}.
+\end{equation}
+This expression tells us that electromagnetic waves transport energy along their
+direction of propagation, which seems to make sense. 
+
+The energy density of electromagnetic radiation is
+\begin{equation}
+U = \frac{\epsilon_0\,E^2}{2} + \frac{B^2}{2\mu_0} = \frac{\epsilon_0\,E^2}{2}
++ \frac{E^2}{2\mu_0 \,c^2} = \epsilon_0 \,E^2,
+\end{equation}
+using $B=E/c$.   Note that 
+the electric and magnetic fields in an electromagnetic wave have {\em equal}\/ energy densities. 
+Since electromagnetic waves travel at the speed of light, we would
+expect the energy flux through one square meter in one second to equal the energy
+contained in a volume of length $c$ and unit cross-sectional area: {\em i.e.},
+$c$ times the energy density. Thus,
+\begin{equation}
+|{\bf u}| = c\,U = \epsilon_0\, c\,  E^2,
+\end{equation}
+which is in accordance with Equation~(\ref{e8.21}). 
+
+As another example, consider a straight cylindrical wire of radius $a$, and
+uniform resistivity $\eta$. Suppose that the wire is co-axial with the $z$-axis.
+Let us adopt standard cylindrical polar coordinates ($r$, $\theta$, $z$). 
+If a current of uniform density ${\bf j} = j\,{\bf e}_z$ flows down the
+wire then Ohm's law tells us that there is a uniform longitudinal
+electric field ${\bf E} = E\,{\bf e}_z$ within the wire, where $E=\eta\,j$. 
+According to Amp\`{e}re's circuital law, the current also generates a circulating magnetic field, inside the wire, of the form
+${\bf B} = (\mu_0\,r\,j/2)\,{\bf e}_\theta$. Hence, the Poynting flux, ${\bf u} = {\bf E}\times {\bf B}/\mu_0$, within the wire points {\em radially inwards}, and is of magnitude $u= \eta\,j^2\,r/2$. The net energy flux
+into a cylindrical surface, co-axial with the wire, of radius $r$ and length $l$ is $U = u\,2\pi\,r\,l=\eta\,j^2\,V(r)$, where $V(r)=\pi\,r^2\,l$ is the volume enclosed by the surface.
+However, $\eta\,j^2$ is the rate of electromagnetic energy loss per unit
+volume, due to ohmic heating. Hence, $\eta\,j^2\,V(r)$ represents the net rate
+of electromagnetic energy loss due to ohmic heating in the region lying within the cylindrical
+surface. Thus, we can see that this energy loss is balanced by the inwards flux
+of electromagnetic energy across the surface. This flux represents energy which is ultimately derived from the battery which drives the current through
+the wire.
+
+In the presence of diamagnetic and magnetic media, starting from 
+Equation~(\ref{ejmag}), we can derive an energy conservation law
+of the form 
+\begin{equation}
+\frac{\partial U}{\partial t} + \nabla\cdot{\bf u} = -{\bf E}\cdot {\bf j}_t,
+\end{equation}
+via analogous steps to those used to derive Equation~(\ref{econs}). Here,
+the electromagnetic energy density is written
+\begin{equation}
+U = \frac{1}{2}\,{\bf E}\cdot{\bf D} + \frac{1}{2}\,{\bf B}\cdot{\bf H},
+\end{equation}
+which is consistent with Equation~(\ref{e8.18}). The Poynting
+flux takes the form
+\begin{equation}
+{\bf u} = {\bf E}\times{\bf H},
+\end{equation}
+which is consistent with Equation~(\ref{e8.19}). Of course, the above expressions
+are only valid for {\em linear} dielectric and magnetic media.
+
+
+\section{Electromagnetic Momentum}
+We have seen that electromagnetic waves carry energy.
+ It turns out that they also carry momentum. Consider the following argument, due
+to Einstein. Suppose that we have a railroad car of mass $M$ and length
+$L$ which is free
+to move in one dimension---see Figure~\ref{f47}. Suppose that electromagnetic radiation of total
+energy $E$ is emitted from one end of the car, propagates along the length of
+the car, and is then absorbed at the other end. The effective mass of this radiation
+is $m= E/c^2$ (from Einstein's famous relation $E=m\, c^2$). At first sight,
+the process described above appears to cause the centre of mass of the system 
+to spontaneously shift. This violates the law of momentum conservation (assuming the
+railway car is subject to no horizontal external forces). The only way in which the
+centre of mass of the system can remain stationary is if the railway car
+{\em moves} in the opposite direction to the direction of propagation of
+the radiation. In fact, if the car moves by a distance $x$ then the centre of
+mass of the system is the same before and after the radiation pulse provided that
+\begin{equation}
+M\, x  = m \,L = \frac{E}{c^2}\, L.
+\end{equation}
+Incidentally, it is assumed that $m\ll M$ in this derivation.
+\begin{figure}
+\epsfysize=3.in
+\centerline{\epsffile{chapter8/fig8.1.eps}}
+\caption{\em Einstein's thought experiment regarding electromagnetic momentum.}\label{f47}
+\end{figure}
+
+
+But, what actually causes the car to move? If the radiation possesses momentum
+$p$ then the car will recoil with the same momentum when the radiation is emitted.
+When the radiation hits the other end of the car then the car acquires momentum
+$p$ in the opposite direction, which stops the motion. The time of flight of
+the radiation is $L/c$. So, the distance traveled by a mass $M$ with momentum
+$p$ in this time is
+\begin{equation}
+x = v \,t = \frac{p}{M} \frac{L}{c},
+\end{equation}
+giving
+\begin{equation}\label{e8.26}
+p = M\,x\, \frac{c}{L} = \frac{E}{c}.
+\end{equation}
+Thus, the momentum carried by electromagnetic radiation equals its energy divided by
+the speed of light. The same result can be obtained from the well-known
+relativistic formula
+\begin{equation}
+E^2 = p^2 c^2 + m^2 c^4
+\end{equation}
+relating the energy $E$, momentum $p$, and mass $m$ of a particle. According to
+quantum theory, electromagnetic radiation is made up of {\em massless}\/particles
+called {\em photons}. Thus,
+\begin{equation}
+	p = \frac{E}{c}
+\end{equation}
+for individual photons, so the same must be true of electromagnetic radiation
+as a whole. It follows from Equation~(\ref{e8.26})
+ that the momentum density $g$ of electromagnetic
+radiation equals its energy density over $c$, so
+\begin{equation}
+g = \frac{U}{c}= \frac{|{\bf u}|}{c^2} = \frac{\epsilon_0 \,E^2}{c}.
+\end{equation}
+It is reasonable to suppose that the momentum points along the direction
+of the energy flow (this is obviously the case for photons),
+ so the vector momentum density (which gives the direction,
+as well as the magnitude, of the momentum per unit volume) of electromagnetic
+radiation is
+\begin{equation}\label{e8.30}
+{\bf g} = \frac{{\bf u}}{c^2}.
+\end{equation}
+Thus, the momentum density equals the energy flux over $c^2$. 
+
+Of course, the electric field associated with an electromagnetic wave oscillates
+rapidly, which implies  that the previous expressions  for the energy density,
+energy flux, and momentum density of electromagnetic radiation are also
+rapidly oscillating. It is convenient to average over many periods of
+the oscillation (this average is denoted $\langle \,\rangle$). Thus,
+\begin{eqnarray}
+\langle U\rangle &=& \frac{\epsilon_0\, E_0^{\,2}}{2},\\[0.5ex]
+\langle {\bf u}\rangle&=& \frac{c\,\epsilon_0 \,E_0^{\,2}}{2} \,\hat{\bf k}= c \,\langle U\rangle\, \hat{\bf k}, \label{e8.35} \\[0.5ex]
+\langle {\bf g} \rangle &=& \frac{\epsilon_0 \,E_0^{\,2}}{2\,c}\,\hat{\bf k} = \frac{\langle U\rangle}{c}
+\,\hat{\bf k},
+\end{eqnarray}
+where the factor $1/2$ comes from averaging $\cos^2 (\omega\, t)$. Here,
+$E_0$ is the peak amplitude of the electric field associated with the wave. 
+
+If electromagnetic radiation possesses momentum then it must exert a force on
+bodies which absorb (or emit) radiation. Suppose that a body is placed in
+a beam of perfectly collimated radiation, which it absorbs completely. The amount
+of momentum absorbed per unit time, per unit cross-sectional area, is simply the
+amount of momentum contained in a volume of length $c$ and unit cross-sectional
+area: {\em i.e.}, $c$ times the momentum density, $g$. An absorbed momentum per
+unit time, per unit area, is equivalent to a pressure. In other words, the radiation
+exerts a pressure $c\,g$ on the body. Thus, the  {\em radiation pressure} is given by
+\begin{equation}\label{e8.32}
+p = \frac{\epsilon_0\,E^2}{2} =\, \langle U\rangle.
+\end{equation}
+So, the pressure exerted by collimated electromagnetic radiation is equal to
+its average energy density. 
+
+Consider a cavity filled with electromagnetic radiation. What is the radiation
+pressure exerted on the walls? In this situation, the radiation propagates in
+all directions with equal probability. Consider  radiation propagating at an
+angle $\theta$ to the local normal to the wall. The amount of such radiation
+hitting the wall per unit time, per unit area, is proportional to $\cos\theta$.
+Moreover, the component of  momentum normal to the wall which the radiation
+carries is also proportional to $\cos\theta$. Thus, the pressure exerted on the
+wall is the same as in Equation~(\ref{e8.32}), except that it is weighted by the
+average of $\cos^2 \theta$ over all solid angles, in order to take into account
+the fact 
+that obliquely propagating radiation exerts a pressure which is $\cos^2\theta$
+times that of normal radiation. The average of $\cos^2\theta$ over all solid angles
+is $1/3$, so for isotropic radiation
+\begin{equation}
+p = \frac{  \langle U\rangle}{3}.
+\end{equation}
+Clearly, the pressure exerted by isotropic radiation is one third of
+its average energy density. 
+
+The power incident on the surface of the Earth due to radiation emitted by
+the Sun is about $1300$ W\,m$^{-2}$. So, what is the radiation pressure?
+Since,
+\begin{equation}
+\langle |{\bf u}|\rangle = c\, \langle U\rangle = 1300 \,{\rm W\, m^{-2}},
+\end{equation}
+then
+\begin{equation}
+p =\, \langle U\rangle \simeq 4\times 10^{-6}\,{\rm N\, m^{-2}}.
+\end{equation}
+Here, the radiation is assumed to be perfectly collimated. 
+Thus, the radiation pressure exerted on the Earth is minuscule (for comparison, the pressure of the atmosphere 
+is  about $10^5$ N\,m$^{-2}$). Nevertheless, this small pressure due to
+radiation is important in outer space, since it 
+is responsible for continuously sweeping
+dust particles out of the Solar System. It is quite common for comets to exhibit
+two separate tails. One (called the {\em gas tail}) consists of ionized gas, and is
+swept along by the Solar Wind (a stream of charged particles and magnetic field-lines
+emitted by the Sun). The other (called the {\em dust tail}) consists of uncharged
+dust particles, and is swept radially outward (since light travels in straight-lines) from the Sun by radiation pressure.
+Two separate 
+tails are observed if  the local direction of the Solar Wind is not radially
+outward from the Sun (which is quite often the case). 
+
+The radiation pressure from sunlight is very weak. However, that produced by
+laser beams can be enormous (far higher than any conventional pressure which
+has ever been produced in a laboratory). For instance, the lasers used in Inertial
+Confinement Fusion ({\em e.g.}, the NOVA experiment in
+Lawrence Livermore National Laboratory) 
+typically have energy fluxes of $10^{18}$ W\,m$^{-2}$. 
+This translates to a radiation pressure of about $10^4$ atmospheres!
+
+\section{Momentum Conservation}\label{s8.4}
+It follows from Equations~(\ref{e8.19}) and (\ref{e8.30}) that the momentum
+density of electromagnetic fields can be written
+\begin{equation}\label{e8.41x}
+{\bf g} = \epsilon_0\,{\bf E}\times{\bf B}.
+\end{equation}
+Now, a momentum conservation equation for electromagnetic fields 
+should take the integral form
+\begin{equation}
+-\frac{\partial}{\partial t}\int_V g_i\,dV = \int_S G_{ij}\,dS_j
++ \int_V \left[\rho\,{\bf E} + {\bf j}\times{\bf B}\right]_i\,dV.
+\end{equation}
+Here, $i$ and $j$ run from 1 to 3 (1 corresponds to the $x$-direction,
+2 to the $y$-direction, and 3 to the $z$-direction). Moreover, the Einstein
+summation convention is employed for repeated indices ({\em e.g.},
+$a_j\,a_j\equiv {\bf a}\cdot{\bf a}$). Furthermore, the tensor
+$G_{ij}$ represents the flux of the $i$th component of electromagnetic momentum  in the $j$-direction. This tensor (a tensor is a direct generalization of a vector with two indices instead of one) is called
+the {\em momentum flux density tensor}. Hence, the above equation states
+that the rate of loss of electromagnetic momentum in some volume $V$
+is equal to the flux of electromagnetic momentum  across the bounding surface $S$ plus the rate at which momentum is transferred to matter inside $V$.
+The latter rate is, of course, just the net electromagnetic force acting
+on matter inside $V$: {\em i.e.}, the volume integral of the electromagnetic
+force density, $\rho\,{\bf E} + {\bf j}\times{\bf B}$.
+Now, a direct generalization of the divergence theorem states that
+\begin{equation}
+\int_S G_{ij}\,dS_j \equiv \int_V \frac {\partial G_{ij}}{\partial x_j}\,dV,
+\end{equation}
+where $x_1 \equiv x$, $x_2\equiv y$, {\em etc.} Hence, in differential form, our
+momentum conservation equation for electromagnetic fields is written
+\begin{equation}\label{e8.41}
+-\frac{\partial}{\partial t}\left[\epsilon_0\,{\bf E}\times{\bf B}\right]_i =
+\frac {\partial G_{ij}}{\partial x_j} + [\rho\,{\bf E} + {\bf j}\times{\bf B}]_i.
+\end{equation}
+Let us now attempt to derive an equation of this form from Maxwell's equations.
+
+Maxwell's equations are as follows:
+\begin{eqnarray}
+\nabla\cdot{\bf E} &=& \frac{\rho}{\epsilon_0},\label{e8.42}\\[0.5ex]
+\nabla\cdot{\bf B} &=& 0,\label{e8.43}\\[0.5ex]
+\nabla\times{\bf E} &=& - \frac{\partial {\bf B}}{\partial t},\label{e8.44}\\[0.5ex]
+\nabla\times{\bf B}&=& \mu_0\,{\bf j} + \epsilon_0\mu_0\, \frac{\partial {\bf E}}{\partial t}.\label{e8.45}
+\end{eqnarray}
+We can cross Equation~(\ref{e8.45}) divided by $\mu_0$ with ${\bf B}$, and rearrange, to give
+\begin{equation}
+-\epsilon_0\,\frac{\partial {\bf E}}{\partial t}\times {\bf B} = \frac{{\bf B}\times(\nabla\times {\bf B})}{\mu_0} + {\bf j}\times {\bf B}.
+\end{equation}
+Next, let us cross ${\bf E}$ with Equation~(\ref{e8.44}) times $\epsilon_0$,
+rearrange, and add the result to the above equation. We obtain
+\begin{equation}
+-\epsilon_0\,\frac{\partial {\bf E}}{\partial t}\times {\bf B}-\epsilon_0\,
+{\bf E}\times\frac{\partial {\bf B}}{\partial t}  = 
+\epsilon_0\,{\bf E}\times (\nabla\times{\bf E})+\frac{{\bf B}\times(\nabla\times {\bf B})}{\mu_0} + {\bf j}\times {\bf B}.
+\end{equation}
+Next, making use of Equations~(\ref{e8.42}) and (\ref{e8.43}), we get
+\begin{eqnarray}\label{e8.48}
+-\frac{\partial}{\partial t} \left[\epsilon_0\,{\bf E}\times{\bf B}\right]&=&
+\epsilon_0\,{\bf E}\times (\nabla\times{\bf E})+\frac{{\bf B}\times(\nabla\times {\bf B})}{\mu_0}\nonumber\\[0.5ex]&& - \epsilon_0\,(\nabla\cdot {\bf E}) \,{\bf E} - \frac{1}{\mu_0}(\nabla\cdot {\bf B}) \,{\bf B}+ 
+\rho\,{\bf E}+{\bf j}\times {\bf B}.
+\end{eqnarray}
+Now, from vector field theory,
+\begin{equation}
+\nabla (E^2/2) \equiv {\bf E}\times(\nabla\times {\bf E}) + ({\bf E}\cdot{\nabla}){\bf E},
+\end{equation}
+with a similar equation for ${\bf B}$. Hence, Equation~(\ref{e8.48})
+takes the form
+\begin{eqnarray}
+-\frac{\partial}{\partial t} \left[\epsilon_0\,{\bf E}\times{\bf B}\right]&=&
+\epsilon_0\left[\nabla(E^2/2) - (\nabla\cdot {\bf E})\,{\bf E} - ({\bf E}\cdot\nabla){\bf E}\right]\nonumber\\[0.5ex]&& 
++\frac{1}{\mu_0}\left[\nabla(B^2/2) - (\nabla\cdot {\bf B})\,{\bf B} - ({\bf B}\cdot\nabla){\bf B}\right]\nonumber\\[0.5ex]&&+
+\rho\,{\bf E}+{\bf j}\times {\bf B}.
+\end{eqnarray}
+Finally, when written in terms of components, the above equation becomes
+\begin{eqnarray}
+-\frac{\partial}{\partial t} \left[\epsilon_0\,{\bf E}\times{\bf B}\right]_i&=&
+\frac{\partial}{\partial x_j}\!\left[\epsilon_0\,E^2\,\delta_{ij}/2  - \epsilon_0\,E_i\,E_j+ B^2\,\delta_{ij}/2\,\mu_0 - B_i\,B_j/\mu_0\right]\nonumber\\[0.5ex]&&+
+\left[\rho\,{\bf E}+{\bf j}\times {\bf B}\right]_i,
+\end{eqnarray}
+since $[(\nabla\cdot{\bf E})\,{\bf E}]_i \equiv (\partial E_j/\partial x_j)\,E_i$,
+and  $[({\bf E}\cdot\nabla){\bf E}]_i \equiv E_j\,(\partial E_i/\partial x_j)$.
+Here, $\delta_{ij}$ is a Kronecker delta symbol ({\em i.e.}, $\delta_{ij}=1$
+if $i=j$, and $\delta_{ij}=0$ otherwise).
+Comparing the above equation with Equation~(\ref{e8.41}), we conclude that
+the momentum flux density tensor of electromagnetic fields takes the
+form
+\begin{equation}\label{e8.55x}
+G_{ij} = \epsilon_0\,(E^2\,\delta_{ij}/2-E_i\,E_j) + (B^2\,\delta_{ij}/2-B_i\,B_j)/ \mu_0.
+\end{equation}
+
+The momentum conservation equation (\ref{e8.41}) is sometimes written
+\begin{equation}
+[\rho\,{\bf E} + {\bf j}\times{\bf B}]_i = \frac {\partial T_{ij}}{\partial x_j}
+-\frac{\partial}{\partial t}\left[\epsilon_0\,{\bf E}\times{\bf B}\right]_i,
+\end{equation}
+where 
+\begin{equation}
+T_{ij} = - G_{ij} = \epsilon_0\,(E_i\,E_j-E^2\,\delta_{ij}/2) + (B_i\,B_j-B^2\,\delta_{ij}/2)/ \mu_0
+\end{equation}
+is called the {\em Maxwell stress tensor}.
+
+Consider a uniform electric field, ${\bf E} = E\,{\bf e}_z$. 
+According to Equation~(\ref{e8.55x}), the momentum flux density
+tensor of such a field is
+\begin{equation}\label{e8.58x}
+{\bf G} = \left(\begin{array}{ccc}\epsilon_0\,E^2/2&0&0\\[0.5ex]
+0&\epsilon_0\,E^2/2&0\\[0.5ex]
+0&0&-\epsilon_0\,E^2/2\end{array}
+\right).
+\end{equation}
+As is well-known, the momentum flux density tensor of a conventional gas of pressure $p$ is
+written
+\begin{equation}
+{\bf G} = \left(\begin{array}{ccc} p&0&0\\[0.5ex]
+0&p&0\\[0.5ex]
+0&0&p\end{array}
+\right).
+\end{equation}
+In other words,  from any small volume element there is an equal {\em outward}\/ momentum flux density $p$ in all three Cartesian directions, which simply corresponds to an {\em isotropic}\/ gas pressure, $p$.  This suggests that
+a positive diagonal element in a momentum stress tensor corresponds to
+a {\em pressure}\/ exerted in the direction of the corresponding Cartesian axis. Furthermore, a negative diagonal element corresponds to negative
+pressure, or {\em tension}, exerted in the direction of the corresponding
+Cartesian axis. Thus, we conclude, from  Equation~(\ref{e8.58x}), that
+electric field-lines act rather like {\em mutually repulsive elastic bands}:
+{\em i.e.}, there is a pressure force acting perpendicular to the field-lines which tries to
+push them apart, whilst a tension force acting along the field-lines simultaneously tries to shorten them. As an example, we have seen that the normal
+electric field $E_\perp$ above the surface of a charged conductor exerts an outward
+pressure $\epsilon_0\,E_\perp^{\,2}/2$ on the surface. One way of interpreting this pressure is to say that it is due to the tension in the
+electric field-lines anchored in the surface. Likewise, the force of
+attraction between the two plates of a charged parallel plate capacitor
+can be attributed to the tension in the electric field-lines running
+between them.
+
+It is easily demonstrated that the momentum flux density tensor of
+a uniform magnetic field, ${\bf B} = B\,{\bf e}_z$, is
+\begin{equation}
+{\bf G} = \left(\begin{array}{ccc}\,B^2/2\mu_0&0&0\\[0.5ex]
+0&B^2/2\mu_0&0\\[0.5ex]
+0&0&-B^2/2\mu_0\end{array}
+\right).
+\end{equation}
+Hence, magnetic field-lines also act like mutually repulsive elastic bands.
+For instance, the uniform field ${\bf B}$ inside a conventional solenoid exerts an
+outward pressure $B^2/2\mu_0$ on the windings which generate and confine it.
+
+\section{Angular Momentum Conservation}
+An electromagnetic field which possesses a momentum density ${\bf g}$ must
+also possess an {\em angular momentum density}\/
+\begin{equation}\label{e8.61x}
+{\bf h} = {\bf r}\times {\bf g}.
+\end{equation}
+It follows that electromagnetic fields can exchange angular momentum, as
+well as linear momentum, with ordinary matter. As an illustration of this, consider
+the following famous example. 
+
+Suppose that we have two thin co-axial cylindrical conducting shells
+of radii $a$ and $c$, where $a< c$. Let the length of both cylinders be
+$l$. Suppose, further, that the cylinders are free to rotate independently about their common axis. Finally, let the inner cylinder carry charge $-Q$, and the
+outer cylinder charge $+Q$ (where $Q>0$). Now, suppose that a uniform co-axial cylindrical
+solenoid winding of radius $b$ (where $a<b<c$), 
+and number of turns  per unit length $N$, is placed between the
+two cylinders, and energized with a current $I$. Note that the total angular
+momentum of this system is a conserved quantity, since the system is
+isolated.
+
+Consider an initial state in which
+both cylinders are stationary. Ramping  the solenoid current down to zero is observed to cause the two cylinders to start to {\em rotate}---the inner cylinder in
+the opposite sense to the sense of current circulation, and the outer cylinder in the same sense.
+In other words, the two cylinders acquire angular momentum when the current in the solenoid coil is ramped down. Where does this angular
+momentum come from? Clearly, it can only have come from the electric
+and magnetic fields in the region between the cylinders.  Let us investigate
+further.
+
+It is convenient to define cylindrical polar coordinates ($r$, $\theta$, $z$)
+which are co-axial with the common axis of the two cylinders and the solenoid coil.
+As is easily demonstrated from Gauss' law, the electric field takes the
+form ${\bf E} = E_r\,{\bf e}_r$, where
+\begin{equation}
+E_r = \left\{
+\begin{array}{lcl}
+-Q/(2\pi\epsilon_0\,r\,l)&\mbox{\hspace{0.5cm}}&\mbox{for $a\leq r\leq c$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+ \right..
+\end{equation}
+Likewise, it is easily shown from Amp\`{e}re's circuital law
+that the initial magnetic field is written ${\bf B} = B_z\,{\bf e}_z$, where
+\begin{equation}
+B_z = \left\{
+\begin{array}{lcl}
+\mu_0\,N\,I&\mbox{\hspace{0.5cm}}&\mbox{for $r\leq b$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+ \right..
+\end{equation}
+It follows from Equation~(\ref{e8.41x}) that the initial momentum density
+of the electromagnetic field is ${\bf g} = g_\theta\,{\bf e}_\theta$, where
+\begin{equation}
+g_\theta = \left\{
+\begin{array}{lcl}
+\mu_0\,N\,I\,Q/(2\pi\,r\,l)&\mbox{\hspace{0.5cm}}&\mbox{for $a \leq r\leq b$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+ \right..
+\end{equation}
+Hence, from Equation~(\ref{e8.61x}), the initial angular momentum density
+of the electromagnetic field is ${\bf h} = h_z\,{\bf e}_z$, where
+\begin{equation}
+h_z = \left\{
+\begin{array}{lcl}
+\mu_0\,N\,I\,Q/(2\pi\,l)&\mbox{\hspace{0.5cm}}&\mbox{for $a \leq r\leq b$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+ \right..
+\end{equation}
+In other words, the electromagnetic field possesses a {\em uniform}\/ $z$-directed angular momentum density ${\bf h}$ in the region between the
+inner cylinder and the solenoid winding. It follows that the initial 
+angular momentum content of the electromagnetic field, ${\bf L}$, is equal to ${\bf h}$
+multiplied by the volume of this region. Hence, we obtain ${\bf L} = L_z\,{\bf e}_z$, where
+\begin{equation}
+L_z = \frac{(b^2-a^2)\,\mu_0\,N\,I\,Q}{2}.
+\end{equation}
+Of course, as the current in the solenoid winding is ramped down this
+electromagnetic angular momentum is lost, and, presumably, transferred
+to the two cylinders. Let us examine how this transfer is effected.
+
+Any change in the current flowing in the solenoid winding generates
+an inductive electric field. From Faraday's law, this field
+takes the form ${\bf E} = E_\theta\,{\bf e}_\theta$, where
+\begin{equation}
+E_\theta = \left\{
+\begin{array}{lcl}
+-\mu_0\,N\,\dot{I}\,r/2 &\mbox{\hspace{0.5cm}}&\mbox{for $r\leq b$}
+\\[0.5ex]
+-\mu_0\,N\,\dot{I}\,b^2/(2\,r)&&\mbox{otherwise}
+\end{array}
+ \right..
+\end{equation}
+This electric field exerts a  torque ${\bf T}_a=T_a\,{\bf e}_z$, where
+\begin{equation}
+T_a = -Q\,E_\theta(a)\,a = \frac{\mu_0\,N\,\dot{I}\,Q\,a^2}{2},
+\end{equation}
+on the inner cylinder, and a  torque ${\bf T}_b=T_b\,{\bf e}_z$, where
+\begin{equation}
+T_b= Q\,E_\theta(b)\,b =- \frac{\mu_0\,N\,\dot{I}\,Q\,b^2}{2},
+\end{equation}
+on the outer cylinder. Thus, the net angular momentum
+acquired by the inner cylinder, as the current in the solenoid coil
+is ramped down, is ${\bf L}_a=L_a\,{\bf e}_z$, where
+\begin{equation}
+L_a = \int T_a\,dt =  -\frac{\mu_0\,N\,I\,Q\,a^2}{2}.
+\end{equation}
+Likewise, the net angular momentum acquired by the outer cylinder is
+${\bf L}_b = L_b\,{\bf e}_z$, where
+\begin{equation}
+L_b = \int T_b\,dt =  \frac{\mu_0\,N\,I\,Q\,b^2}{2}.
+\end{equation}
+Hence, the net angular momentum acquired by the two cylinders,
+as a whole, is ${\bf L} = L_z\,{\bf e}_z$, where
+\begin{equation}
+L_z = \frac{(b^2-a^2)\,\mu_0\,N\,I\,Q}{2}.
+\end{equation}
+This, of course, is equal to the $z$-directed angular momentum lost
+by the electromagnetic field.
+
+{\small
+\section{Exercises}
+\renewcommand{\theenumi}{8.\arabic{enumi}}
+\begin{enumerate}
+\item A solenoid consists of a wire wound uniformly around a solid cylindrical
+core of radius $a$, length $l$, and permeability $\mu$. Suppose that the
+wire has $N$ turns per unit length, and carries a current $I$. What is the energy stored within the core?
+Suppose that the current
+in the wire is gradually ramped down. Calculate the
+integral of the Poynting flux (due to the induced electric field) over the surface of the core. Hence, demonstrate that the instantaneous rate of
+decrease of the energy within the core is always equal to the integral of the  Poynting flux over its surface.
+\item A co-axial cable consists of two thin co-axial cylindrical conducting
+shells of radii $a$ and $b$ (where $a<b$). Suppose that the inner
+conductor carries the longitudinal current $I$ and the charge per unit
+length $\lambda$. Let the outer conductor carry equal and opposite
+current and charge per unit length. What is the flux of electromagnetic energy
+and momentum down the cable (in the direction of the inner current)?
+What is the electromagnetic pressure acting on the inner and
+outer conductors?
+\item Consider a co-axial cable consisting of two thin co-axial cylindrical conducting shells of radii $a$ and
+$b$ (where $a<b$). Suppose that the inner conductor carries  current per unit
+length $I$, circulating in the plane perpendicular to its axis, and
+charge per unit length $\lambda$. Let the outer conductor carry equal and
+opposite current per unit length and charge per unit length. What is the
+flux of electromagnetic angular momentum down the cable? What is the electromagnetic pressure acting on the inner and outer conductors?
+\item Calculate the electrostatic force acting between two identical point electrical charges
+by finding the net electromagnetic momentum flux across a
+plane surface located half-way between the charges. Verify that the result
+is consistent with Coulomb's law.
+\item Calculate the magnetic force per unit length acting between two long
+parallel straight wires carrying identical currents by finding the net electromagnetic momentum flux across a
+plane surface located half-way between the wires. Verify that the result is
+consistent with Amp\`{e}re's law.
+\item Calculate the mean force acting  on a perfect mirror of area $A$ which reflects normally incident electromagnetic radiation of peak electric field $E_0$.
+Suppose that the mirror only reflects a fraction $f$ of the incident electromagnetic energy, and absorbs the remainder. What now is the force
+acting on the mirror?
+\item A thin spherical conducting shell of radius $a$ carries a charge
+$Q$. Use the concept of electric field-line tension to find the force of repulsion between any two halves of the shell.
+\item A solid sphere of radius $a$ carries a net charge $Q$ which
+is uniformly distributed over its volume. What is the force of
+repulsion between any two halves of the sphere?
+\item A $U$-shaped electromagnet of permeability $\mu\gg 1$, length $l$, pole separation $d$, and uniform  cross-sectional
+area $A$ is energized by a current $I$ flowing in a winding with $N$ turns.
+Find the force with which the magnet attracts a bar of the same material
+which is placed over both poles (and completely covers them).
+\item An iron sphere of radius $a$ and uniform magnetization
+${\bf M} = M\,{\bf e}_z$ carries an electric charge $Q$. Find the net angular
+momentum of the electromagnetic field surrounding the sphere. Suppose that
+the magnetization of the sphere decays to zero. Demonstrate that the induced
+electric field exerts a torque on the sphere which is such as to impart to it a mechanical angular momentum equal to that lost by the electromagnetic field.
+\end{enumerate}
+\renewcommand{\theenumi}{arabic{enumi}}
+}

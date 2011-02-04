@@ -1,0 +1,1099 @@
+\chapter{Magnetic Induction}\label{ind}
+\section{Introduction}
+In this chapter, we shall use Maxwell's equations to investigate
+magnetic induction and related phenomena.
+
+\section{Inductance}
+We have already learned about the concepts of voltage, resistance, and capacitance. Let us now investigate the concept of {\em inductance}.
+Electrical engineers like to reduce all pieces of electrical circuitary to an
+{\em equivalent circuit}\/ consisting  of pure voltage sources,
+pure inductors, pure capacitors, and pure resistors. Hence, once we understand inductors, we shall
+be ready to apply the laws of electromagnetism to general electrical circuits. 
+
+Consider two stationary loops of wire, labeled 1 and 2---see Figure~\ref{floop}. Let us run a steady current
+$I_1$ around the first loop to produce a magnetic field ${\bf B}_1$. Some of the field-lines
+of ${\bf B}_1$ will pass through the second loop. Let ${\mit\Phi}_2$ be the flux
+of ${\bf B}_1$ through loop 2,
+\begin{equation}
+{\mit\Phi}_2 = \int_{\rm loop\, 2} {\bf B}_1\cdot d{\bf S}_2,
+\end{equation}
+where $d{\bf S}_2$ is a surface element of loop 2. 
+This flux is generally quite difficult to calculate exactly (unless the two loops
+have a particularly simple geometry). However, we can infer from the Biot-Savart law,
+\begin{equation}
+{\bf B}_1({\bf r}) = \frac{\mu_0 \,I_1}{4\pi} \oint_{\rm loop \,1} 
+\frac{ d{\bf l}_1 \times ({\bf r} - {\bf r}_1)}{|{\bf r} - {\bf r}_1|^3},
+\end{equation}
+that the magnitude of ${\bf B}_1$ is proportional to the current $I_1$.
+This is
+ultimately a consequence of the linearity of Maxwell's equations. 
+Here, $d{\bf l}_1$ is a line element of loop 1 located at position
+vector ${\bf r}_1$.  
+It follows that
+the flux ${\mit\Phi}_2$ must also be proportional to $I_1$. Thus, we can write
+\begin{equation}
+{\mit\Phi}_2 = M_{21}\,I_1,
+\end{equation}
+where $M_{21}$ is a constant of proportionality. This constant is  called
+the {\em mutual inductance}\/ of the two loops. 
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter7/fig7.1.eps}}
+\caption{\em Two current carrying loops.}\label{floop}
+\end{figure}
+
+Let us write the magnetic field ${\bf B}_1$ in terms of a vector potential ${\bf A}_1$, so that
+\begin{equation}
+{\bf B}_1 = \nabla\times {\bf A}_1.
+\end{equation}
+It follows from Stokes' theorem that
+\begin{equation}\label{e7.5}
+{\mit\Phi}_2 = \int_{\rm loop \,2} {\bf B}_1\cdot d{\bf S}_2 = \int_{\rm loop \,2}
+\nabla\times {\bf A}_1 \cdot d{\bf S}_2 = \oint_{\rm loop\, 2} {\bf A}_1 \cdot
+d{\bf l}_2,
+\end{equation}
+where $d{\bf l}_2 $ is a line element of loop 2. 
+However, we know that
+\begin{equation}
+{\bf A}_1 ({\bf r}) = \frac{\mu_0 \,I_1}{4\pi}
+\oint_{\rm loop \,1} \frac{d {\bf l}_1}{|{\bf r} - {\bf r}_1|}.
+\end{equation}
+ The above equation is just a special case of the more general law,
+\begin{equation}
+{\bf A}_1({\bf r}) = \frac{\mu_0}{4\pi} \int_{\rm all \,space} 
+\frac{{\bf j}({\bf r}')}
+{|{\bf r} - {\bf r}'|} \,d^3{\bf r}',
+\end{equation}
+for ${\bf j}({\bf r}_1) = d{\bf l}_1 \,I_1/ dl_1\, dA$ and $d^3{\bf r}' = dl_1 \,dA$, where
+$dA$ is the cross-sectional area of loop 1. Thus,
+\begin{equation}
+{\mit\Phi}_2 = \frac{\mu_0 \,I_1}{4\pi} 
+\oint_{\rm loop \,1}\oint_{\rm loop \,2} \frac{d{\bf l}_1\cdot d{\bf l}_2}{|{\bf r}_2-
+{\bf r}_1|},
+\end{equation}
+where ${\bf r}_2$ is the position vector of the line element $d{\bf l}_2$
+of loop 2, which implies that
+\begin{equation}
+M_{21}   = \frac{\mu_0}{4\pi} 
+\oint_{\rm loop\, 1}\oint_{\rm loop \,2} \frac{d{\bf l}_1\cdot d{\bf l}_2}{|{\bf r}_2-
+{\bf r}_1|}.
+\end{equation}
+In fact, mutual
+inductances are rarely worked out using the above formula, because it is usually
+much too difficult. However, this expression---which is known as the {\em Neumann formula}---tells us two important things. 
+Firstly, the mutual inductance of two current loops is a purely {\em geometric}\/ quantity,
+having to do with the sizes, shapes, and relative orientations of the loops.
+Secondly, the integral is unchanged if we switch the roles of loops 1 and 2.
+In other words, 
+\begin{equation}
+M_{21} = M_{12}.
+\end{equation}
+Hence, we can drop the subscripts, and just call both  these quantities $M$.
+This is a rather surprising result. It implies that no matter what the shapes and
+relative positions of the two loops, the magnetic flux through loop 2 when we run a
+current $I$ around loop 1 is {\em exactly} the same as the flux through loop 1
+when we run the same current around loop 2.
+ 
+We have seen that a current $I$ flowing around some wire loop, 1, generates a magnetic
+flux linking some other loop, 2. However,  flux is also generated through the
+first loop. As before, the magnetic field, and, therefore, the flux, ${\mit\Phi}$, 
+is proportional to the current, so we can write
+\begin{equation}
+{\mit\Phi} = L\, I.
+\end{equation}
+The constant of proportionality $L$ is called the {\em self-inductance}. Like
+$M$ it only depends on the geometry of the loop. 
+
+Inductance is measured in SI units called henries (H): 1 henry is 1 volt-second
+per ampere. The henry, like the farad, is a rather unwieldy unit, since
+inductors in electrical circuits typically have a inductances of order a micro-henry. 
+
+\section{Self-Inductance}
+Consider a long, uniformly wound, cylindrical solenoid of length $l$, and radius $r$,
+which has $N$ turns per unit length,
+and carries a current $I$. The longitudinal ({\em i.e.}, directed along the
+axis of the solenoid) magnetic field within the solenoid is approximately uniform,
+and is given by
+\begin{equation}
+B= \mu_0\, N\, I.
+\end{equation}
+(This result is easily obtained by integrating Amp\`{e}re's law over a rectangular
+loop whose long sides run parallel to the axis of the solenoid, one inside the
+solenoid, and the other outside, and whose short sides run perpendicular to the
+axis.) The magnetic flux though each turn of the solenoid wire is $B\,\pi \,r^2=
+\mu_0\, N \,I\,\pi \,r^2$. The total flux through
+the solenoid wire, which has $N\,l$ turns, is
+\begin{equation}
+{\mit\Phi} = N\,l\, \mu_0 \,N\,I\, \pi \,r^2.
+\end{equation}
+Thus, the self-inductance of the solenoid is
+\begin{equation}
+L = \frac{{\mit\Phi}}{I} = \mu_0\, N^2\, \pi\, r^2\, l.
+\end{equation}
+Note that the self-inductance only depends on geometric quantities, such as the number
+of turns per unit length of the solenoid, and the cross-sectional area of the turns. 
+
+Suppose that the current $I$ flowing through the solenoid changes. Let us
+assume that the change is sufficiently slow that we can neglect the displacement
+current, and retardation effects, in our calculations. This implies that the typical
+time-scale of the change must be much longer than the time for a light-ray to traverse the
+circuit. If this is the case then the above formulae remain valid. 
+
+A change in the current implies a change in the magnetic flux linking the solenoid
+wire, since ${\mit\Phi} = L \,I$. According to Faraday's
+law, this change
+generates an emf in the wire. By Lenz's law, the emf is such
+as to oppose the change in the current---{\em i.e.}, it is a {\em back-emf}. Thus, we can write
+\begin{equation}
+V = - \frac{d {\mit\Phi}}{d t} = - L\, \frac{d I}{dt},
+\end{equation}
+where $V$ is the generated back-emf. 
+
+
+Suppose that our solenoid has an electrical resistance $R$. Let us
+connect the ends of the solenoid across the terminals of a battery of
+constant voltage $V$. What is going to happen? The equivalent circuit is shown in Figure~\ref{f45}.
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter7/fig7.2.eps}}
+\caption{\em The equivalent circuit of a solenoid connected to a battery.}\label{f45}
+\end{figure}
+The inductance and resistance of the solenoid are represented by a perfect
+inductor, $L$, and a perfect resistor, $R$, connected in series. The voltage drop
+across the inductor and resistor is equal to the voltage of the battery,
+$V$. The voltage drop across the resistor is simply $I\,R$, whereas the
+voltage drop across the inductor ({\em i.e.},  the back-emf) is
+$L \,dI/dt$. Here, $I$ is the current flowing through the solenoid. 
+It follows that 
+\begin{equation}
+V = I\,R + L \,\frac{dI}{dt}.
+\end{equation}
+This is a differential equation for the current $I$. We can rearrange it to
+give
+\begin{equation}
+\frac{dI}{dt}+ \frac{R}{L}\,I= \frac{V}{L}.
+\end{equation}
+The general solution is
+\begin{equation}
+I(t) = \frac{V}{R} + k \exp(-R\,t/L).
+\end{equation}
+The constant $k$ is fixed by the boundary conditions. Suppose that the
+battery is connected at time $t=0$, when $I=0$. It follows that $k=-V/R$, so
+that
+\begin{equation}
+I(t) = \frac{V}{R} \left[1-\exp(-R\,t/L)\,\right].
+\end{equation}
+This curve is shown in Figure~\ref{flr}. It can be seen that, after the battery is connected, the current
+ramps up, and attains its steady-state value $V/R$ (which comes from Ohm's
+law), on the characteristic time-scale
+\begin{equation}
+\tau = \frac{L}{R}.
+\end{equation}
+This time-scale is sometimes called the  {\em time constant}\/ of the circuit, or
+(somewhat unimaginatively) the  {\em L over R time}\/ of the circuit. 
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter7/fig7.3.eps}}
+\caption{\em Typical current rise profile in a circuit of the type shown in Figure~\ref{f45}. Here, $I_0 = V/R$ and $\tau=L/R$.}\label{flr}
+\end{figure}
+
+We can now appreciate the significance of self-inductance. The back-emf 
+generated in an inductor, as the current flowing through it tries to change, prevents the
+current from rising (or falling) much faster than the $L/R$ time. This effect is
+sometimes advantageous, but  is often a great nuisance.
+All circuit elements possess some self-inductance, as well as some resistance, and thus have a finite $L/R$ time. This means that when we power up a DC circuit, the current
+does not jump up instantaneously to its steady-state value. Instead, the
+rise is spread out over the L/R time of the circuit. This is a good thing.
+If the current were to rise instantaneously then extremely large electric
+fields would be generated by the sudden jump in the induced magnetic field, leading,
+inevitably, to breakdown and electric arcing. So, if there were no such thing
+as self-inductance then every time we switched an electric circuit on or off
+there would be a blue flash due to arcing between conductors. Self-inductance
+can also be a bad thing. Suppose that we possess an expensive power supply which can generate a wide variety of complicated voltage waveforms, and we wish
+to use it to send such a waveform down a wire (or transmission line).
+Of course, the wire or transmission line will possess both resistance and inductance,
+and will, therefore, have some characteristic $L/R$ time. Suppose that we
+try to send a square-wave signal down the wire. Since the current in the wire
+cannot rise or fall faster than the $L/R$ time,  the leading and trailing edges of
+the signal will get smoothed out over an $L/R$ time. The typical difference between
+the signal fed into the wire, and that which comes out of the
+other end, is illustrated in Figure~\ref{fsquare}. Clearly, there is little
+point in having an expensive power supply unless we also possess a low inductance
+wire, or transmission line, so that the signal from the power supply can be
+transmitted to some load device without serious distortion. 
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter7/fig7.4.eps}}
+\caption{\em Difference between the input waveform (left panel) and
+the output waveform (right panel) when a square-wave is sent down a
+wire whose $L/R$ time is 1/20th of the square-wave period, $T$.}\label{fsquare}
+\end{figure}
+
+\section{Mutual Inductance}
+Consider, now, two long thin cylindrical solenoids, one wound on top of the other. The length
+of each solenoid is $l$, and the common radius is $r$. Suppose that the bottom
+coil has $N_1$ turns per unit length, and carries a current $I_1$. The magnetic
+flux passing through each turn of the top coil is $\mu_0\, N_1\, I_1\,\pi \,r^2$, and
+the total flux linking the top coil is therefore ${\mit\Phi}_2 = N_2 \,l\, \mu_0 N_1\,
+I_1\,\pi\, r^2$, where $N_2$ is the number of turns per unit length in the top
+coil. It follows that the mutual inductance of the two coils, defined ${\mit\Phi}_2
+=M\, I_1$, is given by 
+\begin{equation}
+M = \mu_0\, N_1\, N_2 \,\pi\, r^2\, l.
+\end{equation}
+Recall that the self-inductance of the bottom coil is
+\begin{equation}
+L_1 = \mu_0\, N_1^{\,2} \,\pi \,r^2 \,l,
+\end{equation}
+and that  of the top coil is
+\begin{equation}
+L_2 = \mu_0 \,N_2^{\,2} \,\pi \,r^2 \,l.
+\end{equation}
+Hence, the mutual inductance can be written
+\begin{equation}
+M = \sqrt{L_1\, L_2}.
+\end{equation}
+Note that this result depends on the assumption that {\em all}\/ of the magnetic flux produced
+by one coil passes through the other coil. In reality, some of the flux
+leaks out, so that the mutual inductance is somewhat less than that given in the
+above formula. We can write
+\begin{equation}\label{e7.25}
+M= k \,\sqrt{L_1 \,L_2},
+\end{equation}
+where the dimensionless constant $k$ is called the {\em coefficient of coupling},
+and lies in the range $0\leq k \leq 1$. 
+
+Suppose that the two coils have resistances $R_1$ and $R_2$. If the bottom coil
+has an instantaneous  current $I_1$ flowing through it, and a total voltage drop
+$V_1$,  then the voltage drop due to its resistance is $I_1 \,R_1$. The voltage drop
+due to the back-emf generated by the self-inductance of the coil is
+$L_1\, d I_1/dt$. There is also a back-emf due to inductive coupling with
+the top coil. We know that the flux through the bottom coil due to the instantaneous
+current $I_2$ flowing in the top coil is
+\begin{equation}
+{\mit\Phi}_1 = M \,I_2.
+\end{equation}
+Thus, by Faraday's law and Lenz's law, the  back-emf induced in the bottom
+coil is
+\begin{equation}
+V = - M \,\frac{dI_2}{dt}.
+\end{equation}
+The voltage drop across the bottom coil due to its mutual inductance with the
+top coil is minus this expression. Thus, the circuit equation for the bottom coil is
+\begin{equation}
+V_1 = R_1\, I_1 + L_1 \frac{dI_1}{dt} + M\,\frac{dI_2}{dt}.
+\end{equation}
+Likewise, the circuit equation for the top coil is
+\begin{equation}
+V_2 = R_2 \,I_2 + L_2 \frac{d I_2}{dt} + M\,\frac{d I_1}{dt}.
+\end{equation}
+Here, $V_2$ is the total voltage drop across the top coil. 
+
+Suppose that we suddenly connect a battery of constant voltage
+$V_1$ to the bottom coil, at  time $t=0$. The top coil is assumed to be
+open-circuited, or connected to a voltmeter of very high internal resistance,
+so that $I_2=0$. What is the voltage generated in the top coil?
+Since $I_2=0$, the circuit equation for the bottom coil is
+\begin{equation}
+V_1 = R_1 \,I_1 + L_1 \frac{d I_1}{dt},
+\end{equation}
+where $V_1$ is constant, and $I_1(t=0)=0$. We have already seen the solution to
+this equation:
+\begin{equation}
+I_1 = \frac{V_1}{R_1} \left[ 1 - \exp(-R_1\, t/L_1)\right].
+\end{equation}
+The circuit equation for the top coil is
+\begin{equation}
+V_2 = M \,\frac{d I_1}{dt},
+\end{equation}
+giving 
+\begin{equation}
+V_2 = V_1\, \frac{M}{L_1} \exp(- R_1\, t/L_1).
+\end{equation}
+It follows from Equation~(\ref{e7.25}) that
+\begin{equation}
+V_2 = V_1 \,k \,\sqrt{\frac{L_2}{L_1}} \,\exp(- R_1\, t/L_1).
+\end{equation}
+Since $L_1/L_2 =N_1^{\,2}/N_2^{\,2}$, we obtain
+\begin{equation}
+V_2 = V_1\, k \,\frac{N_2}{N_1} \,\exp(-R_1 \,t/L_1).
+\end{equation}
+Note that $V_2(t)$ is discontinuous at $t=0$. This is not a problem, since the
+resistance of the top circuit is infinite, so there is no discontinuity in the
+current (and, hence, in the magnetic field). But, what about the displacement current,
+which is proportional to $\partial {\bf E}/\partial t$? Surely, this is discontinuous
+at $t=0$ (which is clearly unphysical)? The crucial point, here,
+ is that we have specifically
+neglected the displacement current in all of our previous analysis, so it does not
+make much sense to start worrying about it now. If we had retained the displacement
+current in our calculations then
+ we would have found that the voltage in the top circuit jumps up,
+at $t=0$, on a time-scale similar to the light traverse time across the circuit
+({\em i.e.}, the jump is instantaneous, to all intents and purposes, but the
+displacement current remains finite). 
+
+Now,
+\begin{equation}
+\frac{V_2(t=0)}{V_1} = k\, \frac{N_2}{N_1},
+\end{equation}
+so if $N_2 \gg N_1$  then  the voltage in the bottom circuit is considerably amplified
+in the top circuit. This effect is  the basis for  old-fashioned car ignition
+systems. A large voltage spike is induced in a secondary circuit (connected to
+a coil with very many turns) whenever the current in a primary circuit 
+(connected to a coil with not so many turns) is either switched on or off.
+The primary circuit is connected to the car battery (whose voltage is
+typically 12 volts). 
+The switching is done by a set of points, which are mechanically opened and
+closed as the engine turns. The large voltage spike induced in the secondary circuit,
+as the points are either opened or closed, causes a spark to jump across a gap
+in this circuit. This spark ignites a petrol/air mixture in one of the cylinders. 
+We might think that the optimum configuration is to have only one turn in the primary
+circuit, and lots of turns in the secondary circuit, so that the ratio
+$N_2/N_1$ is made as large as possible. However, this is not the case. Most of
+the magnetic  flux generated by a single turn primary coil is likely to
+miss the secondary coil altogether. This means that the coefficient of coupling $k$
+is small, which reduces the voltage induced in the secondary circuit. Thus, we
+need a reasonable number of turns in the primary coil in order to localize the
+induced magnetic flux, so that it links effectively with the secondary coil.
+
+\section{Magnetic Energy}
+Suppose that, at $t=0$, a coil of inductance, $L$, and resistance $R$, is connected
+across the terminals of a battery of voltage $V$. The circuit equation is
+\begin{equation}\label{e7.37}
+V = L\,\frac{d I}{dt} + R\,I.
+\end{equation}
+Now, the power output of the battery is $V\,I$. [Every charge $q$ that goes around the circuit
+falls through a potential difference $q \,V$. In order to raise it back to
+the starting potential, so that it can perform another circuit, the battery must do
+work $q\,V$. The work done per unit time ({\em i.e.}, the power) is $n\,q\,V$, where $n$ is
+the number of charges per unit time passing a given point on the circuit. 
+But, $I=n\,q$, so the power output is $V\,I$.]\@ Thus, the net work done by the battery in
+raising the current in the circuit from zero at time $t=0$ to $I_T$ at
+time $t=T$ is 
+\begin{equation}
+W = \int_0^T V\,I \,dt.
+\end{equation}
+Using the circuit equation (\ref{e7.37}), we obtain
+\begin{equation}
+W = L \int_0^T I\,\frac{dI}{dt} \,dt + R \int_0^T I^2\,dt,
+\end{equation}
+giving
+\begin{equation}
+W = \frac{1}{2}\, L\, I_T^{\,2} + R \int_0^T I^2\,dt. 
+\end{equation}
+The second term on the right-hand side of the above equation represents the irreversible conversion of
+electrical energy into heat energy by the resistor. The first term is the amount of
+energy stored in the inductor at time $T$. This energy can be recovered after the
+inductor is disconnected from the battery. Suppose that the battery is disconnected
+at time $T$. The circuit equation is now
+\begin{equation}
+0 = L\,\frac{dI}{dt} + RI,
+\end{equation}
+giving 
+\begin{equation}\label{e7.42}
+I= I_T \exp \left[ - \frac{R}{L} \,(t-T)\right],
+\end{equation}
+where we have made use of the boundary condition $I(T) = I_T$. 
+Thus, the current
+decays away exponentially. The energy stored in the inductor is dissipated as
+heat in the resistor. The total heat energy appearing in the resistor after the
+battery is disconnected is
+\begin{equation}
+\int_T^\infty I^2 \,R \,dt = \frac{1}{2}\, L\, I_T^{\,2},
+\end{equation}
+where use has been made of Equation~(\ref{e7.42}). 
+Thus, the heat energy appearing in the resistor is equal to the
+energy stored in the inductor. This energy is actually stored in the magnetic
+field generated around the inductor. 
+
+Consider, again, our circuit with two coils wound on top of one another. Suppose that 
+each coil is connected to its own battery. The circuit equations are thus
+\begin{eqnarray}
+V_1 &=& R_1\, I_1 + L_1\,\frac{d I_1}{dt} +M\,\frac{d I_2}{dt},\nonumber\\[0.5ex]
+V_2 &=& R_2 \,I_2 + L_2\, \frac{d I_2}{d t} + M\,\frac{d I_1}{dt},
+\end{eqnarray}
+where $V_1$ is the voltage of the battery in the first circuit, {\em etc.} 
+The net work done by the two batteries in increasing the currents in the two circuits,
+from zero at time 0, to $I_1$ and $I_2$ at time $T$, respectively, is
+\begin{eqnarray}
+W &=& \int_0^T (V_1\, I_1 + V_2 \,I_2 )\,dt\nonumber\\[0.5ex]
+&=& \int_0^T (R_1 \,I_1^{\,2} + R_2 \,I_2^{\,2})\,dt +\frac{1}{2}\, L_1 \,I_1^{\,2}
++ \frac{1}{2}\, L_2 \,I_2^{\,2}\nonumber\\[0.5ex]
+&& + M \int_0^T \left(I_1\, \frac{dI_2}{dt}  + I_2\,\frac{d I_1}{dt } \right)dt.
+\end{eqnarray}
+Thus, 
+\begin{eqnarray}
+W &=& \int_0^T (R_1 \,I_1^{\,2} + R_2\, I_2^{\,2} )\,dt\nonumber\\[0.5ex]
+&& + \frac{1}{2} \,L_1 \,I_1^{\,2} + \frac{1}{2}\, L_2 \,I_2^{\,2} + M\, I_1\, I_2.
+\end{eqnarray}
+Clearly, the total magnetic energy stored in the two coils is
+\begin{equation} 
+W_B =  \frac{1}{2}\, L_1\, I_1^{\,2} + \frac{1}{2} \,L_2 \,I_2^{\,2} + M \,I_1 \,I_2.
+\end{equation}
+Note that the mutual inductance term increases the stored magnetic energy if $I_1$ and
+$I_2$ are of the same sign---{\em i.e.}, if the currents in the  two coils flow
+in the same direction, so that they generate magnetic fields which reinforce
+one another. Conversely, the mutual inductance term decreases the stored 
+magnetic energy if $I_1$ and $I_2$ are of the opposite sign. However, the total 
+stored energy can never be negative, otherwise the coils
+would constitute a power source (a negative stored energy is equivalent to
+a positive generated energy). Thus,
+\begin{equation} 
+\frac{1}{2}\, L_1 \,I_1^{\,2} + \frac{1}{2}\, L_2 \,I_2^{\,2} + M\, I_1 \,I_2\geq 0,
+\end{equation}
+which can be written
+\begin{equation}
+\frac{1}{2}\left( \sqrt{L_1} \,I_1 + \sqrt{L_2}\,I_2\right)^2 - I_1 \,I_2 (\sqrt{L_1 \,L_2}
+-M) \geq 0,
+\end{equation}
+assuming that $I_1\, I_2 <0$. It follows that
+\begin{equation}
+M \leq \sqrt{L_1 \,L_2}.
+\end{equation}
+The equality sign corresponds to the situation in which
+all of the magnetic flux generated by one coil passes through the other. If some of
+the flux misses then the inequality sign is appropriate. 
+In fact, the above formula is valid 
+for any two inductively coupled circuits, and effectively sets an upper limit
+on their mutual inductance.
+
+We intimated previously that the energy stored in an inductor is actually
+stored in the surrounding  magnetic field. Let us now obtain an
+explicit formula for the energy stored in a magnetic field. Consider an ideal
+cylindrical solenoid. The energy stored in the solenoid when a current $I$ flows through it
+is
+\begin{equation}\label{e7.51}
+W = \frac{1}{2} \,L \,I^2,
+\end{equation}
+where $L$ is the self-inductance. We know that
+\begin{equation}
+L = \mu_0\, N^2\,\pi\, r^2\, l,
+\end{equation}
+where $N$ is the number of turns per unit length of the
+solenoid, $r$ the radius, and $l$ the length. The magnetic field inside the solenoid is approximately
+uniform, with magnitude
+\begin{equation}
+B = \mu_0 \,N\,I,
+\end{equation}
+and is approximately zero outside the solenoid. Equation~(\ref{e7.51}) can be rewritten 
+\begin{equation}
+W = \frac{B^2}{2\mu_0}\,V,
+\end{equation}
+where $V = \pi\, r^2 \,l$ is the volume of the solenoid. The above formula strongly
+suggests that a magnetic field possesses an energy density
+\begin{equation}\label{eeb}
+U = \frac{B^2}{2\mu_0}.
+\end{equation}
+
+Let us now examine  a more general proof of the above formula. Consider a system
+of $N$ circuits   (labeled $i=1$ to $N$), each carrying a current $I_i$. 
+The magnetic flux through the $i$th circuit is written [{\em cf}., Equation~(\ref{e7.5})]
+\begin{equation}\label{e7.56}
+{\mit\Phi}_i = \int {\bf B} \cdot d{\bf S}_i = \oint {\bf A} \cdot d{\bf l}_i,
+\end{equation}
+where ${\bf B} = \nabla\times{\bf A}$, and $d{\bf S}_i$ and $d{\bf l}_i$ denote a
+surface element and a line element of this  circuit, respectively. The 
+back-emf induced in the $i$th circuit follows from Faraday's law:
+\begin{equation}
+V_i = - \frac{d {\mit\Phi}_i}{dt}.
+\end{equation}
+The rate of work of the battery which maintains  the current $I_i$ 
+in the $i$th circuit
+against this back-emf is 
+\begin{equation}
+P_i = I_i\, \frac{d {\mit\Phi}_i}{dt}.
+\end{equation}
+Thus, the total work required
+ to raise the currents in the $N$ circuits from zero at time
+0, to $I_{0\,i}$ at time $T$, is
+\begin{equation}
+W = \sum_{i=1}^N \int_0^T I_i \,\frac{d{\mit\Phi}_i}{dt}\,dt.
+\end{equation}
+The above expression for the work done is, of course, equivalent to the total
+energy stored in the magnetic field surrounding the various circuits. 
+This energy is independent of the manner in which the currents
+ are set up. 
+Suppose, for the sake of simplicity,  that the currents are ramped up linearly,
+so that
+\begin{equation}
+I_i = I_{0\,i}\, \frac{t}{T}.
+\end{equation}
+The fluxes are proportional to the currents, so they must also ramp up linearly: {\em i.e.}, 
+\begin{equation}
+{\mit\Phi}_i = {\mit\Phi}_{0\,i} \,\frac{t}{T}.
+\end{equation}
+It follows that
+\begin{equation}
+W = \sum_{i=1}^N \int_0^T I_{0\,i} \,{\mit\Phi}_{0\,i}\, \frac{t}{T^2}\,dt,
+\end{equation}
+giving
+\begin{equation}
+W = \frac{1}{2} \sum_{i=1}^N I_{0\,i} \,{\mit\Phi}_{0\,i}.
+\end{equation}
+So, if instantaneous currents $I_i$ flow in the the $N$ circuits, which link 
+instantaneous fluxes ${\mit\Phi}_i$, then the instantaneous stored energy is
+\begin{equation}\label{e7.64}
+W= \frac{1}{2} \sum_{i=1}^N I_i \,{\mit\Phi}_i.
+\end{equation}
+
+Equations (\ref{e7.56}) and (\ref{e7.64}) imply that
+\begin{equation}\label{e7.65}
+W = \frac{1}{2} \sum_{i=1}^N I_i \oint {\bf A} \cdot d{\bf l}_i.
+\end{equation}
+It is convenient, at this stage, to replace our $N$ line currents by
+$N$  current
+distributions  of
+small, but finite, cross-sectional area.
+Equation (\ref{e7.65})
+transforms to
+\begin{equation}
+W = \frac{1}{2} \int_V {\bf A} \cdot {\bf j} \, dV,
+\end{equation}
+where $V$ is a volume which contains all of the circuits.
+Note that for an element of the $i$th circuit, ${\bf j} =I_i\, d{\bf l}_i
+/dl_i \,A_i$ and  $dV = dl_i \,A_i$, where $A_i$ is the cross-sectional area of the
+ circuit.
+Now, $\mu_0\, {\bf j} = \nabla\times {\bf B}$ (we are neglecting the displacement
+current in this calculation), so
+\begin{equation}
+W = \frac{1}{2\mu_0} \int_V {\bf A} \cdot \nabla\times{\bf B} \, dV.
+\end{equation}
+According to vector field theory,
+\begin{equation}
+\nabla\cdot({\bf A} \times{\bf B}) \equiv {\bf B} \cdot \nabla\times{\bf A} -
+{\bf A} \cdot \nabla\times{\bf B},
+\end{equation}
+which implies that
+\begin{equation}
+W = \frac{1}{2\mu_0} \int_V \left[- \nabla\cdot ({\bf A} \times{\bf B})
++{\bf B}\cdot \nabla \times {\bf A} \right] \,dV.
+\end{equation}
+Using Gauss' theorem, and ${\bf B} = \nabla\times{\bf A}$, we obtain
+\begin{equation}
+W = -\frac{1}{2\mu_0} \oint_S {\bf A}\times{\bf B} \cdot d{\bf S} +
+\frac{1}{2\mu_0} \int_V B^2\,dV,
+\end{equation}
+where $S$ is the bounding surface of  some volume $V$. Let us take this surface
+to infinity. It is easily demonstrated that the magnetic field generated by a current
+loop falls of like $r^{-3}$ at large distances. The vector potential
+falls off like $r^{-2}$. However, the  area of surface $S$ only increases like $r^2$. 
+It follows that the surface integral is negligible in the limit $r\rightarrow\infty$.
+Thus, the above expression reduces to
+\begin{equation}
+W = \int \frac{B^2}{2\mu_0} \, dV,
+\end{equation}
+where the integral is over all space.
+Since this expression is valid for any magnetic field whatsoever, we can safely conclude 
+that the energy density of a general magnetic field generated by a system of electrical circuits is given by
+\begin{equation}
+U = \frac{B^2}{2\mu_0}.
+\end{equation}
+Note, that the above expression is consistent with the expression
+(\ref{e6en}) which we previously obtained during our investigation of magnetic
+media.
+
+\section{Alternating Current Circuits}
+Alternating current (AC) circuits are made up of voltage sources and {\em three}\/
+different types of passive element: {\em i.e.}, resistors, inductors,
+and capacitors.  Resistors satisfy Ohm's law,
+\begin{equation}
+V = I \,R,
+\end{equation}
+where $R$ is the resistance, $I$ the current flowing through the resistor, and
+$V$ the voltage drop across the resistor (in the direction in which the current
+flows). Inductors satisfy
+\begin{equation}
+V = L\, \frac{dI}{dt},
+\end{equation}
+where $L$ is the inductance. Finally, capacitors obey
+\begin{equation}
+V = \frac{q}{C} = \left.\int_0^t I\,dt\right/C,
+\end{equation}
+where $C$ is the capacitance, $q$ is the charge stored on the plate with the most
+positive potential, and $I=0$ for $t<0$. Note that any 
+passive component of a real electrical
+circuit can always be represented as a combination of ideal resistors, inductors, and
+capacitors. 
+
+
+Let us consider the classic LCR circuit, which consists of an inductor, $L$, a
+capacitor, $C$, and a resistor, $R$, all connected in series with an voltage source,
+$V$---see Figure~\ref{flcr}. The circuit equation is obtained by setting the input voltage $V$  equal to
+the sum of the voltage drops across the three passive elements in the circuit. 
+Thus,
+\begin{equation}\label{e776}
+V = I\,R+ L\,\frac{dI}{dt} + \left.\int_0^t I\,dt\right/C.
+\end{equation}
+This is an integro-differential equation which, in general, is quite difficult to
+solve. Suppose, however, that both the voltage and the current 
+oscillate at some fixed angular frequency $\omega$, so that
+\begin{eqnarray}
+V(t) &=& V_0\, \exp({\rm i}\,\omega\, t),\\[0.5ex]
+I(t) &=& I_0 \,\exp({\rm i}\,\omega \,t),\label{e777}
+\end{eqnarray}
+where the physical solution is understood to be the {\em real part} of
+the above expressions. The assumed behaviour of the voltage and current is
+clearly relevant to electrical
+ circuits powered by the mains voltage (which oscillates at 60 hertz). 
+ \begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{chapter7/fig7.5.eps}}
+\caption{\em An LCR circuit.}\label{flcr}
+\end{figure}
+
+
+Equations~(\ref{e776})--(\ref{e777}) yield
+\begin{equation}
+V_0\,  \exp({\rm i}\,\omega \,t) =I_0 \, \exp({\rm i}\,\omega \,t)\,
+R+ L\, {\rm i}\,\omega \,I_0\exp({\rm i}\,\omega \,t)
++\frac{I_0 \exp({\rm i}\,\omega \,t)}{{\rm i}\,\omega\, C},
+\end{equation}
+giving
+\begin{equation}
+V_0 = I_0 \left({\rm i}\,\omega\, L + \frac{1}{{\rm i}\,\omega\, C} + R\right).
+\end{equation}
+It is helpful to define the {\em impedance} of the circuit:
+\begin{equation}\label{e7.80}
+Z = \frac{V}{I} = {\rm i}\,\omega\, L + \frac{1}{{\rm i }\, \omega \,C} + R.
+\end{equation}
+Impedance is a generalization of the concept of resistance. In general, the impedance
+of an AC circuit is a {\em complex} quantity. 
+
+The average power output of  the voltage source is
+\begin{equation}
+P = \langle  V(t) \,I(t) \rangle,
+\end{equation}
+where the average is taken over one period of the oscillation. Let us, first of all,
+calculate the power using real (rather than complex)  voltages and currents.
+We can write
+\begin{eqnarray}
+V(t) &=& |V_0|\, \cos(\omega\, t),\\[0.5ex] 
+I(t) &=& |I_0| \,\cos(\omega\, t - \theta),
+\end{eqnarray}
+where $\theta$ is the phase-lag of the current with respect to the voltage.
+It follows that
+\begin{eqnarray}
+P& = &|V_0|\, |I_0| \int_{\omega t = 0}^{\omega t = 2\pi}
+\cos(\omega\, t)\, \cos(\omega\, t - \theta)\,\,\frac{d(\omega \,t)}{2\pi}\\[0.5ex]
+&=& |V_0|\, |I_0| \int_{\omega t =0}^{\omega t = 2\pi} 
+\cos(\omega\, t) \left[\cos(\omega\, t)\, \cos\theta + \sin(\omega \,t) \,\sin \theta\right]\,\,
+\frac{d(\omega\, t)}{2\pi},\nonumber
+\end{eqnarray}
+giving
+\begin{equation}
+P = \frac{1}{2}\, |V_0|\, |I_0| \cos\theta,
+\end{equation}
+since $\langle \cos(\omega\, t)\,\sin(\omega\, t)\rangle = 0$ and $\langle \cos(\omega\, t) \,\cos(\omega \,t)\rangle = 1/2$. 
+In complex representation, the voltage and the current are written
+\begin{eqnarray}
+V(t) &=& |V_0| \,\exp({\rm i}\,\omega\,t),\\[0.5ex] 
+I(t) &=& |I_0|\, \exp[{\rm i}\,(\omega \,t - \theta)].
+\end{eqnarray}
+Now,
+\begin{equation}
+\frac{1}{2} ( V\, I^\ast +V^\ast\, I)=
+|V_0|\, |I_0|\, \cos\theta.
+\end{equation}
+It follows that
+\begin{equation}
+P = \frac{1}{4} ( V\, I^\ast + V^\ast \,I) = \frac{1}{2}\, {\rm Re}(V \,I^\ast).
+\end{equation}
+Making use of Equation~(\ref{e7.80}), we find that
+\begin{equation}
+P = \frac{1}{2} \,{\rm Re}(Z)\, |I|^2 = \frac{1}{2} \frac{{\rm Re}(Z)\,|V|^2}{|Z|^2}.
+\end{equation}
+Note that power dissipation is associated with the {\em real part} of the impedance.
+For the special case of an LCR circuit, 
+\begin{equation}
+P = \frac{1}{2} \,R \,|I_0|^{\,2}.
+\end{equation}
+We conclude that only the resistor dissipates energy in this circuit. The inductor and
+the capacitor both store energy, but they eventually return it to the circuit
+without dissipation. 
+
+According to Equation~(\ref{e7.80}), the amplitude of the current which flows in an LCR circuit
+for a given amplitude of the input voltage  is
+given by
+\begin{equation}
+|I_0| = \frac{|V_0|}{|Z|}= \frac{|V_0|}{\sqrt{(\omega \,L-1/\omega \,C)^2 + R^2}}.
+\end{equation}
+As can be seen from Figure~\ref{flcr1}, the response of the circuit is
+  {\em resonant}, peaking at $\omega = 1/\sqrt{L\,C}$, and reaching
+$1/\sqrt{2}$ of the peak value at $\omega = 1/\sqrt{L\,C} \pm R/(2\,L)$ (assuming that
+$R \ll \sqrt{L/C}$). For this reason, LCR circuits are used in analog radio tuners to filter out
+signals whose frequencies fall outside a given band. 
+\begin{figure}
+\epsfysize=2.25in
+\centerline{\epsffile{chapter7/fig7.6.eps}}
+\caption{\em The characteristics of an LCR circuit. The left-hand and right-hand panes show the amplitude and phase-lag of the current versus frequency, respectively. Here, $\omega_c=1/\sqrt{L\,C}$ and $Z_0 = \sqrt{L/C}$. The solid, short-dashed, long-dashed,
+and dot-dashed curves correspond to $R/Z_0 = 1$, 1/2, 1/4, and 1/8, respectively.}\label{flcr1}
+\end{figure}
+
+The phase-lag of the current with respect to the voltage is given by
+\begin{equation}
+\theta = {\rm arg}(Z) = \tan^{-1}\left( \frac{\omega \,L - 1/\omega\, C }
+{R} \right).
+\end{equation}
+As can be seen from Figure~\ref{flcr1}, the phase-lag varies from $-\pi/2$ for frequencies significantly  below the resonant
+frequency, to zero at the resonant frequency ($\omega = 1/\sqrt{L\,C}$), to
+$\pi/2$ for frequencies significantly above the resonant frequency.
+
+It is clear that in conventional AC circuits the circuit equation reduces to a
+simple algebraic equation, and that the behaviour of the circuit is summed up
+by the complex impedance, $Z$. The real part of  $Z$ tells us the power dissipated in
+the circuit, the magnitude of $Z$ gives the ratio of the peak current to the
+peak voltage, and the argument of $Z$ gives the phase-lag of the current
+with respect to the voltage. 
+
+\section{Transmission Lines}\label{strans}
+The central assumption made in the analysis of conventional AC circuits is that
+the voltage (and, hence,  the current) has the {\em same phase}\/ throughout the circuit. 
+Unfortunately, if the circuit is sufficiently large, or the frequency of
+oscillation, $\omega$, is sufficiently high, then this assumption becomes invalid. 
+The assumption of a constant phase throughout the circuit is reasonable if the 
+wavelength of the oscillation, $\lambda = 2\pi \,c/\omega$, is 
+much larger than the dimensions of
+the circuit. (Here, we assume that signals propagate around electrical circuits
+at about the velocity of light. This assumption will be justified later on.)
+This is generally not the case in electrical circuits which are
+associated with {\em communication}. The frequencies in such
+circuits tend to be very high, and the dimensions  are, almost
+by definition,  large. For instance,
+leased telephone lines (the type to which computers are connected) run at
+$56$ kHz. The corresponding wavelength is about 5 km, so the constant-phase
+approximation clearly breaks down for long-distance calls. Computer networks
+generally run at about 100 MHz, corresponding to $\lambda \sim 3$ m. Thus,
+ the constant-phase approximation also breaks down for most computer networks,
+since such networks are generally significantly larger than 3\,m.
+It turns out that we need a
+special sort of wire, called a {\em transmission line}, to propagate signals around circuits
+whose dimensions greatly exceed the wavelength, $\lambda$. Let us investigate
+transmission lines. 
+
+An idealized transmission line consists of two parallel conductors of uniform
+cross-sectional area. 
+ The conductors possess a capacitance per unit length,
+$C$, and an inductance per unit length, $L$. Suppose that $x$ measures the position
+along the line. 
+
+Consider the voltage difference between two neighbouring points
+on the line, located at positions $x$ and $x+\delta x$, respectively---see Figure~\ref{ftrans}.
+The self-inductance of the portion of the line lying between these two
+points is $L\,\delta x$. This small section of the line can be thought of as
+a conventional inductor, and, therefore, obeys the well-known equation
+\begin{equation}
+V(x, t) -V(x+\delta x, t) =  L\,\delta x\,\frac{\partial I(x, t)}{\partial t},
+\end{equation}
+where $V(x, t)$ is the voltage difference between the two conductors at
+position $x$ and time $t$, and 
+$I(x, t)$ is the current flowing in one of the conductors at position
+$x$ and time $t$ [the current flowing
+in the other conductor is $-I(x, t)$]. In the limit $\delta x\rightarrow 0$,
+the above equation reduces to
+\begin{equation}\label{e7.93}
+\frac{\partial V}{\partial x} = - L\,\frac{\partial I}{\partial t}.
+\end{equation}
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{chapter7/fig7.7.eps}}
+\caption{\em A segment of a transmission line.}\label{ftrans}
+\end{figure}
+
+Consider the difference in current between two neighbouring points on the
+line, located at positions $x$ and $x+\delta x$, respectively---see Figure~\ref{ftrans}. The capacitance
+of the portion of the line lying between these two points is
+$C\,\delta x$. This small section of the line can be thought of
+as a conventional capacitor, and, therefore, obeys the well-known equation
+\begin{equation}
+\int_0^t I(x, t)\,dt - \int_0^t I(x+\delta x, t)\,dt =  C\,\delta x\,V(x,t),
+\end{equation}
+where $t=0$ denotes a time at which the charge stored in either  of
+the conductors in the region $x$ to
+$x+\delta x$ is zero. In the limit $\delta x \rightarrow 0$, the above equation
+yields
+\begin{equation}\label{e7.95}
+\frac{\partial I}{\partial x} = - C\,\frac{\partial V}{\partial t}.
+\end{equation}
+Equations~(\ref{e7.93}) and (\ref{e7.95}) are generally known as the {\em Telegrapher's equations,}
+since an old-fashioned telegraph line can be thought of as a primitive
+transmission line (telegraph lines consist of a single wire---the other conductor
+is the Earth.) 
+
+Differentiating Equation~(\ref{e7.93}) with respect to $x$, we obtain
+\begin{equation}
+\frac{\partial^2 V}{\partial x^2} = - L\, \frac{\partial^2 I}{\partial x\, \partial t}.
+\end{equation}
+Differentiating Equation~(\ref{e7.95}) with respect to $t$ yields
+\begin{equation}
+\frac{\partial^2 I}{\partial x\, \partial t} = 
+-C\,\frac{\partial^2 V}{\partial t^2}.
+\end{equation}
+The above two equations can be combined to give
+\begin{equation}\label{e7.98}
+L\,C\,\frac{\partial^2 V}{\partial t^2} = \frac{\partial^2 V}{\partial x^2}.
+\end{equation}
+This is clearly a wave equation, with wave velocity  $v= 1/\sqrt{L\,C}$. An
+analogous equation can be written for the current, $I$.
+
+Consider a transmission line which is connected to a generator at one end 
+($x=0$), and
+a resistor, $R$, at the other ($x=l$). Suppose that the generator outputs
+a voltage $V_0 \,\cos(\omega\, t)$. If follows that
+\begin{equation}
+V(0, t) = V_0\, \cos(\omega\, t).
+\end{equation}
+The solution to the wave equation (\ref{e7.98}), subject to the above boundary condition, is
+\begin{equation}\label{e7.100}
+V(x, t) = V_0 \cos(\omega\, t - k\,x),
+\end{equation}
+where $k= \omega / v$. This clearly corresponds to a wave which propagates
+from the generator towards the resistor. Equations (\ref{e7.93}) and (\ref{e7.100}) yield
+\begin{equation}
+I(x, t)  = \frac{V_0}{\sqrt{L/C}} \cos(\omega \,t -k\,x).
+\end{equation}
+For self-consistency, the resistor at the end of the line must have a particular 
+value:
+\begin{equation}
+R = \frac{V(l, t)}{I(l, t)} = \sqrt{\frac{L}{C}}.
+\end{equation}
+The  so-called  {\em input impedance} of the line is defined
+\begin{equation}
+Z_{\rm in} = \frac{V(0, t)}{I(0, t)} = \sqrt{\frac{L}{C}}.
+\end{equation}
+Thus, a transmission line terminated by a resistor $R= \sqrt{L/C}$ acts very
+much like a conventional resistor $R=  Z_{\rm in}$ in the circuit containing
+the generator. In fact, the transmission line could be replaced by an effective
+resistor $R=  Z_{\rm in}$ in the circuit diagram for the generator circuit.
+The power loss due to this effective resistor corresponds to power which
+is extracted from the circuit, transmitted down the line, and absorbed by the
+terminating resistor. 
+
+The most commonly occurring type of
+transmission line is a co-axial cable, which consists of
+two co-axial cylindrical conductors of radii $a$ and $b$ (with $b>a$). We
+have already shown that the capacitance per unit length of such a cable is
+(see Section~\ref{scap})
+\begin{equation}
+C = \frac{ 2\pi\, \epsilon_0}{\ln (b/a)}.
+\end{equation}
+Let us now calculate the inductance per unit length. Suppose that the inner conductor
+carries a current $I$. According to Amp\`{e}re's law, the magnetic field in the
+region between the conductors is given by
+\begin{equation}
+B_\theta = \frac{\mu_0 \,I}{2\pi\, r}.
+\end{equation}
+The flux linking unit length of the cable is
+\begin{equation}
+{\mit\Phi} = \int_a^b B_\theta \,dr = \frac{\mu_0\, I}{2\pi} \ln(b/a).
+\end{equation}
+Thus, the self-inductance  per unit length is
+\begin{equation}
+L = \frac{{\mit\Phi}}{I} = \frac{\mu_0}{2\pi} \ln(b/a). 
+\end{equation}
+So, the speed of propagation of a wave down a co-axial cable is
+\begin{equation}
+v = \frac{1}{\sqrt{L\,C}} = \frac{1}{\sqrt{\epsilon_0 \,\mu_0}} = c.
+\end{equation}
+Not surprisingly, the wave (which is a type of electromagnetic wave) propagates at
+the speed of light. The impedance of the cable is given by
+\begin{equation}
+Z_0 = \sqrt{\frac{L}{C} } = \left(\frac{\mu_0}{4\pi^2\, \epsilon_0}\right)^{1/2}
+\ln\, (b/a) = 60 \,\ln\, (b/a) \,\,{\rm ohms}.
+\end{equation}
+
+If we fill the region between the two cylindrical conductors with a
+dielectric of dielectric constant $\epsilon$, then, according to the
+discussion in Section~\ref{spolz}, the capacitance per unit length
+of the transmission line goes up by a factor $\epsilon$. However,
+the dielectric has no effect on magnetic fields, so the inductance
+per unit length of the line remains unchanged. It follows that the
+propagation speed of signals down a dielectric filled co-axial cable
+is
+\begin{equation}
+v = \frac{1}{\sqrt{L\,C}}= \frac{c}{\sqrt{\epsilon}}.
+\end{equation}
+As we shall discover later, this is simply the propagation velocity of electromagnetic waves
+through a dielectric medium of dielectric constant $\epsilon$. The impedance of the cable
+becomes
+\begin{equation}\label{ez0}
+Z_ 0 = 60\,\frac{\ln(b/a)}{\sqrt{\epsilon}}\,\,{\rm ohms}.
+\end{equation}
+
+We have seen that if a transmission line is terminated by a resistor whose
+resistance $R$ matches the impedance $Z_0$ 
+of the line then all of the power sent down the
+line is absorbed by the resistor. What happens if $R\neq Z_0$? The answer is
+that
+some of the power is reflected back down the line. Suppose that the
+beginning of the line lies at $x=-l$, and the end of the line is at $x=0$.
+Let us consider a solution
+\begin{equation}
+V(x, t) = V_0 \,\exp[{\rm i}\,(\omega \,t - k\,x)] + K\, V_0 \, \exp[{\rm i}\,(\omega\, t + k\,x)].
+\end{equation}
+This corresponds to a voltage wave of amplitude $V_0$ which travels down the line,
+and is reflected at the end of the line, with reflection coefficient $K$. 
+It is easily demonstrated from the Telegrapher's equations that the corresponding
+current waveform is
+\begin{equation}
+I(x, t) = \frac{V_0}{Z_0} \exp[{\rm i}\,(\omega\, t - k\,x)] - \frac{K \,V_0}{Z_0}
+ \exp[{\rm i}\,(\omega\, t + k\,x)].
+\end{equation}
+Since the line is terminated by a resistance $R$ at $x=0$, we have, from
+Ohm's law, 
+\begin{equation}
+\frac{V(0,t)}{I(0,t)} = R.
+\end{equation}
+This yields an expression for the coefficient of reflection,
+\begin{equation}
+K = \frac{ R - Z_0}{R+Z_0}.
+\end{equation}
+The input impedance of the line is given by
+\begin{equation}
+Z_{\rm in} = \frac{V(-l, t)}{I(-l, t)} = Z_0\, \frac{R \,\cos (k\,l) +{\rm i}\,Z_0 \,\sin( k\,l)}
+{Z_0 \,\cos (k\,l) + {\rm i}\, R \,\sin (k\,l)}.
+\end{equation}
+
+Clearly, if the resistor at the end of the line is properly matched, so that
+$R=Z_0$, then there is no reflection ({\em i.e.}, $K= 0$), and the input impedance of
+the line is $Z_0$. If the line is short-circuited, so that $R=0$, then there is total
+reflection at the end of the line ({\em i.e.}, $K= -1$), and the input impedance becomes
+\begin{equation}
+Z_{\rm in} = {\rm i} \,Z_0 \tan (k\,l).
+\end{equation}
+This impedance is purely imaginary, implying that the transmission line absorbs no
+net power from the generator circuit. In fact, the line acts rather like a pure
+inductor or capacitor in the generator circuit 
+({\em i.e.}, it can store, but cannot absorb, energy). If the line
+is open-circuited, so that $R\rightarrow \infty$, then there is again
+total reflection at the end of the line ({\em i.e.}, $K = 1$), and the input 
+impedance becomes
+\begin{equation}
+Z_{\rm in} = {\rm i}\,Z_0\tan(k\,l-\pi/2).
+\end{equation}
+Thus, the open-circuited line acts like a closed-circuited line which is shorter by
+one quarter of a wavelength. For the special case where the length of the line
+is exactly one quarter of a wavelength ({\em i.e.}, $k\,l=\pi/2$), we find that
+\begin{equation}\label{e7q}
+Z_{\rm in} = \frac{Z_0^{\,2}}{R}.
+\end{equation}
+Thus, a quarter-wave line looks like a pure resistor in the generator circuit.
+Finally, if the length of the line is much less than the wavelength ({\em i.e.}, $k\,l\ll 1$)
+then we enter the constant-phase regime, and $Z_{\rm in}\simeq R$ ({\em i.e.}, we can
+forget about the transmission line connecting the
+terminating  resistor to the generator circuit).
+
+Suppose that we wish to build a radio transmitter. We can use a standard half-wave antenna ({\em i.e.}, an antenna whose length is half the wavelength
+of the transmitted radio-waves)
+to emit the radiation. In electrical circuits, such an antenna acts like a resistor of resistance
+73 ohms (it is more usual to  say that the antenna has an impedance of 73 ohms---see Section~\ref{s9.1}). 
+Suppose that we buy a 500\,kW
+generator to supply the power to the antenna. How do we transmit
+the power from the generator to the antenna? We use a transmission line, of course. 
+(It is clear that if the distance between  the generator and the antenna is of
+order the dimensions of the antenna ({\em i.e.}, $\lambda/2$) then the constant-phase 
+approximation breaks down, and so we have to use a transmission line.)
+Since the impedance of the antenna is fixed at 73 ohms, we need to use a
+73 ohm transmission line ({\em i.e.}, $Z_0 = 73$ ohms) to connect the generator to
+the antenna, otherwise some of the power we send down the line is reflected
+({\em i.e.}, not all of the power output of the generator is converted into
+radio waves). If we wish to use a co-axial cable to connect the generator to
+the antenna then it is clear from Equation~(\ref{ez0}) that the  radii of the
+inner and outer conductors need to be such that $b/a = 3.38\,\exp(\sqrt{\epsilon})$.
+
+Suppose, finally, that we upgrade our transmitter  to use a full-wave antenna
+({\em i.e.}, an antenna whose length equals the wavelength of the emitted radiation).
+A full-wave antenna has a different impedance than a half-wave antenna. Does
+this mean that we have to rip out our original co-axial cable, and replace it
+by one whose impedance matches that of the new antenna? Not necessarily.
+Let $Z_0$ be the impedance of the co-axial cable, and $Z_1$ the impedance of
+the antenna. Suppose that we place a quarter-wave transmission line ({\em i.e.}, one whose
+length is one quarter of a wavelength) of characteristic
+impedance $Z_{1/4} = \sqrt{Z_0 \,Z_1}$ between the end of the cable and the
+antenna. According to Equation~(\ref{e7q}) (with $Z_0 \rightarrow  \sqrt{Z_0 \,Z_1}$
+and $R\rightarrow Z_1$), the input impedance of the quarter-wave line
+is $Z_{\rm in} = Z_0$, which matches that of the cable. The output impedance
+matches that of the antenna. Consequently, there is no reflection of the power
+sent down the cable to the antenna. A quarter-wave line of the appropriate impedance
+can easily
+ be fabricated from a short length of co-axial cable of the appropriate $b/a$. 
+
+{\small
+\section{Exercises}
+\renewcommand{\theenumi}{7.\arabic{enumi}}
+\begin{enumerate}
+\item A planar wire loop of resistance $R$ and cross-sectional area $A$ is placed in a uniform magnetic
+field of strength $B$. Let the normal to the loop subtend an angle $\theta$ with the direction of the magnetic field. Suppose that the loop is made to
+rotate
+steadily, such that $\theta = \omega\,t$. Use Faraday's law to find the
+emf induced around the loop. What is the current circulating around the loop. 
+Find 
+the torque exerted on the loop by the magnetic field. Demonstrate that the
+mean rate of work required to maintain the rotation of the loop against
+this torque is equal to the mean ohmic power loss in the loop.
+Hint: It may be helpful
+to treat the loop as a magnetic dipole. Neglect the self-inductance of the loop.
+\item Consider a long, uniformly wound, cylindrical solenoid of length $l$,
+radius $r$, and turns per unit length $N$. Suppose that the solenoid is
+wound around a ferromagnetic core of permeability $\mu$. What is the
+self-inductance of the solenoid?
+\item A cable consists of a long cylindrical conductor  of radius $a$ which carries current uniformly
+distributed over its cross-section. The current returns in a thin insulated sheath  on the surface of the cable. Find the self-inductance per unit length
+of the cable.
+\item Consider two co-planar and concentric circular wire loops of radii
+$a$ and $b$, where $a\ll b$. What is the mutual inductance of the loops?
+Suppose that the smaller loop is shifted a distance $z$ out of the
+plane of the larger loop (whilst remaining co-axial with the larger loop).
+What now is the mutual inductance of the two loops?
+\item Two small current loops are sufficiently far apart that they interact
+like two magnetic dipoles. Suppose that the loops have position vectors ${\bf r}_1$ and ${\bf r}_2$, cross-sectional
+areas $A_1$ and $A_2$, and unit normals ${\bf n}_1$ and ${\bf n}_2$, respectively. What is the mutual inductance of the loops?
+\item A circular loop of wire of radius $a$ lies in the plane of a long
+straight wire, with its center a perpendicular distance $b > a$ from the wire.
+Find the mutual inductance of the two wires.
+\item An electric circuit consists of a resistor, $R$, a capacitor, $C$, and
+an inductor, $L$, connected in series with a switch, and a battery of constant voltage
+$V$. Suppose that the switch is turned on at $t=0$. What current subsequently flows in the circuit? Consider the three cases $\omega_0> \nu$,
+$\omega_0=\nu$, and $\omega_0< \nu$ separately, where $\omega_0=1/\sqrt{L\,C}$, and $\nu = R/(2\,L)$.
+\item A coil of self-inductance $L$ and resistance $R$ is connected
+in series with a switch, and  a battery of constant voltage $V$. The
+switch is closed, and the steady current $I=V/R$
+is established in the circuit. The switch is then opened at $t=0$. Find 
+the current as a function of time, for $t >0$. 
+\item A steady voltage is suddenly applied to a coil of self-inductance $L_1$ in the presence of a nearby closed second coil of self-inductance $L_2$. Suppose that the mutual inductance of the two coils is $M$. Demonstrate
+that the presence of the second coil effectively decreases the initial self-inducatance of the first coil from $L_1$ to $L_1-M^2/L_2$. 
+\item An alternating circuit consists of a resistor, $R_1$, and an inductor, $L_1$, in series with an alternating voltage source of peak voltage $V_1$
+and angular frequency $\omega$. This circuit is inductively coupled
+to a closed wire loop of self-inductance $L_2$ and resistance $R_2$. Let
+$M$ be the mutual inductance of the two circuits. Find the impedance of
+the first circuit. Demonstrate that the presence of the second circuit
+causes the effective resistance of the first circuit to increase to
+$$
+R_1 + \frac{\omega^2\,M^2\,R_2}{(R_2^{\,2} + \omega^2\,L^2)},
+$$
+and its effective inductance to decrease to
+$$
+L_1 - \frac{\omega^2\,M^2\,L_2}{(R_2^{\,2} + \omega^2\,L^2)}.
+$$
+\item An alternating circuit consists of a coil and a capacitor connected
+in parallel across an alternating voltage source of angular frequency $\omega$. Suppose that the coil has self-inductance $L$, and resistance $R$. Find
+the impedance of the circuit. Demonstrate that if $L\gg C\,R^2$ then the amplitude
+of the current drawn from the voltage source goes through a minimum at
+$\omega=1/\sqrt{L\,C}$. 
+\item Repeat the calculation of Exercise~7.1, taking into account the self-inductance, $L$, of the loop.
+\item Find the characteristic impedance of a transmission line consisting of
+two identical parallel cylindrical wires of radius $a$ and spacing $d$. 
+\item Suppose that a transmission line has an inductance per unit length, $L$,
+a capacitance per unit length, $C$, and a resistance per unit length, $R$. 
+Demonstrate that a signal sent down the line decays exponentially
+on the characteristic length-scale $l = 2\,L/(R\,v)$, where $v$ is the
+propagation velocity. You may assume that $l$ is much longer
+than the wavelength of the signal.
+\item Three co-axial cables of impedance $Z_0$ have their central
+conductors connected via three identical resistors of resistance $R$, as shown in the diagram. The outer conductors are all earthed.
+What must the value $R$ be in order to ensure that there is no reflection of signals coming into the
+junction from any cable?
+\epsfysize=2in
+\centerline{\epsffile{chapter7/fig7.8.eps}}
+\end{enumerate}
+\renewcommand{\theenumi}{arabic{enumi}}
+}
